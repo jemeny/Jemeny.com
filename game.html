@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html>
+<html  lang = "en">
+<head>
+
+<title>Game Page</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Comfortaa">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<style>
+Canvas{
+border:1px solid black;
+background-color:#f1f1f1;
+box-shadow:15px 15px 10px grey;
+}
+
+@font-face{
+font-family:"Jemeny";
+src: url("https://fonts.googleapis.com/css?family=Comfortaa");
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+<!--Menu 1 navigation bar-->
+<nav class = "navbar navbar-default">
+<div class = "container-fluid">
+<div class = "navbar-header">
+<a href = "#" class = "navbar-brand">Jemeny.com</a>
+</div>
+<ul class = "nav navbar-nav">
+<li class = "active"><a href = "game.html">Home</a></li>
+<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"  href = "#">Games
+<span class = "caret"></span></a>
+<ul class = "dropdown-menu">
+<li><a href = "index.html">Jemeny City</a></li>
+<li><a href = "#">World War III</a></li>
+</ul>
+</li>
+<li><a href = "#">Course</a></li>
+<li class = "dropdown" ><a class = "dropdown-toggle" data-toggle = "dropdown" href = "#">Register
+<span class = "caret"></span></a>
+<ul class = "dropdown-menu">
+<li><a href = "SignUp.html" >Sign Up</a></li>
+<li><a href = "#" >Login</a></li>
+</ul>
+</li>
+</ul>
+<ul class = "nav navbar-nav navbar-right">
+<li><a href = "SignUp.html"><span class = "glyphicon glyphicon-user"></span> Sign up</a></li>
+<li><a href = "#"><span class = "glyphicon glyphicon-log-in"></span> Login </a></li>
+</ul>
+</div>
+</nav>
+
+<div class = "container">
+
+<!--<div class = "roll">        Menu 2
+
+<div class = "col-md-12">
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Home</button>
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Game <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Jemeny City</a></li>
+      <li><a href="#">World War III</a></li>
+    </ul>
+  </div>
+  <button type="button" class="btn btn-primary">Contact</button>
+  <button type="button" class="btn btn-info">Register</button>
+  
+</div>
+
+</div>
+
+</div>-->
+
+<div class = "roll">
+
+<div class = "col-md-12">
+
+<div class = "jumbotron well">
+<h1>Jemeny City <small>The Best Game Ever~</small></h1>
+</div>
+</div>
+
+</div>
+
+<div class = "roll">
+
+<div class = "col-md-8">
+<canvas id = "Cav" width = 600 height = 450>SORRY</canvas><br>
+
+<script>
+
+//Bouncing game 1
+var canvas = document.getElementById("Cav");
+var context = canvas.getContext("2d");
+var x = canvas.width/2;
+var y = canvas.height-30;
+var dx = 2;
+var dy = -2;
+var r = 10;
+var ph = 10;
+var pw = 75;
+var px = (canvas.width - pw)/2;
+var py = canvas.height - ph;
+var left = false;
+var right = false;
+//brick row count
+var brc = 3;
+//brick column count
+var bcc = 6;
+var bw = 75;
+var bh = 20;
+//brick padding
+var bp = 15;
+//off set top
+var bt = 30;
+//off set left
+var bl = 30;
+var score = 0;
+
+var c, rr;
+var bricks = [];
+for(c=0; c<bcc; c++){
+bricks[c] = [];
+for(rr=0; rr<brc; rr++){
+bricks[c][rr] = {xx:0, yy:0, status:1};
+}
+}
+
+
+window.addEventListener("keydown", keyDownHandler, false);
+window.addEventListener("keyup", keyUpHandler, false);
+
+function keyDownHandler(e){
+
+if(e.keyCode == '39'){
+right = true;
+}
+else if(e.keyCode == '37'){
+left = true;
+}
+}
+
+function keyUpHandler(e){
+if(e.keyCode == '39'){
+right = false;
+}
+else if (e.keyCode == '37'){
+left = false;
+}
+}
+
+//basics
+function create(){
+context.beginPath();
+context.arc(x, y, r , 0, 2*Math.PI);
+context.fillStyle = "red";
+context.fill();
+context.closePath();
+}
+
+function paddel(){
+context.beginPath();
+context.rect(px, py, pw, ph );
+context.fillStyle = "skyBlue";
+context.fill();
+context.closePath();
+}
+
+function Bricks(){
+for(c=0; c<bcc; c++){
+for(rr=0; rr<brc; rr++){
+if(bricks[c][rr].status == 1){
+var brX = (c*(bw+bp))+bl;
+var brY = (rr*(bh+bp))+bt;
+bricks[c][rr].xx = brX;
+bricks[c][rr].yy = brY;
+context.beginPath();
+context.rect(brX, brY, bw, bh);
+context.fillStyle = "teal";
+context.fill();
+context.closePath();
+}
+}
+}
+}
+
+function Collision(){
+for(c=0; c<bcc; c++){
+for(rr=0; rr<brc; rr++){
+var b = bricks[c][rr];
+if(b.status == 1){
+if(x > b.xx && x < b.xx + bw && y > b.yy && y < b.yy + bh){
+dy = -dy;
+b.status = 0;
+score ++;
+if(score == bcc * brc){
+alert("YOU WIN! YOUR FINAL SCORE IS:" + score);
+document.location.reload();
+}
+}
+}
+}
+}
+}
+
+function Score(){
+context.font = "20px Arial";
+context.fillStyle = "teal";
+context.fillText("Score:" + score, 8, 430);
+}
+
+function Player(){
+context.clearRect(0,0,canvas.width,canvas.height);
+create();
+paddel();
+Bricks();
+Collision();
+Score();
+
+if(x + dx > canvas.width - r || x + dx < r){
+dx = -dx;
+}
+
+if(y + dy < r){
+dy = -dy;
+}
+else if (y + dy > canvas.height - r){
+if(x > px && x < px + pw){
+dy = -dy;
+}
+else{
+alert("Game Over! Try it again.");
+document.location.reload();
+}
+}
+
+
+ if(right && px < canvas.width-pw) {
+        px += 7;
+    }
+    else if(left && px > 0) {
+        px -= 7;
+    }
+
+x += dx;
+y += dy;
+
+requestAnimationFrame(Player);
+}
+
+//update frame
+Player();
+
+
+/*
+//note
+function StartGame(){
+var object = new Components(30, 30, "red", 10, 120);
+}
+
+//object
+function Components(width, height, x, y, color){
+this.width = width;
+this.height = height;
+this.x = x;
+this.y = y;
+context.fillStyle = color;
+context.fillRect(this.x, this.y, this.width, this.height);
+}
+
+//create gradient
+var grd = context.createLinearGradient(0,0,60,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"black");
+
+//create filled text
+context.font = "50px Arial";
+context.fillStyle = "red";
+context.textAlign = "center";
+context.fillText("Jemeny City", canvas.width/2, canvas.height/2);
+
+//fill with gradient
+//context.fillStyle =grd;
+//context.fillRect(0,0,50,50);
+*/
+</script>
+
+<img width = "600" height = "450" src = "http://www.pixelstalk.net/wp-content/uploads/2016/06/Download-video-game-wallpapers-620x388.jpg" id = "thumpnail" style = "display:none;"/>
+
+</div>
+
+<div class = "col-md-4">
+
+<blockquote>
+<p>I really want to thank you in behalf of all the staff of Jemeny. You are the one who we worship here at Jemeny.
+I hope you enjoy our newest version of Jemeny City, not trying to brag here, but it is the best game I ever seen.</p>
+<footer>From the Director of Jemeny.com</footer>
+</blockquote>
+
+</div>
+
+</div>
+
+<div class = "roll">
+
+<div class = "col-md-4">
+<h1>Description</h1>
+<p>Once upon a time....</p>
+</div>
+
+<div class = "col-md-4">
+<h1>Insutructions</h1>
+<p>Use the <kbd>&#8592;</kbd><kbd>&#8594;</kbd> to Control direction, use <kbd>&#8593;</kbd> to Jump. <kbd>Space</kbd> to shoot, and <kbd>P</kbd> to pause. Hope you Enjoy!</p>
+</div>
+
+<div class = "col-md-4">
+<h1></h1>
+<p></p>
+</div>
+
+</div>
+
+<div class = "roll">
+
+<div class = "col-md-12">
+<h1 style = "font-family:Comfortaa;"><strong>World War III</strong> <span class = "label label-default">New!</span></h1>
+</div>
+
+</div>
+
+
+<div class = "roll">
+<div class = "col-md-12">
+<div class = "panel panel-primary">
+<div class = "panel-heading">
+<h2 class = "Title" data-toggle = "collapse" href = "#collapse1" >Contact Info.</h2>
+</div>
+<div id = "collapse1" class = "panel-collapse collapse">
+<div class = "panel-body">
+<form>
+<div class = "form-group">
+<label for = "email">Please Enter Your Email <span class = "glyphicon glyphicon-envelope"></span></label>
+<input type = "email" class = "form-control" id = "email" required>
+</div>
+
+<div class = "form-group">
+<label for = "textarea">Please Leave Your Comment Here <span class = "glyphicon glyphicon-pencil"></span></label>
+<textarea class = "form-control" rows = 4  required></textarea>
+</div>
+
+<div class = "form-footer">
+<button type = "submit"  class = "btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class = "alert alert-warning fade in">
+<a href = "#" class = "close" data-dismiss = "alert" aria-label = "close"> &times </a>
+<strong>Warning:</strong> Please do not copy or remix the game anyhow, or else you are going to be sorry.
+</div>
+
+</body>
+
+
+
+</html>

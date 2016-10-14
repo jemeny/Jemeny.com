@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<html lang = "en">
+<head>
+<meta charset = "utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Comfortaa">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<title>Jemeny.com</title>
+<script src = "phaser.min.js"></script>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+    var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+      preload: preload, create: create, update: update
+    });
+	var ground;
+	var sky;
+	var player;
+	
+	function preload(){
+	game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+	game.scale.pageAlignHorizontally = true;
+	game.scale.pageAlignVertocally = true;
+	game.stage.backgroundColor = "#eee";
+	game.load.image("plateform", "img/paddle.png");
+	game.load.image("sky", "img/sky.png");
+	game.load.spritesheet("player", "img/dude.png");
+	}
+	function create(){
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+	game.physics.arcade.checkCollision.down = false;
+	sky = game.add.sprite(0,0,"sky");
+	ground = game.add.group();
+	ground.enableBody = true;
+	var ledge = ground.create(10, 45, "plateform");
+	ledge.body.immovable = true;
+    player = game.add.sprite(0,0,"player");
+	game.physics.arcade.enable(player);
+	player.body.bounce.set(1);
+    player.body.gravity.y = 300;
+    player.body.collideWorldBounds = true;
+	 player.animations.add('left', [0, 1, 2, 3], 10, true);
+    player.animations.add('right', [5, 6, 7, 8], 10, true);
+
+	}
+	function update(){
+	game.physics.arcade.collide("player","ground");
+	}
+	
+</script>
+</body>
