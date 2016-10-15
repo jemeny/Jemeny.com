@@ -105,7 +105,8 @@ color:teal;	}
 	}
 	
 	.game_area{
-		margin:40px;
+		margin:45px;
+		padding:15px;
 	}
 	
 	@media screen and (max-width: 480px) {
@@ -171,6 +172,7 @@ color:teal;	}
 	<div class= "game_area">
 
 		<canvas id = "canvas"></canvas>
+		<span>Mingle's Exploit</span>
 <script>
     var game = new Phaser.Game(480, 320, Phaser.AUTO, "canvas", {
       preload: preload, create: create, update: update
