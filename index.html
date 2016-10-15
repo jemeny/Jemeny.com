@@ -170,8 +170,9 @@ color:teal;	}
 
 	<div class= "game_area">
 
+		<canvas id = "canvas"></canvas>
 <script>
-    var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+    var game = new Phaser.Game(480, 320, Phaser.AUTO, "canvas", {
       preload: preload, create: create, update: update
     });
 	var player1;
