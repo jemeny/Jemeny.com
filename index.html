@@ -139,7 +139,7 @@ color:teal;	}
 <div class = "nav-bar">
 	<ul>
 		<li><a href = "index.html">Home</a></li>
-		<li><a href = "game.html">Game</a></li>
+		<li><a href = "Mingle's Exploit.html">Game</a></li>
 		<li><a href = "doggy.html">More</a></li>
 	</ul>
 	
@@ -171,10 +171,9 @@ color:teal;	}
 
 	<div class= "game_area">
 
-		<canvas id = "canvas"></canvas>
 		<span>Mingle's Exploit</span>
 <script>
-    var game = new Phaser.Game(480, 320, Phaser.AUTO, "canvas", {
+    var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
       preload: preload, create: create, update: update
     });
 	var player1;
