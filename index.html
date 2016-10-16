@@ -186,6 +186,20 @@
 	.footer h6{
 		margin:25px;
 	}
+	
+	#ghost-icon{
+		position:relative;
+		animation-name:moving;
+		animation-duration: 5s;
+	}
+	
+	@keyframes moving{
+		0% {left:0px top:0px;}
+		25%{left:100px; top:0px;}
+		50%{left:100px; top:150px;}
+		75%{left:0px; top:100px;}
+		100%{left:0px; top:0px;}
+	}
 
 </style>
 </head>
@@ -228,7 +242,7 @@
 	</div>
 	
 	<section class = "Guide">
-		<h1>Jemeny's Features <img style = "display:inline-block; width:50px; height:auto; margin:auto;" src = "https://lh3.googleusercontent.com/CVeS0fuQfqz6CxWBWGMzpNjI61h9yL-WBezepQ1cZzp7KQQbnVu886W0priNcjJLt7k=w300"/></h1>
+		<h1>Jemeny's Features <img id = "ghost-icon" style = "display:inline-block; width:70px; height:auto; margin:auto;" src = "https://lh3.googleusercontent.com/CVeS0fuQfqz6CxWBWGMzpNjI61h9yL-WBezepQ1cZzp7KQQbnVu886W0priNcjJLt7k=w300"/></h1>
 	</section>
 	
 	<section class = "latest-news">
