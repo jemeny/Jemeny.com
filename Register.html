@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html>
+<html lang = "en">
+<head>
+<meta charset = "utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<title>Jemeny Register</title>
+<script src = "phaser.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+	<link href = "https://fonts.googleapis.com/css?family=Eczar" rel = "stylesheet" type = 'text/css'>
+<style>
+	
+	li{
+		display:inline-block;
+	}
+	
+        a{
+		font-family:Comfortaa;
+		font-size:20px;
+		text-decoration:none;
+		color:white;
+		padding:10px;
+		 margin:25px;
+		transition-duration: 0.5s;
+	}
+	
+        li a:hover{
+                color:teal;	}
+	
+	html{
+		background-image:url("background.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	
+	.caption{
+		color:white;
+		font-size:60px;
+		text-align:center;
+		padding:10px;
+		margin:5px;
+		text-shadow: 1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF,  0px 0px 20px #1C86EE;
+		font-family:Comfortaa;
+	}
+	
+	section h1{
+		color:white;
+		font-size:40px;
+		text-align:center;
+		padding:10px;
+		margin:5px;
+		text-shadow: 1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF,  0px 0px 20px #1C86EE;
+		font-family:Comfortaa;
+		
+	}
+	
+	.tageline{
+		color:white;
+		font-size:25px;
+		font-family:Eczar;
+		padding:10px;
+		margin:3px;
+		text-align:center;
+	}
+	
+	.button{
+		text-align: center;
+		padding:15px;
+		position:absolute;
+		left:40%;
+		background-color:#008CBA;
+		display:inline-block;
+                color:white;
+                font-size:20px;
+		border:none;
+		text-decoration:none;
+		border-radius:5px;
+		transition-duration:0.5s;
+		font-family:Comfortaa;
+	}
+	
+	button:hover{
+		background-color:#EEA2AD;
+		cursor:pointer;
+	}
+	
+	.button1{
+		text-align: center;
+		padding:15px;
+		position:absolute;
+		left:50%;
+		background-color:#008CBA;
+		display:inline-block;
+                color:white;
+                font-size:20px;
+		border:none;
+		text-decoration:none;
+		border-radius:5px;
+		transition-duration:0.5s;
+		font-family:Comfortaa;
+	
 
+	  
+	}
+	
+	h2{
+		color:white;
+		font-size:20px;
+		display:block;
+		text-align:center;
+		margin:10px;
+	}
+	
+	.footer{
+		clear:both;
+		text-align:center;
+		font-family:Comfortaa;
+		font-size:25px;
+		color:teal;
+		padding:15px;
+		margin:20px;
+		
+		
+	}
+	
+	.game_area{
+		margin:45px;
+		padding:15px;
+	}
+	
+	@media screen and (max-width: 480px) {
+		.button{
+			width:100%;
+			left:0%;
+			margin:10px;
+			display:block;
+			
+		}
+		
+		.button1{
+			width:100%;
+			left:0%;
+			top:75%;
+			margin:10px;
+			display:block;
+			
+		}
+	}
+	
+	.reg{
+		border:none;
+		background-color:#EEB422;
+		text-align:center;
+		transition-duration:0.5s;
+		border-radius:5px;
+	}
+	
+	.reg:hover{
+		background-color:#EE9A00;
+		cursor:pointer;
+	}
+	
+	.footer button{
+		display:block;
+		padding:10px;
+		text-align:center;
+		width:200px;
+		height:50px;
+		margin:auto;
+		color:white;
+		font-family:Comfortaa;
+		font-size:20px;
+		border:none;
+		text-decoration:none;
+		transition-duration:0.5s;
+		background-color:#66CDAA;
+		
+	}
+	
+.footer button:hover{
+	background-color:#EEAD0E;
+	cursor:pointer;
+	}
+	
+	.footer h6{
+		margin:25px;
+	}
+	
+	#ghost-icon{
+		position:relative;
+		animation-name:moving;
+		animation-duration: 4s;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+		animation-timing-function:ease-in;
+		animation-delay:2s;
+	}
+	
+	@keyframes moving{
+		0% {left:0px top:0px;}
+		10%{left:0px; top:0px;}
+		25%{left:100px; top:45px;}
+		50%{left:100px; top:100px;}
+		75%{left:0px; top:100px;}
+		100%{left:0px; top:0px;}
+	}
+	
+       .Guide p{
+		color:white;
+		font-family:Comfortaa;
+		font-size:20px;
+		float:right;
+	       display:inline-block;
+	       margin:10px;
+	       padding:15px;
+	}
+	
+	section{
+		display:block;
+		margin:15px;
+		clear:both;
+	}
+
+</style>
+</head>
