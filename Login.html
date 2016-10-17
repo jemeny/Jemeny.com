@@ -301,7 +301,7 @@
     var d = new Date();
     d.setTime(d.getTime() + (days*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
-    document.cookie = name + value + ";" + expires + ";path=/";
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 			
 			function eatCookie(cname) {
@@ -322,7 +322,7 @@
 			function checkCookie() {
     var username=eatCookie("username");
     if (username!="") {
-        alert("Welcome again " + username);
+        alert("Welcome again " + username + "!");
     } else {
         username = prompt("Please enter your name:", "");
         if (username != "" && username != null) {
