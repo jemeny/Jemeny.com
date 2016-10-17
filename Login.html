@@ -283,16 +283,19 @@
 		font-size:20px;
 		width:40%;
 		height:auto;
+		transition-duration:0.8s
 	}
 	
 	input[type = "submit"]:hover{
 		background-color:DeepSkyBlue;
 		cursor:pointer;
+		width:100%;
+		
 	}
 </style>
 </head>
 	
-	<body onload = checkCookie()>
+	<body onload = "checkCookie()">
 		<script>
 			function bakeCookie(name, value, days) {
     var d = new Date();
@@ -327,8 +330,6 @@
         }
     }
 }
-
-			
 		</script>
 		
 		
