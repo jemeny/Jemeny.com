@@ -297,6 +297,9 @@
 	
 	<body onload = "checkCookie()">
 		<script>
+			
+			var username = document.getElementById("user");
+			var password = document.getElementById("pass");
 			function bakeCookie(name, value, days) {
     var d = new Date();
     d.setTime(d.getTime() + (days*24*60*60*1000));
@@ -349,11 +352,11 @@
 			<form action = "Login.html" method = "get">
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
-					<input type = "text"/>
+					<input id = "user" type = "text"/>
 				</div>
 				<div class = "f-group">
 					<label for = "password">Please Enter your Password</label>
-					<input type = "password"/>
+					<input id = "pass" type = "password"/>
 					<br>
 					<input type = "submit"/>
 				</div>
