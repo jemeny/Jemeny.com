@@ -262,6 +262,25 @@
 		opacity:0.6;
 		border-image:url(Border.png) 15% stretch;
 	}
+	
+	input[type='submit']{
+		width:50%;
+		margin:auto;
+		text-align:center;
+		padding:5px;
+		font-size:20px;
+		font-family:Comfortaa;
+		color:white;
+		background-color:hotpink;
+		transition-duration:0.6s;
+	}
+	
+	input[type='submit']:hover{
+		width:100%;
+		background-color:#CD6090;
+	}
+	
+	
 </style>
 </head>
 	
@@ -274,9 +293,8 @@
 			 var d = new Date();
 			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
-			document.cookie = "User_name" + "=" + username + ";" + expires + ";path=/";
+			document.cookie = "User_name" + "=" + username.value + ";" + expires + ";path=/";
 			var cookie = document.cookie;
-			alert(cookie);
 							     
 		</script>
 	
@@ -308,6 +326,8 @@
 				<label for = "password">Password</label> <input id = "ps" type = "password">
 				
 				<label for = "password">Confirm Password</label> <input id = "cps" type = "password">
+				
+				<input type = "submit"/>
 			
 			</form>
 			
