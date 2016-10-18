@@ -318,6 +318,7 @@
 			var username = document.getElementById('user').value;
 			var password = document.getElementById('pass').value;
 			
+			function Login() {
 			for(i=0; i<User.length; i++){
 				if(username == User[i].username && password == User[i].password){
 					alert("Welcome" + username + "!");
@@ -326,7 +327,7 @@
 				}
 			}
 			
-			
+			}
 			
 			/*var username = document.getElementById("user");
 			var password = document.getElementById("pass");
@@ -389,7 +390,7 @@
 					<label for = "password">Please Enter your Password</label>
 					<input id = "pass" type = "password"/ require>
 					<br>
-					<input type = "submit"/>
+					<input type = "submit" onclick = "Login()" />
 				</div>
 			</form>
 		</div>
