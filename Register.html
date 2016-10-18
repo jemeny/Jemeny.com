@@ -260,10 +260,23 @@
 	
 	.form-div:hover{
 		opacity:0.6;
-		border-image:url(Border.png) 15% round;
+		border-image:url(Border.png) 15% stretch;
 	}
 </style>
 </head>
+	
+	<body>
+		<script>
+			var username = document.getElementById("user");
+			var password = document.getElemetById("ps");
+			var email = document.getElementById("email");
+			var comfirm = document.getElementById("cps");
+			 var d = new Date();
+			d.setTime(d.getTime() + (365*60*60*1000));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = 
+							     
+		</script>
 	
 	<div class = "container">
 <div class = "nav-bar">
@@ -286,13 +299,13 @@
 		<div class = "form-div">
 			<form>
 				
-				<label for = "text">Username</label> <input type = "text">
+				<label for = "text">Username</label> <input id = "user" type = "text">
 				
-				<label for = "email">Email</label> <input type = "email">
+				<label for = "email">Email</label> <input id = "email" type = "email">
 				
-				<label for = "password">Password</label> <input type = "password">
+				<label for = "password">Password</label> <input id = "ps" type = "password">
 				
-				<label for = "password">Confirm Password</label> <input type = "password">
+				<label for = "password">Confirm Password</label> <input id = "cps" type = "password">
 			
 			</form>
 			
@@ -300,3 +313,5 @@
 			
 		</center>
 	</div>
+		
+	</body>
