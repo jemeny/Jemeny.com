@@ -319,7 +319,7 @@
 			var password = document.getElementById('pass').value;
 			
 			function Login() {
-			for(i=0; i<User.length; i++){
+			for(var i=0; i<User.length; i++){
 				if(username == User[i].username && password == User[i].password){
 					alert("Welcome" + username + "!");
 				}else{
