@@ -295,13 +295,38 @@
 </style>
 </head>
 	
-	<body onload = "checkCookie()">
+	<body>
 		<script>
 			
-			var User = {
-				username:Jeff,
-				password:1sd23
+			var User = [
+				{
+				
+				username:'Jeff',
+				password:123543
+				},
+				{
+				
+				username:'Lane',
+				password:333678
+				},
+				{
+					username:'Tobias',
+					password:224349
+			
+				}
+				 ]
+			var username = document.getElementById('user').value;
+			var password = document.getElementById('pass').value;
+			
+			for(i=0; i<User.length; i++){
+				if(username == User[i].username && password == User[i].password){
+					alert("Welcome" + username + "!");
+				}else{
+					alert("Password and Username Doesn't match, Please Try Again");
+				}
 			}
+			
+			
 			
 			/*var username = document.getElementById("user");
 			var password = document.getElementById("pass");
@@ -352,21 +377,23 @@
 	</ul>
 		</div>
 		
+		<center>
 		<div class = "form">
 			
-			<form action = "Login.html" method = "get">
+			<form>
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
-					<input id = "user" type = "text"/>
+					<input id = "user" type = "text" require>
 				</div>
 				<div class = "f-group">
 					<label for = "password">Please Enter your Password</label>
-					<input id = "pass" type = "password"/>
+					<input id = "pass" type = "password"/ require>
 					<br>
 					<input type = "submit"/>
 				</div>
 			</form>
 		</div>
+		</center>
 		</div>
 
 		</body>
