@@ -234,10 +234,18 @@
 		margin:10px;
 	}
 	
+	input:focus{
+		border:1px solid teal;
+	}
+	
 	label{
 		color:white;
 		font-family:comfortaa;
 		font-size:20px;
+	}
+	
+	label:hover{
+		text-shadow: 1px 1px 2px teal, 0px 0px 20px #FF69B4, 0px 0px 23px #00B2EE;
 	}
 	
 	.form-div{
@@ -251,6 +259,10 @@
 		opacity:0.8;
 		border: 40px solid transparent;
 		border-image:url(Border.png) 15% round;
+	}
+	
+	.form-div:focus{
+		opacity:0.6;
 	}
 </style>
 </head>
