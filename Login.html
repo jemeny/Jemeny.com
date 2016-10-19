@@ -298,37 +298,17 @@
 	<body>
 		<script>
 			
-			var User = [
-				{
-				
-				username:'Jeff',
-				password:123543
-				},
-				{
-				
-				username:'Lane',
-				password:333678
-				},
-				{
-					username:'Tobias',
-					password:'Freeman'
-			
-				}
-				 ];
+			var user = prompt("What is your name?");
 			var username = document.getElementById('user').value;
 			var password = document.getElementById('pass').value;
+			  var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires = "; expires="+date.toGMTString();
+			document.cookie = ("username" = user; expire; "path=/";)
+			var cookies = document.cookie;
 			
 			function Login() {
-			for(var i=0; i<User.length; i++){
-				if(username == User[i].username && password == User[i].password){
-					alert("Welcome" + username + "!");
-				}
-			}
-				
-				
-				alert("Password and Username Doesn't match, Please Try Again");
-				
-			
+				console.log(cookies);
 			}
 			
 			
