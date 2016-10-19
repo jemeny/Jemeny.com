@@ -297,18 +297,15 @@
 	
 	<body>
 		<script>
-			
-			var user = prompt("What is your name?");
 			var username = document.getElementById('user').value;
 			var password = document.getElementById('pass').value;
-			  var date = new Date();
-			date.setTime(date.getTime()+(days*24*60*60*1000));
-			var expires = "; expires="+date.toGMTString();
-			document.cookie = ("username" = user; expire; "path=/";)
-			var cookies = document.cookie;
+	
 			
 			function Login() {
-				console.log(cookies);
+				var user = prompt("What is your name?");
+				if(username == user){
+					alert("Welcome" + user);
+				}
 			}
 			
 			
