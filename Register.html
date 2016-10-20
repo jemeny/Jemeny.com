@@ -289,10 +289,10 @@
 			var username = document.forms['form']['user'].value;
 			var password = document.forms['form']['ps'].value;
 			 var d = new Date();
-			d.setTime(d.getTime() + (0*24*60*60*1000));
+			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
 			document.cookie = "Username1" + "=" + username + ";" + expires + ";path=Login.html";
-			document.cookie = "Password1" + "=" + password + ";" + expires + ";path=/";
+			document.cookie = "Password1" + "=" + password + "; Thursday, October 19, 2016 t 10:47:38 PM
 			var cookie = document.cookie;
 			alert(cookie);
 			}
