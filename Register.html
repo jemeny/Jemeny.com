@@ -290,10 +290,10 @@
 			 var d = new Date();
 			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
-			document.cookie = "JUsername" + "=" + username + ";" + expires + ";path=/";
-			document.cookie = "JPassword" + "=" + password + ";" + expires + ";path=/";
-			document.cookie = "JEmail" + "=" + email + ";" + expires + ";path=/";
-			document.cookie = "JComfirm" + "=" + comfirm + ";" + expires + ";path=/";
+			document.cookie = "Username1" + "=" + username + ";" + expires + ";path=/";
+			document.cookie = "Password1" + "=" + password + ";" + expires + ";path=/";
+			document.cookie = "email" + "=" + email + ";" + expires + ";path=/";
+			document.cookie = "comfirm" + "=" + comfirm + ";" + expires + ";path=/";
 			var cookie = document.cookie;
 			alert(cookie);
 			}				     
