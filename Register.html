@@ -282,12 +282,12 @@
 	<body>
 		<script>
 			
-			var username = document.forms['form']['user'].value;
-			var password = document.Forms['form']['ps'].value;
 			var email = document.getElementById("email").value;
 			var comfirm = document.getElementById("cps").value;
 			
 			function Bake(){
+			var username = document.forms['form']['user'].value;
+			var password = document.forms['form']['ps'].value;
 			 var d = new Date();
 			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
@@ -318,7 +318,7 @@
 			<br>
 
 		<div class = "form-div">
-			<form name = "form">
+			<form name = "form" onsubmit = "Bake()" action = "/">
 				
 				<label for = "text">Username</label> <input name = "user" id = "user" type = "text" required>
 				
@@ -328,7 +328,7 @@
 				
 				<label for = "password">Confirm Password</label> <input name = "confirm" id = "cps" type = "password" required>
 				
-				<input type = "submit" value = "Submit" onclick = "Bake();" />
+				<input type = "submit" value = "Submit" />
 			
 			</form>
 			
