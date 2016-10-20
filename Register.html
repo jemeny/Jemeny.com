@@ -282,8 +282,8 @@
 	<body>
 		<script>
 			
-			var username = document.getElementById("user").value;
-			var password = document.getElemetById("ps").value;
+			var username = document.forms['form']['user'].value;
+			var password = document.Forms['form']['ps'].value;
 			var email = document.getElementById("email").value;
 			var comfirm = document.getElementById("cps").value;
 			
@@ -291,10 +291,10 @@
 			 var d = new Date();
 			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
-			document.cookie = "Username=Jeff" + ";" + expires + ";path=/";
-			document.cookie = "Pass=Jun" + ";" + expires + ";path=/";
+			document.cookie = "Username1" + "=" + username + ";" + expires + ";path=/";
+			document.cookie = "Password1" + "=" + password + ";" + expires + ";path=/";
 			var cookie = document.cookie;
-			//alert(cookie);
+			alert(cookie);
 			}
 							     
 		</script>
@@ -318,15 +318,15 @@
 			<br>
 
 		<div class = "form-div">
-			<form>
+			<form name = "form">
 				
-				<label for = "text">Username</label> <input id = "user" type = "text" required>
+				<label for = "text">Username</label> <input name = "user" id = "user" type = "text" required>
 				
-				<label for = "email">Email</label> <input id = "email" type = "email" required>
+				<label for = "email">Email</label> <input name = "email" id = "email" type = "email" required>
 				
-				<label for = "password">Password</label> <input id = "ps" type = "password" required>
+				<label for = "password">Password</label> <input name = "ps" id = "ps" type = "password" required>
 				
-				<label for = "password">Confirm Password</label> <input id = "cps" type = "password" required>
+				<label for = "password">Confirm Password</label> <input name = "confirm" id = "cps" type = "password" required>
 				
 				<input type = "submit" value = "Submit" onclick = "Bake();" />
 			
