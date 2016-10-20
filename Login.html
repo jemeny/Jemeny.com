@@ -297,18 +297,9 @@
 	
 	<body>
 		<script>
-			var username = document.getElementById('user').value;
-			var password = document.getElementById('pass').value;
-			var user = prompt("What is your name?");
-			var pas = prompt("What is your password?");
 	
-			
-			function Login() {
-
-				if(username == user && password == pas){
-					alert("Welcome" + "" + user);
-				}
-			}
+			var cookie = document.cookie;
+			confirm(cookie);
 			
 			
 		</script>
