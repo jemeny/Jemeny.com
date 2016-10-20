@@ -281,14 +281,15 @@
 	
 	<body>
 		<script>
-			var username = document.getElementById("user");
-			var password = document.getElemetById("ps");
-			var email = document.getElementById("email");
-			var comfirm = document.getElementById("cps");
+			var username = document.getElementById("user").value;
+			var password = document.getElemetById("ps").value;
+			var email = document.getElementById("email").value;
+			var comfirm = document.getElementById("cps").value;
 			 var d = new Date();
 			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
-			document.cookie = "User_name" + "=" + username.value + ";" + expires + ";path=/";
+			document.cookie = "Username" + "=" + username + ";" + expires + ";path='Login.html'";
+			document.cookie = "Pass" + "=" + password + ";" + expires + ";path='Login.html'";
 			var cookie = document.cookie;
 							     
 		</script>
