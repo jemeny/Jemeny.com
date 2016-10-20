@@ -264,6 +264,31 @@
 		opacity:0.5;
 	}
 	
+	.img_page{
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		background-color:black;
+		z-index:1;
+		opacity:0.8;
+	}
+	
+	#descript{
+		display:block;
+		padding:10px;
+		clear:both;
+		text-align:center;
+		font-family:Comfortaa;
+		font-size:25px;
+		text-shadow: 1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF,  0px 0px 20px #1C86EE;
+	}
+	
+	.myImage{
+		display:none;
+		border-radius:5px;
+	}
+	
 </style>
 </head>
 
@@ -313,7 +338,27 @@
 		
 		<h1>Jemeny's Features  <img id = "ghost-icon" style = "display:inline-block;  width:70px; height:auto;" src = "https://lh3.googleusercontent.com/CVeS0fuQfqz6CxWBWGMzpNjI61h9yL-WBezepQ1cZzp7KQQbnVu886W0priNcjJLt7k=w300"/></h1>
 			
-			<img id = "jgaming" alt = "Jemeny Gaming"  src = "http://cdn.wallpapersafari.com/1/56/WPbvqJ.jpg"/>
+			<img id = "jgaming" alt = "Jemeny Entertainment" src = "http://cdn.wallpapersafari.com/1/56/WPbvqJ.jpg"/>
+
+		<div class = "img_page" id = "model">
+			<span id = "close" >close</span>
+			<img class = "myImage" id = "my_image"/>
+			<h1 id = "descript"></h1>
+		</div>
+		
+		<script>
+			var img = document.getElementById("jgaming");
+			var img_model = document.getElementById("my_image");
+			var model = document.getElementById("model");
+			var cls = document.getElementById("close");
+			var caption = document.getElementById("descript");
+			
+			img.onclick = function(){
+				img_model.style.display = "block";
+				img_model.src = this.src;
+				caption.innerHtml = this.alt;
+			}
+		</script>
 			
 		
 			<p><span style = "font-size:30px; color:white; text-shadow:1px 1px 2px teal, 0px 0px 20px #8470FF, 0px 0px 20px #4876FF,  0px 0px 20px #1C86EE; ">Jemeny's</span> entertaining games are created using html canvas. <br>
