@@ -281,6 +281,7 @@
 	
 	<body>
 		<script>
+			function Bake(){
 			var username = document.getElementById("user").value;
 			var password = document.getElemetById("ps").value;
 			var email = document.getElementById("email").value;
@@ -288,9 +289,8 @@
 			 var d = new Date();
 			d.setTime(d.getTime() + (365*24*60*60*1000));
 			var expires = "expires="+ d.toUTCString();
-			function Bake(){
 			document.cookie = "Username" + "=" + username + ";" + expires + ";path=/";
-			document.cookie = "Pass" + "=" + password + ";" + expires + ";path=Login.html";
+			document.cookie = "Pass" + "=" + password + ";" + expires + ";path=/";
 			var cookie = document.cookie;
 			alert(cookie);
 			}
