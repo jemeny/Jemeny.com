@@ -314,9 +314,11 @@
 			}
 				
 				function Check(){
-					var username = Eat('Jemeny_Username'); 
-					if(username != ""){
-						alert("You already have an account," + "" + username + "!");
+					var user = Eat('Jemeny_Username'); 
+					var pass = Eat('Jemeny_Password');
+					var email = Eat('Jemeny_Email');
+					if(user && pass && email != ""){
+						alert("You already have an account," + "" + user + "!");
 					}else{
 						Bake();
 					}
