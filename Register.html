@@ -287,8 +287,8 @@
 			var d = new Date();
   			d.setTime(d.getTime() + (365*24*60*60*1000));
   			var expires = "expires="+ d.toUTCString();
- 		        document.cookie = "Username1" + "=" + username + "; Tuesday, October 17, 2017 at 6:26:47 PM ;path=/";
-  			document.cookie = "Password1" + "=" + password + "; Tuesday, October 17, 2017 at 6:26:47 PM ;path=/";
+ 		        document.cookie = "Username1" + "=" + username + "; Tuesday, October 17, 2017 at 6:26:47 PM UTC ; path=/";
+  			document.cookie = "Password1" + "=" + password + "; Tuesday, October 17, 2017 at 6:26:47 PM UTC ; path=/";
   			var cookie = document.cookie;  
 			alert(cookie);
   			
