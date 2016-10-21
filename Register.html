@@ -297,7 +297,38 @@
 				var dog = document.cookie;
 				alert(dog);
   			
-		}				     
+		}		
+			
+			function Eat(cname) {
+				var name = cname + "=";
+				var ca = document.cookie.split(';');
+				for(var i = 0; i <ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length,c.length)
+					}
+				
+					return "";
+				}
+				
+				function Digest(){
+					
+					  var username= Eat("username");
+					var password = Eat("password");
+					var email = Eat("email");
+					if (username && password && email!="") {
+						alert("Welcome again " + username);
+					} else {
+						Bake();
+					}
+				}
+			}
+						  
+          
+        
 		</script>
 	
 	<div class = "container">
@@ -319,7 +350,7 @@
 			<br>
 
 		<div class = "form-div">
-			<form name = "form" onsubmit ="Bake();">
+			<form name = "form" onsubmit ="Digest();">
 				
 				<label for = "text">Username</label> <input name = "user" id = "user" type = "text" required>
 				
