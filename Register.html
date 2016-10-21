@@ -285,10 +285,15 @@
 			function Bake(){
 				var username = document.forms['form']['user'].value;
 				var password = document.forms['form']['ps'].value;
+				var email = document.forms['form']['email'].value;
+				var confirm = document.forms['form']['confirm'].value;
 				var d = new Date();
 				d.setTime(d.getTime() + (365*24*60*60*1000));
 				var expires = "expires="+ d.toUTCString();
-				document.cookie = "username" + "=" + username;
+				document.cookie = "username" + "=" + username + ";" + expires + ";path=/";
+				document.cookie = "password" + "=" + password + ";" + expires + ";path=/";
+				document.cookie = "email" + "=" + email + ";" + expires + ";path=/";
+				document.cookie = "confirm" + "=" + confirm + ";" + expires + ";path=/";
 				var dog = document.cookie;
 				alert(dog);
   			
