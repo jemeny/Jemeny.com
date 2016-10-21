@@ -280,20 +280,19 @@
 	
 	<body>
 		<script>
-			
-			var username = document.forms['form']['user'].value;
+		
+			function Bake(){
+				var username = document.forms['form']['user'].value;
 				var password = document.forms['form']['ps'].value;
 				var email = document.forms['form']['email'].value;
 				var confirm = document.forms['form']['confirm'].value;
-		
-			function Bake(){
 				var d = new Date();
 				d.setTime(d.getTime() + (365*24*60*60*1000));
 				var expires = "expires="+ d.toUTCString();
-				document.cookie = "username" + "=" + username;
-				document.cookie = "password" + "=" + password;
-				document.cookie = "email" + "=" + email;
-				document.cookie = "confirm" + "=" + confirm;
+				document.cookie = "username" + "=" + username + ";" + expire + ";path=/";
+				document.cookie = "password" + "=" + password + ";" + expire + ";path=/";
+				document.cookie = "email" + "=" + email + ";" + expire + ";path=/";
+				document.cookie = "confirm" + "=" + confirm + ";" + expire + ";path=/";
 				var dog = document.cookie;
 				alert(dog);
   			
