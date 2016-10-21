@@ -283,8 +283,8 @@
 			
 		
 			function Bake(){
-				var username = document.form['form']['user'];
-				var password = document.form['form']['ps'];
+				var username = document.form['form']['user'].value;
+				var password = document.form['form']['ps'].value;
 				var d = new Date();
 				d.setTime(d.getTime() + (365*24*60*60*1000));
 				var expires = "expires="+ d.toUTCString();
