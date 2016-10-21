@@ -281,12 +281,12 @@
 	<body>
 		<script>
 			
-		
-			function Bake(){
-				var username = document.forms['form']['user'].value;
+			var username = document.forms['form']['user'].value;
 				var password = document.forms['form']['ps'].value;
 				var email = document.forms['form']['email'].value;
 				var confirm = document.forms['form']['confirm'].value;
+		
+			function Bake(){
 				var d = new Date();
 				d.setTime(d.getTime() + (365*24*60*60*1000));
 				var expires = "expires="+ d.toUTCString();
@@ -299,8 +299,8 @@
   			
 		}		
 			
-			function Eat(cname) {
-				var name = cname + "=";
+			function Eat(doggy) {
+				var name = doggy + "=";
 				var ca = document.cookie.split(';');
 				for(var i = 0; i <ca.length; i++) {
 					var c = ca[i];
@@ -316,14 +316,13 @@
 				
 				function Digest(){
 					
+					Bake();
 					  var username= Eat("username");
 					var password = Eat("password");
 					var email = Eat("email");
-					if (username && password && email!="") {
+					if (username !="") {
 						alert("Welcome again " + username);
-					} else {
-						Bake();
-					}
+					} 
 				}
 			}
 						  
