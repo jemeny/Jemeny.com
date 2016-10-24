@@ -1,7 +1,7 @@
 
 <?php
 
-if(isset($_GET['']))
+if(isset($_GET['sub']))
 {
   $username = $GET['user'];
   $password = $GET['ps'];
