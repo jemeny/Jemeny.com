@@ -293,6 +293,10 @@
 		width:100%;
 		
 	}
+	.submit_butt:hover{
+		width:100%;
+		background-color:hotpink;
+	}
 	
 </style>
 		</head>
@@ -325,8 +329,7 @@
 					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
 					<br>
 				</div>
-			<button onclick = "Check()">Login</button>
-			<p id = "announce"></p>
+			<button class = "submit_butt" style = "color:white; border:none; background-color:DeepSkyBlue; padding:10px; font-family:Comfortaa; font-size:20px; tansition-duration:0.6s;" onclick = "Check()">Login</button>
 			<script>
 	
 			/*var cookie = document.cookie;
@@ -360,7 +363,26 @@
 				
 					if(document.getElementById('user').value == 'Jon' && document.getElementById('pass').value == 'jkbsd'){
 						alert('Welcome to Jemeny,' + document.getElementById('user').value + '!');
-						document.getElementById('announce').innerHTML = "Welcome to Jemeny" + username + "!";
+					}else{
+						alert("Password and username doesn't match.");
+					}
+				if(document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'ohbasd'){
+						alert('Welcome to Jemeny,' + document.getElementById('user').value + '!');
+					}else{
+						alert("Password and username doesn't match.");
+					}
+				if(document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'kasdls'){
+						alert('Welcome to Jemeny,' + document.getElementById('user').value + '!');
+					}else{
+						alert("Password and username doesn't match.");
+					}
+				if(document.getElementById('user').value == 'Collin' && document.getElementById('pass').value == 'asdxx'){
+						alert('Welcome to Jemeny, Antonias Druses CEO,' + document.getElementById('user').value + '!');
+					}else{
+						alert("Password and username doesn't match.");
+					}
+				if(document.getElementById('user').value == 'Dario' && document.getElementById('pass').value == 'hhgasd'){
+						alert('Welcome to Jemeny, Drago CEO,' + document.getElementById('user').value + '!');
 					}else{
 						alert("Password and username doesn't match.");
 					}
