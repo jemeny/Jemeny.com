@@ -326,9 +326,10 @@
 					pwd:  "Jkddioi"
 				}
 					
-				   ]
-				var username = document.forms['form']['username'].value;
-				var password = document.forms['form']['password'].value;
+				   ];
+				var username = document.getElementById('user').value;
+				var password = document.getElementById('pass').value;
+				
 				for(var i=0; i<users.length, i++){
 					if(username == users[i].name && password == users[i].pwd){
 						alert('Welcome to Jemeny,' + username + '!');
@@ -356,18 +357,17 @@
 		<center>
 		<div class = "form">
 			
-			<form name = "form">
+			<!--<form name = "form">-->
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
-					<input id = "user" name = "username" type = "text" require>
+					<input id = "user" name = "username" type = "text" onclick = "document.getElementById('user').value = '';" require>
 				</div>
 				<div class = "f-group">
 					<label for = "password">Please Enter your Password</label>
-					<input id = "pass" name = "password" type = "password"/ require>
+					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
 					<br>
-					<input type = "submit" onclick = "Check()" />
 				</div>
-			</form>
+			<p id = "announce"></p>
 		</div>
 		</center>
 		</div>
