@@ -388,6 +388,7 @@
 					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Password and Username does not match, please try again.</p>';
 				}*/
 				
+				if(document.getElementById('user').value && document.getElementById('pass').value !== ''){
 				if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
             if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true'}
             if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
@@ -403,6 +404,11 @@
             document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, you are logged in!';
             a = 'false';
             } else { document.getElementById('doogy').innerHTML = 'The username and password does not match.'}
+			}
+				else{
+					document.getElementById('doogy').style = 'color:red';
+					document.getElementById('doogy').innerHTML = 'The username and password does not match.'innerHTML = 'The username and password does not match.';
+				}
 			}
 			
 		
