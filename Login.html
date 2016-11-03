@@ -293,6 +293,7 @@
 		width:100%;
 		
 	}
+	
 </style>
 		</head>
 	
@@ -303,7 +304,8 @@
 			confirm(cookie);
 			*/
 			
-			var users = [
+			function Check(){
+				var users = [
 				{
 				name: "Jon",
 				pwd: "jkbsd"
@@ -325,14 +327,13 @@
 				}
 					
 				   ]
-			
-			function Check(){
-				
 				var username = document.forms['form']['username'].value;
 				var password = document.forms['form']['password'].value;
 				for(var i=0; i<users.length, i++){
 					if(username == users[i].name && password == users[i].pwd){
 						alert('Welcome to Jemeny,' + username + '!');
+					}else{
+						alert("Password and username doesn't match.");
 					}
 				}
 			}
