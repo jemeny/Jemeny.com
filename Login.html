@@ -344,6 +344,7 @@
 			*/
 			
 			function Check(){
+				var a = 'false'
 				/*var users = [
 				{
 				name: "Jon",
@@ -365,9 +366,8 @@
 					pwd:  "Jkddioi"
 				}
 					
-				   ];*/
+				   ];
 				
-				var a = 'false';
 				
 					if(document.getElementById('user').value == 'Jon' && document.getElementById('pass').value == 'jkbsd'){
 						a = 'true';
@@ -390,8 +390,23 @@
 				a = 'false';
 				}else{
 					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Password and Username does not match, please try again.</p>';
-				}
+				}*/
 				
+				if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
+            if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true' }
+            if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
+            if (document.getElementById('user').value == 'Dan' && document.getElementById('pass').value == 'olppas') { a = 'true' }
+            if (document.getElementById('user').value == 'Tobias' && document.getElementById('pass').value == 'olkasd') { a = 'true' }
+            if (document.getElementById('user').value == 'Daniel' && document.getElementById('pass').value == 'jjiolh') { a = 'true' }
+            if (document.getElementById('user').value == 'Jon' && document.getElementById('pass').value == 'jkbsd') { a = 'true' }
+            if (document.getElementById('user').value == 'Dario' && document.getElementById('pass').value == 'jasdka') { a = 'true' }
+            if (document.getElementById('user').value == 'Collin' && document.getElementById('pass').value == 'asdja') { a = 'true' }
+            if (document.getElementById('user').value == 'Pj' && document.getElementById('pass').value == 'jhasdk') { a = 'true' }
+          if (document.getElementById('user').value == 'Trey' && document.getElementById('pass').value == 'asdask') { a = 'true' }
+          if(a == 'true'){
+            document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, you are logged in!';
+            a = 'false';
+            } else { document.getElementById('doogy').innerHTML = 'The username and password does not match.';
 			}
 			
 		</script>
