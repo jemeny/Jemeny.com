@@ -294,7 +294,7 @@
 		
 	}
 </style>
-</head>
+		</head>
 	
 	<body>
 		<script>
@@ -303,13 +303,37 @@
 			confirm(cookie);
 			*/
 			
+			var users = [
+				{
+				name: "Jon",
+				pwd: "jkbsd"
+				},
+				
+				{
+				name: "Jeff",
+				pwd: "jasdf"
+				},
+				
+				{
+					name: "Lane",
+					pwd: "Dasdda"
+				},
+				
+				{
+					name: "Collin",
+					pwd:  "Jkddioi"
+				}
+					
+				   ]
+			
 			function Check(){
 				
 				var username = document.forms['form']['username'].value;
 				var password = document.forms['form']['password'].value;
-				if(username == "Jon" && password == "jkbsd"){
-					alert('Welcome to Jemeny, Jon!');
-					var cookie = ("username = Jon");
+				for(var i=0; i<users.length, i++){
+					if(username == users[i].name && password == users[i].pwd){
+						alert('Welcome to Jemeny,' + username + '!');
+					}
 				}
 			}
 			
@@ -331,7 +355,7 @@
 		<center>
 		<div class = "form">
 			
-			<form name = "form" action = "Index.html" method = "post">
+			<form name = "form" action = "/" method = "post">
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
 					<input id = "user" name = "username" type = "text" require>
