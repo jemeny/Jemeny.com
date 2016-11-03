@@ -297,13 +297,7 @@
 	.submit_butt:hover{
 		background-color:hotpink;
 	}
-	
-	ul{
-		
-		margin:0;
-		padding:0;
-	}
-	
+
 </style>
 		</head>
 	
@@ -312,7 +306,7 @@
 		
 	<div class = "container">
 <div class = "nav-bar" style = "background-image:none;">
-	<ul>
+	<ul style = "margin:0; padding:0;">
 		<li><a href = "index.html">Home</a></li>
 		<li><a href = "Mingle's Exploit.html">Game</a></li>
 		<li><a href = "Blog.html">Blog</a></li>
@@ -323,8 +317,7 @@
 		</div>
 		
 		<center>
-		<div class = "form">
-			
+		<div class = "form" style = "background-color:grey; opacity:0.8;">
 			<!--<form name = "form">-->
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
@@ -388,7 +381,6 @@
 					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Password and Username does not match, please try again.</p>';
 				}*/
 				
-				if(document.getElementById('user').value && document.getElementById('pass').value !== ''){
 				if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
             if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true'}
             if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
@@ -404,11 +396,6 @@
             document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, you are logged in!';
             a = 'false';
             } else { document.getElementById('doogy').innerHTML = 'The username and password does not match.'}
-			}
-				else{
-					document.getElementById('doogy').style = 'color:red';
-					document.getElementById('doogy').innerHTML = 'The username and password does not match.'innerHTML = 'The username and password does not match.';
-				}
 			}
 			
 		
