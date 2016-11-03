@@ -334,7 +334,7 @@
 			*/
 			
 			function Check(){
-				var users = [
+				/*var users = [
 				{
 				name: "Jon",
 				pwd: "jkbsd"
@@ -355,18 +355,15 @@
 					pwd:  "Jkddioi"
 				}
 					
-				   ];
-				var username = document.getElementById('user').value;
-				var password = document.getElementById('pass').value;
+				   ];*/
 				
-				for(var i=0; i<users.length, i++){
-					if(username == users[i].name && password == users[i].pwd){
-						alert('Welcome to Jemeny,' + username + '!');
+				
+					if(document.getElementById('user').value == 'Jon' && document.getElementById('pass').value == 'jkbsd'){
+						alert('Welcome to Jemeny,' + document.getElementById('user').value + '!');
 						document.getElementById('announce').innerHTML = "Welcome to Jemeny" + username + "!";
 					}else{
 						alert("Password and username doesn't match.");
 					}
-				}
 			}
 			
 		</script>
