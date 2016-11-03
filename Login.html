@@ -336,7 +336,7 @@
 					<br>
 				</div>
 			<button class = "submit_butt" style = "color:white; border:none; background-color:DeepSkyBlue; padding:10px; font-family:Comfortaa; font-size:20px; transition-duration:0.6s;" onclick = "Check()">Login</button>
-			<p style = "color:teal; font-size:25px; font-family:Exo;" id = "doogy"></p>
+			<div id = "doogy"></div>
 			<script>
 	
 			/*var cookie = document.cookie;
@@ -367,27 +367,29 @@
 					
 				   ];*/
 				
-				var a = false;
+				var a = 'false';
 				
 					if(document.getElementById('user').value == 'Jon' && document.getElementById('pass').value == 'jkbsd'){
-						a = true;
+						a = 'true';
 					}
 				if(document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'ohbasd'){
-						a = true;
+						a = 'true';
 					}
 				if(document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'kasdls'){
-						a = true;
+						a = 'true';
 				}
 				if(document.getElementById('user').value == 'Collin' && document.getElementById('pass').value == 'asdxx'){
-						a = true;
+						a = 'true';
 					}
 				if(document.getElementById('user').value == 'Dario' && document.getElementById('pass').value == 'hhgasd'){
-					        a = true;
+					        a = 'true';
 					}
 				
-				if(a == true){
-					document.getElementById('doogy').innerHTML = '<div style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Welcome to Jemeny!, + "username" + "!"</div>'
-				
+				if(a == 'true'){
+					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Welcome to Jemeny, you are succesfully logged in.</p>';
+				a = 'false';
+				}else{
+					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Password and Username does not match, please try again.</p>';
 				}
 				
 			}
