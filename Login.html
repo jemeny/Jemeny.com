@@ -336,6 +336,7 @@
 					<br>
 				</div>
 			<button class = "submit_butt" style = "color:white; border:none; background-color:DeepSkyBlue; padding:10px; font-family:Comfortaa; font-size:20px; transition-duration:0.6s;" onclick = "Check()">Login</button>
+			<p style = "color:teal; font-size:25px; font-family:Exo;" id = "doogy"></p>
 			<script>
 	
 			/*var cookie = document.cookie;
@@ -370,7 +371,7 @@
 				
 				
 					if(document.getElementById('user').value == 'Jon' && document.getElementById('pass').value == 'jkbsd'){
-						alert('Welcome to Jemeny,' + document.getElementById('user').value + '!');
+						document.getElementById('doogy').InnerHtml = "'Welcome to Jemeny,' + document.getElementById('user').value + '!'"
 						var a = true;
 					}else{
 						alert("Password and username doesn't match.");
