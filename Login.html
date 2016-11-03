@@ -305,8 +305,8 @@
 			
 			function Check(){
 				
-				var username = ;
-				var password = ;
+				var username = document.forms['form']['username'].value;
+				var password = document.forms['form']['password'].value;
 			}
 			
 		</script>
@@ -326,14 +326,14 @@
 		<center>
 		<div class = "form">
 			
-			<form>
+			<form name = "form">
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
-					<input id = "user" type = "text" require>
+					<input id = "user" name = "username" type = "text" require>
 				</div>
 				<div class = "f-group">
 					<label for = "password">Please Enter your Password</label>
-					<input id = "pass" type = "password"/ require>
+					<input id = "pass" name = "password" type = "password"/ require>
 					<br>
 					<input type = "submit" onclick = "Login()" />
 				</div>
