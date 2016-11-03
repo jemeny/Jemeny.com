@@ -298,7 +298,36 @@
 		</head>
 	
 	<body>
-		<script>
+		
+		
+	<div class = "container">
+<div class = "nav-bar" style = "background-image:none;">
+	<ul>
+		<li><a href = "index.html">Home</a></li>
+		<li><a href = "Mingle's Exploit.html">Game</a></li>
+		<li><a href = "Blog.html">Blog</a></li>
+		<li><a href = "Support.html">Support</a></li>
+		<button class = "reg" style = "float:right;" ><a href = "Register.html">Register</a></button>
+		<a class = "Reg" href = "Login.html">Login</a>
+	</ul>
+		</div>
+		
+		<center>
+		<div class = "form">
+			
+			<!--<form name = "form">-->
+				<div class = "f-group">
+					<label for = "username">Please Enter Your Username</label>
+					<input id = "user" name = "username" type = "text" onclick = "document.getElementById('user').value = '';" require>
+				</div>
+				<div class = "f-group">
+					<label for = "password">Please Enter your Password</label>
+					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
+					<br>
+				</div>
+			<button onclick = "Check()">Login</button>
+			<p id = "announce"></p>
+			<script>
 	
 			/*var cookie = document.cookie;
 			confirm(cookie);
@@ -333,6 +362,7 @@
 				for(var i=0; i<users.length, i++){
 					if(username == users[i].name && password == users[i].pwd){
 						alert('Welcome to Jemeny,' + username + '!');
+						document.getElementById('announce').innerHTML = "Welcome to Jemeny" + username + "!";
 					}else{
 						alert("Password and username doesn't match.");
 					}
@@ -341,34 +371,6 @@
 			
 		</script>
 		
-		
-	<div class = "container">
-<div class = "nav-bar" style = "background-image:none;">
-	<ul>
-		<li><a href = "index.html">Home</a></li>
-		<li><a href = "Mingle's Exploit.html">Game</a></li>
-		<li><a href = "Blog.html">Blog</a></li>
-		<li><a href = "Support.html">Support</a></li>
-		<button class = "reg" style = "float:right;" ><a href = "Register.html">Register</a></button>
-		<a class = "Reg" href = "Login.html">Login</a>
-	</ul>
-		</div>
-		
-		<center>
-		<div class = "form">
-			
-			<!--<form name = "form">-->
-				<div class = "f-group">
-					<label for = "username">Please Enter Your Username</label>
-					<input id = "user" name = "username" type = "text" onclick = "document.getElementById('user').value = '';" require>
-				</div>
-				<div class = "f-group">
-					<label for = "password">Please Enter your Password</label>
-					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
-					<br>
-				</div>
-			<button onclick = "Check()">Login</button>
-			<p id = "announce"></p>
 			
 		</div>
 		</center>
