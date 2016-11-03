@@ -335,16 +335,11 @@
 					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
 					<br>
 				</div>
-			<button class = "submit_butt" style = "color:white; border:none; background-color:DeepSkyBlue; padding:10px; font-family:Comfortaa; font-size:20px; transition-duration:0.6s;" onclick = "Check()">Login</button>
+			<button style = "color:white; border:none; background-color:DeepSkyBlue; padding:10px; font-family:Comfortaa; font-size:20px; transition-duration:0.6s;" onclick = "Check()">Login</button>
 			<div id = "doogy"></div>
 			<script>
-	
-			/*var cookie = document.cookie;
-			confirm(cookie);
-			*/
 			
 			function Check(){
-				var a = 'false'
 				/*var users = [
 				{
 				name: "Jon",
@@ -393,7 +388,7 @@
 				}*/
 				
 				if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
-            if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true' }
+            if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { alert('welcome'); }
             if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
             if (document.getElementById('user').value == 'Dan' && document.getElementById('pass').value == 'olppas') { a = 'true' }
             if (document.getElementById('user').value == 'Tobias' && document.getElementById('pass').value == 'olkasd') { a = 'true' }
@@ -406,7 +401,7 @@
           if(a == 'true'){
             document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, you are logged in!';
             a = 'false';
-            } else { document.getElementById('doogy').innerHTML = 'The username and password does not match.';
+            } else { document.getElementById('doogy').innerHTML = 'The username and password does not match.'}
 			}
 			
 		</script>
