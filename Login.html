@@ -312,7 +312,7 @@
 		</div>
 		
 		<center>
-		<div class = "form" style = " border:10px solid transparent; margin-top:100px; background-color:grey; opacity:0.8; border-image:url('https://s-media-cache-ak0.pinimg.com/736x/64/86/17/648617b7fbcdc81adf6562518d09464d.jpg') 20% round;">
+		<div class = "form" style = " border:20px solid transparent; margin-top:100px; background-color:grey; opacity:0.8; border-image:url('http://clipartix.com/wp-content/uploads/2016/04/Pencil-border-clipart-free-clipart-images.png') 20% round;">
 			<!--<form name = "form">-->
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
@@ -396,14 +396,19 @@
 	if (document.getElementById('user').value == 'doggy' && document.getElementById('pass').value == 'monster') { a = 'true' }
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
           if(a == 'true'){
-		  alert('Successful login,' + '' + input + '!');
-                  document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + '' + input + '.' + '<br> you are logged in!';
+		   alert('Successful login,' + '' + input + '!');
+		  $('#output').click(function(){
+			  $(this).css('margin-top', '35px');
+		  });
+                  document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + ' ' + input + '.' + '<br> you are logged in!';
             a = 'false';    
 	    }else { 
+		     alert('Try again');
 		    document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.';
 	    }
 			}
 			
+				
 		
 			
 		</script>
