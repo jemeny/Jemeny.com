@@ -375,7 +375,7 @@
 					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Password and Username does not match, please try again.</p>';
 				}*/
 				var input = document.getElementById('user').value;
-				var output = document.getElementById('user');
+				var butt = document.getElementById('submit_butt');
 	    if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
             if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true'}
             if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
@@ -398,7 +398,10 @@
 		  output.style.margin = '35px';
                   document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + '' + input + '.' + '<br> you are logged in!';
             a = 'false';    
-	    }else { document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.';}
+	    }else { 
+		     output.style.margin = '35px';
+		    document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.';
+	    }
 			}
 			
 		
