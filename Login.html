@@ -321,8 +321,9 @@
 					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
 					<br>
 				</div>
-			<button class = "submit_butt" onclick="Check()">Login</button>
 			<div id = "doogy" style = "color:white; font-size:25px; font-weight:600; font-family:Exo; text-shadow:1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF, 0px 0px 20px #1C86EE; "></div>
+			<button class = "submit_butt" onclick="Check()">Login</button>
+			
 			<script>
 				
 			function Check(){
@@ -386,9 +387,9 @@
             if (document.getElementById('user').value == 'Pj' && document.getElementById('pass').value == 'jhasdk') { a = 'true' }
           if (document.getElementById('user').value == 'Trey' && document.getElementById('pass').value == 'asdask') { a = 'true' }
           if(a == 'true'){
-            document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, you are logged in!';
+            document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, <br> you are logged in!';
             a = 'false';
-            } else { document.getElementById('doogy').innerHTML = 'The username and password does not match.'}
+            } else { document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.'}
 			}
 			
 		
