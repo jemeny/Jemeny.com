@@ -288,6 +288,8 @@
 		padding:10px; font-family:Comfortaa;
 		font-size:20px; 
 		transition-duration:0.6s;
+		margin-top:50px;
+		padding:15px;
 	}
 
 </style>
@@ -374,7 +376,7 @@
 				}else{
 					document.getElementById('doogy').innerHTML = '<p style = "color:green; font-family:Comfortaa; font-size:25px; font-weight:600;>Password and Username does not match, please try again.</p>';
 				}*/
-				
+				var input = document.getElementById('user').value;
 	    if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
             if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true'}
             if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
@@ -393,7 +395,7 @@
 	if (document.getElementById('user').value == 'doggy' && document.getElementById('pass').value == 'monster') { a = 'true' }
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
           if(a == 'true'){
-            document.getElementById('doogy').innerHTML = 'Welcome to Jemeny, <br> you are logged in!';
+            document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + input '<br> you are logged in!';
             a = 'false';    
 	    }else { document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.'}
 			}
