@@ -10,6 +10,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	<link href = "https://fonts.googleapis.com/css?family=Eczar" rel = "stylesheet" type = 'text/css'>
 	<Link href = "Jemeny Style.css" rel = "stylesheet" type = "text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>	
 <style>
 	
 	html{
@@ -310,7 +312,7 @@
 		</div>
 		
 		<center>
-		<div class = "form" style = " border:50px solid transparent; margin-top:100px; background-color:grey; opacity:0.8; border-image:url('https://s-media-cache-ak0.pinimg.com/736x/64/86/17/648617b7fbcdc81adf6562518d09464d.jpg') 50 round;">
+		<div class = "form" style = " border:10px solid transparent; margin-top:100px; background-color:grey; opacity:0.8; border-image:url('https://s-media-cache-ak0.pinimg.com/736x/64/86/17/648617b7fbcdc81adf6562518d09464d.jpg') 20% round;">
 			<!--<form name = "form">-->
 				<div class = "f-group">
 					<label for = "username">Please Enter Your Username</label>
@@ -395,11 +397,9 @@
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
           if(a == 'true'){
 		  alert('Successful login,' + '' + input + '!');
-		  output.style.margin = '35px';
                   document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + '' + input + '.' + '<br> you are logged in!';
             a = 'false';    
 	    }else { 
-		     output.style.margin = '35px';
 		    document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.';
 	    }
 			}
