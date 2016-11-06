@@ -325,9 +325,20 @@
 					<br>
 				</div>
 			<div id = "doogy" style = "color:white; font-size:25px; font-weight:600; font-family:Exo; text-shadow:1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF, 0px 0px 20px #1C86EE; "></div>
+			<button id = 'acc' style = "border:none; color:white; font-family:Comfortaa; font-size:25px; font-weight:600; background-color:teal; display:none;">Your Account</button>
 			<button class = "submit_butt" onclick="Check()">Login</button>
 			
 			<script>
+				
+				$(document).ready(function(){
+					
+					$('#submit_butt').click(function(){
+						$('#submit_butt').css('margin-top', '40px');
+						$('#acc').fadeIn('slow');
+					});
+					
+				});
+				
 				
 			function Check(){
 				var a = 'false';
@@ -408,13 +419,6 @@
 		    document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.';
 	    }
 			}
-			
-				$(document).ready(function(){
-					$('#submit_butt').click(function(){
-						$('#submit_butt').css('margin-top', '40px');
-					});
-				});
-				
 		
 			
 		</script>
