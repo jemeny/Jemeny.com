@@ -156,11 +156,18 @@
 			  color:black;
 		  }
 		  
-		  @keyframe otate {
+		  @keyframes rotate {
 			  
-			  from {transform:scaleY(0);}
-			  to {}
+			  from {transform:scaleY(0deg);}
+			  to {transform:scaleY(360deg);}
+		  }
+		  
+		  .RotateY{
 			  
+			  animation-name:rotate; 
+			  animation-delay:2s;
+			  animation-duration:10s;
+			  animation-iteration-count:infinite;
 		  }
 	  </style>
   </head>
@@ -181,7 +188,7 @@
 	      <br>
 	<br>
 	
-	     <h1 class = "left Big-font Exo">WE ARE HERE TO HELP!</h1>
+	     <h1 class = "left Big-font Exo RotateY">WE ARE HERE TO HELP!</h1>
 	
 	<br>
 	<br>
