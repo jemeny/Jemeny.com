@@ -298,9 +298,46 @@
 		  }
 		  
 		  .Box-normal{
-			  box-sizing:border-box;
 			  padding:20px;
-			  font-size:20px
+			  margin-bottom:50px;
+			  margin-top:10px;
+		  }
+		  
+		  .B-header{
+			 font-weight:600;
+			  text-transform:uppercase;
+		  }
+		  
+		  .B-content{
+			  
+			  margin-top:32px;
+			  padding:auto;
+		  }
+		  
+		  .button{
+			  
+			  box-sizing:border-box;
+			  padding:15px;
+			  text-align:center;
+			  border:none;
+			  text-decoration:none;
+		  }
+		  
+		  .button-sub{
+			  
+			  background-color:#EE6A50;
+			  color:white;
+			  font-size:20px;
+		  }
+		  
+		  .button:hover{
+			  
+			  
+		  }
+		  
+		  .Focused:focus{
+			  
+			  border-bottom: 10px solid #00B2EE;
 		  }
 		  
 		  @keyframes rotate {
@@ -360,7 +397,14 @@
 	      </div>
 	      
 	      <div class = "BC-seagreen Box-normal">
+		      <div class = "B-header">
 		      <h2 class = "Exo C-white M-font">Sign up for update</h2>
+		      </div>     
+		      <div class = 'B-content'>
+			      <label for = "email"></label>
+			      <input type = "email"/>
+			      <input type = "submit"/>
+		      </div>
 	      </div>
       </div>
     </div>
