@@ -234,6 +234,11 @@
 			  margin-left:500px;
 		  }
 		  
+		  .BC-white{
+			  
+			  background-color:white;
+		  }
+		  
 		  .BC-alice{
 			  
 			  background-color:aliceblue;
@@ -335,9 +340,21 @@
 			  
 		  }
 		  
+		  .Box-flex{
+			  
+			  display:flex;
+			  flex-wrap:wrap;
+		  }
+		  
+		  .flex-item{
+			  
+			  width:500px;
+			  height:auto;
+		  }
+		  
 		  .Focused:focus{
 			  
-			  border-bottom: 10px solid #00B2EE;
+			  border-bottom: 8px solid #f5f5f5;
 		  }
 		  
 		  @keyframes rotate {
@@ -404,6 +421,18 @@
 			      <label for = "email"></label>
 			      <input type = "email"/>
 			      <input type = "submit"/>
+		      </div>
+	      </div>
+	      
+	      <div class = "Box-flex BC-white">
+		      <div class = "flex-item">
+			      <div><h2>1</h2></div>
+		      </div>
+		        <div class = "flex-item">
+			      <div><h2>1</h2></div>
+		      </div>
+		        <div class = "flex-item">
+			      <div><h2>1</h2></div>
 		      </div>
 	      </div>
       </div>
