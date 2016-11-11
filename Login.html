@@ -266,10 +266,23 @@
 		to{transform:rotateZ(360deg);}
 	}
 	
+	@keyframes RotateX{
+		
+		from{transform:rotateX(0deg);}
+		to{transform:rotateY(360deg);}
+	}
+	
 	.fade{
 		
 		animation-name: fadein;
-		animation-duration:6s;
+		animation-duration:5s;
+		animation-delay:1s;
+	}
+	
+	.edaf{
+		
+		animation-name: RotateX;
+		animation-duration:5s;
 		animation-delay:1s;
 	}
 	
