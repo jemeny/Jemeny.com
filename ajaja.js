@@ -2,8 +2,8 @@
 function S(){
  //var user = document.getElementById('User').value;
  //var pass = document.getElementById('ps').value;
-  localStorage.setItem('username', document.getElementById('User').value;);
-  localStorage.setItem('password', document.getElementById('ps').value;);
+  localStorage.setItem('username', document.getElementById('User').value);
+  localStorage.setItem('password', document.getElementById('ps').value);
 }
 
 function C(){
