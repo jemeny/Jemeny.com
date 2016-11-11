@@ -260,6 +260,19 @@
 		margin:auto;
 	}
 	
+	@keyframes fadein{
+		
+		from{transform:rotateZ(0deg);}
+		to{transform:rotateZ(360deg);}
+	}
+	
+	.fade{
+		
+		animation-name: fadein;
+		animation-duration:6s;
+		animation-delay:1s;
+	}
+	
 	input[type = "submit"]{
 		background-color:SkyBlue;
 		border:none;
