@@ -436,10 +436,13 @@
 	if (document.getElementById('user').value == 'doggy' && document.getElementById('pass').value == 'monster') { a = 'true' }
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
           if(a == 'true'){
+		  var m = document.createAttribute("class");
+		  m.value = 'edaf";
 		   alert('Successful login,' + '' + input + '!');
 		  document.getElementById('cca').style.display = 'none';
                   document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + ' ' + input + '.' + '<br> you are logged in!';
 		  document.getElementById('acc').style.display = 'inline-block';
+		  document.getElementById('acc').setAttributeNode(m);
 		   a = 'false';    
 	    }else { 
 		    var dmonster = document.createAttribute("class");
