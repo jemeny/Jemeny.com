@@ -1,17 +1,16 @@
 
-var user = document.getElementById('User');
-var pass = document.getElementById('ps');
-
 function S(){
-  localStorage.setItem('username', user.value);
-  localStorage.setItem('password', pass.value);
+ var user = document.getElementById('User').value;
+ var pass = document.getElementById('ps').value;
+  localStorage.setItem('username', user);
+  localStorage.setItem('password', pass);
 }
 
 function C(){
   var user1 = localStorage.getItem('username');
   var pass1 = localStorage.getItem('password');
-  var USER = document.getElementById('user');
-  var PWD = document.getElementById('pass');
+  var USER = document.getElementById('user').value;
+  var PWD = document.getElementById('pass').value;
   if(USER == user1 && PWD == pass1){
     alert('Welcome to Jemeny,' + " " + user1 + "! You are logged in.")
   }else{
