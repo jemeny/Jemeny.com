@@ -329,6 +329,7 @@
 			  border:none;
 			  text-decoration:none;
 			  font-size:20px;
+			  transition:0.6s ease;
 		  }
 		  
 		  .button-sub{
@@ -340,7 +341,7 @@
 		  
 		  .button:hover{
 			  
-			  
+			  box-shadow:10px 10px 15px black;
 		  }
 		  
 		  .Box-flex{
@@ -353,6 +354,18 @@
 			  
 			  width:500px;
 			  height:auto;
+		  }
+		  
+		  .Jemeny--input{
+			  padding: 10px;
+			  font-size:15px;
+			  display:inline-block;
+			  margin-bottom:10px;
+		  }
+		  
+		  .top--border{
+			  
+			  border-top:8px solid #e7e0e0;
 		  }
 		  
 		  .Focused:focus{
@@ -418,14 +431,14 @@
 		 	<!--<img class = "Image" Style = "max-height:650px;" alt =  "Jemeny Support" src = "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-3.jpg" width = 1500/>
 		      <img class = "Image" Style = "max-height:650px;" alt = "Jemeny Support" src = "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-1.jpg"/>
 		      -->
-		      <div style = "position:absolute; top:100px; right:100px; background-color:#efefef; padding:20px; margin-bottom:100px;">
+		      <div class = "top--border" style = "position:absolute; top:100px; right:100px; background-color:#efefef; padding:20px; margin-bottom:100px;">
 			      <form>
 				      <div style = "padding-left:0;">
 					      <h1 class = "Com" style = "text-align:center;">Sign up</h1>
 					      <h2 class = "C-black Exo">Be the first one to know <br> about Jemeny's Latest News!</h2>
 				      </div>
 				      <div style = "padding-left:0;">
-					      <input type = "email" value = "Enter Email"/>
+					      <input class = "Jemeny-input Com" type = "email" value = "Enter Email"/>
 					      <input class = "button Exo" style = "background-color:#7df97d; display:block; text-transform:uppercase; font-weight:100;" type = "submit" value = "Send"/>
 				      </div>
 			      </form>
