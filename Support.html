@@ -411,10 +411,27 @@
 	      
 	      <br>
 	<br>
-	
+	<script>
+		var i = 0;
+		Slide();
+		
+		function Slide(){
+			var a; 
+			var s = document.getElementsByClassName("Image");
+			for(a = 0; a < s.length; a++){
+				s[a].style.display = "none";
+			}
+			i ++;
+			if(i > s.length){i = 1}
+			s[i-1].style.display = "block";
+			setTimeout(Slide, 4000);
+		}
+	      </script>
 	      <div style = "max-width:1500px;">
 		      <img  class = "Image" style = "max-height:650px;" alt = "Jemeny Support" src = "http://wall-papers.info/images/arts-wallpaper-hd/arts-wallpaper-hd-14.jpg" width = 1500 height = 700 />
-		 	<div style = "margin:auto; max-width:600px; max-height:auto; padding:25px;">
+		 	<img class = "Image" Style = "max-height:650px;" alt =  "Jemeny Support" src = "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-3.jpg" width = 1500/>
+		      <img class = "Image" Style = "max-height:650px;" alt = "Jemeny Support" src = "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-1.jpg"/>
+		      <div style = "margin:auto; max-width:600px; max-height:auto; padding:25px;">
 	     <h1 class = "left Big-font Exo RotateY C-white" style = "position:absolute; top:50%;">WE ARE HERE TO HELP!</h1>
 		      </div>
 	      </div>
