@@ -9,6 +9,7 @@
 <script src = "phaser.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 	<link href = "https://fonts.googleapis.com/css?family=Eczar" rel = "stylesheet" type = 'text/css'>
+	<link href = "https://fonts.googleapis.com/css?family=Exo" rel = "stylesheet" type = 'text/css'>
 	<Link href = "Jemeny Style.css" rel = "stylesheet" type = "text/css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<script src = "ajaja.js"></script>
@@ -329,6 +330,19 @@
 		transition-duration:0.6s;
 	}
 	
+	.Jemeny--position--left{
+		
+		left:460px;
+	}
+	
+	@media only screen and (max-width:1024px) and (min-width:768px){
+		
+		.Jemeny--position--left{
+			
+			left:60px;
+		}
+	}
+	
 
 </style>
 		</head>
@@ -352,6 +366,9 @@
 		<center>
 		<div class = "form" style = " border:50px solid transparent; margin-top:100px; background-color:none; opacity:0.8; ">
 			<!--<form name = "form">-->
+			<div class = "Jemeny--position" style = "position:absolute; top:35%;">
+				<h2 style = "font-size:40px; font-family:Exo; font-weight:100;"><span></span><span></span></h2>
+			</div>
 			<div style = "max-width:500px; padding:14px; border:1px solid white;">
 			<h1 class = "caption">Login Form</h1>
 				<div class = "f-group">
