@@ -354,8 +354,8 @@
 					<br>
 				</div>
 			<div id = "doogy" style = "color:white; font-size:25px; font-weight:600; font-family:Exo; text-shadow:1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF, 0px 0px 20px #1C86EE; "></div>
-			<button id = 'acc' style = "border:none; margin-top:20px; padding:10px; color:white; font-family:Comfortaa; font-size:22px; font-weight:600; background-color:#ff3333; visibility:hidden;"><a href = '/' style = "text-decoration:none; font-size:22px; font-family:Comfortaa; color:white; text-transform:Capitalize;">Your Account</a></button>
-			<button id = 'cca' style = "border:none; margin-top:20px; padding:10px; color:white; background-color:#f5a81b; font-family:Exo; font-size:22px; font-weight:600; visibility:hidden;"><a target = '_blank'; href = "https://mail.google.com/mail/u/1/?tab=wm#inbox?compose=1583b74739a12221" style = "text-decoration:none; font-size:20px; font-family:Comfortaa; color:white; text-transform:capitalize;">New Account</a></button>
+			<button id = 'acc' style = "border:none; display:none; margin-top:20px; padding:10px; color:white; font-family:Comfortaa; font-size:22px; font-weight:600; background-color:#ff3333; visibility:hidden;"><a href = '/' style = "text-decoration:none; font-size:22px; font-family:Comfortaa; color:white; text-transform:Capitalize;">Your Account</a></button>
+			<button id = 'cca' style = "border:none; display:none; margin-top:20px; padding:10px; color:white; background-color:#f5a81b; font-family:Exo; font-size:22px; font-weight:600; visibility:hidden;"><a target = '_blank'; href = "https://mail.google.com/mail/u/1/?tab=wm#inbox?compose=1583b74739a12221" style = "text-decoration:none; font-size:20px; font-family:Comfortaa; color:white; text-transform:capitalize;">New Account</a></button>
 			<button class = "submit_butt" onclick="Check()">Login</button>
 			
 			<script>
@@ -443,8 +443,10 @@
 		  m.value = 'edaf';
 		   alert('Successful login,' + '' + input + '!');
 		  document.getElementById('cca').style.visibility = 'hidden';
+		  document.getElementById('cca').style.display = "none";
                   document.getElementById('doogy').innerHTML = 'Welcome to Jemeny,' + ' ' + input + '.' + '<br> you are logged in!';
 		  document.getElementById('acc').style.visibility = 'visible';
+		  document.getElementById('acc').style.display = "inine-block";
 		  document.getElementById('acc').setAttributeNode(m);
 		   a = 'false';    
 	    }else { 
@@ -452,9 +454,11 @@
 		    dmonster.value = 'fade';
 		     alert('Try again');
 		    document.getElementById('acc').style.visibility = 'hidden';
+		    document.getElementById('acc').style.display = 'none';
 		    document.getElementById('doogy').innerHTML = 'The username and <br> password does not match.';
 		    alert("If you don't have an account, click on the button");
 		    document.getElementById('cca').style.visibility = 'visible';
+		    document.getElementById('cca').style.display = "none";
 		    document.getElementById('cca').setAttributeNode(dmonster);
 	    }
 			}
