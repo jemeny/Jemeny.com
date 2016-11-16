@@ -238,11 +238,15 @@
 		clear:both;
 	}
 	
-	input{
-		width:25%;
+	input[name]{
+		width:50%;
 		height:10%;
 		border-radius:5px;
 		padding:15px;
+	}
+	
+	::webkit-input-placeholder{
+		color:white;
 	}
 	
 	.form{
@@ -257,8 +261,7 @@
 	}
 	
 	.f-group{
-		width:500px;
-		height:100px;
+		height:85px;
 		margin:auto;
 	}
 	
@@ -343,15 +346,15 @@
 		<center>
 		<div class = "form" style = " border:50px solid transparent; margin-top:100px; background-color:none; opacity:0.8; ">
 			<!--<form name = "form">-->
-			<div style = "max-width:450px; padding:14px; border:1px solid white;">
+			<div style = "max-width:500px; padding:14px; border:1px solid white;">
 			<h1 class = "caption">Login Form</h1>
 				<div class = "f-group">
-					<label for = "username">Please Enter Your Username</label>
-					<input id = "user" name = "username" type = "text" onclick = "document.getElementById('user').value = '';" require>
+					<!--<label for = "username">Please Enter Your Username</label>-->
+					<input style = "background-color:transparent" id = "user" name = "username" type = "text" placeholder = "Enter your username" onclick = "document.getElementById('user').value = '';" require>
 				</div>
 				<div class = "f-group">
-					<label for = "password">Please Enter your Password</label>
-					<input id = "pass" name = "password" type = "password" onclick = "document.getElementById('pass').value = '';" require>
+					<!--<label for = "password">Please Enter your Password</label>-->
+					<input style = "background-color:transparent;" id = "pass" name = "password" type = "password" placeholder = "Enter your password" onclick = "document.getElementById('pass').value = '';" require>
 					<br>
 				</div>
 			<div id = "doogy" style = "color:white; font-size:25px; font-weight:600; font-family:Exo; text-shadow:1px 1px 2px teal, 0px 1px 20px #8470FF, 0px 0px 20px #4876FF, 0px 0px 20px #1C86EE; "></div>
