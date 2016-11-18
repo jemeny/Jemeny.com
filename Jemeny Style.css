@@ -570,7 +570,7 @@ ul{
 		display:inline-block;
 	}
 	
-	ul list:not(:first-child){
+	ul li:not(:first-child){
 		
 		display:none;
 	}
