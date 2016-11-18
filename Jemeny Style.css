@@ -501,6 +501,8 @@ ul{
 		height:100%;
 		position:fixed;
 		z-index:1;
+		display:none;
+		transition:0.7s ease;
 		top:0;
 		left:0;
 	}
@@ -568,7 +570,7 @@ ul{
 		display:inline-block;
 	}
 	
-	ul li:not(:firstchild){
+	.list_l:not(:firstchild){
 		
 		display:none;
 	}
