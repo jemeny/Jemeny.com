@@ -349,8 +349,24 @@
 		</head>
 	
 	<body>
-		
-		
+		<script>
+			function Open(){
+				document.getElementById("full").style.width = "100%";
+			}
+			
+			function Close(){
+				document.getElementById("full").style.width = "100%";
+			}
+		</script>
+		<div class = "full_screen" id = "full">
+			<span class = "close_button" onclick = "Close()">Close</span>
+			<div class = "full_content">
+				<li><a>Home</a></li>
+				<li><a>Game</a></li>
+				<li><a>Blog</a></li>
+				<li><a>Support</a></li>
+			</div>
+		</div>
 	<div class = "container">
 <div class = "nav-bar" style = "background-image:none;">
 	<ul style = "margin:0; padding:0; font-size:18px;">
@@ -361,6 +377,7 @@
 		<a href="/"><img style="float:left;" src="Jemeny.png"></a>
 		<button class = "reg" style = "float:right;" ><a href = "Register.html">Register</a></button>
 		<a class = "Reg" href = "Login.html">Login</a>
+		<a class = "open_button" href = "javascript:void(0)"><span>Open</span></a>
 	</ul>
 		</div>
 		
