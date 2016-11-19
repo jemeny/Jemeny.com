@@ -356,13 +356,18 @@
 			function Open(){
 				document.getElementById("full").style.width = "100%";
 				document.getElementById("full").style.opacity = "1";
-				document.getElementsByClassName("a").style.display = "block";
+				var monster = document.getElementsByClassName("a");
+				for(var i=0; i<monster.length; i++){
+				monster[i].style.display = "block";
+				}
 			}
 			
 			function Close(){
 				document.getElementById("full").style.width = "0%";
 				document.getElementById("full").style.opacity = "0";
-				document.getElementsByClassName("a").style.display = "none";
+				var monster = document.getElementsByClassName("a");
+				for(var i=0; i<monster.length; i++){
+				monster[i].style.display = "none";
 			}
 		</script>
 		<div class = "full_screen" id = "full">
