@@ -525,7 +525,7 @@ ul{
 .full_content li a{
 	
 	padding:14px;
-	display:block;
+	display:none;
 	color:white;
 	font-family:Comfortaa;
 	font-size:40px;
