@@ -356,20 +356,22 @@
 			function Open(){
 				document.getElementById("full").style.width = "100%";
 				document.getElementById("full").style.opacity = "1";
+				document.getElementsByClassName("a").style.display = "block";
 			}
 			
 			function Close(){
 				document.getElementById("full").style.width = "0%";
 				document.getElementById("full").style.opacity = "0";
+				document.getElementsByClassName("a").style.display = "none";
 			}
 		</script>
 		<div class = "full_screen" id = "full">
 			<span class = "close_button hoverable" onclick = "Close()">Close</span>
 			<div class = "full_content">
-				<li><a class = "hoverable" href = "index.html">Home</a></li>
-				<li><a  class = "hoverable" href = "Mingle's Exploit.html">Game</a></li>
-				<li><a  class = "hoverable" href = "Blog.html">Blog</a></li>
-				<li><a  class = "hoverable" href = "Support.html">Support</a></li>
+				<li><a class = "a hoverable" href = "index.html">Home</a></li>
+				<li><a  class = "a hoverable" href = "Mingle's Exploit.html">Game</a></li>
+				<li><a  class = "a hoverable" href = "Blog.html">Blog</a></li>
+				<li><a  class = "a hoverable" href = "Support.html">Support</a></li>
 			</div>
 		</div>
 	<div class = "container">
