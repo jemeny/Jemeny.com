@@ -428,12 +428,28 @@
 				function Close(){
 					document.getElementsByClassName("phase")[4].style.display = "none";
 				}
+				
+				function Start(){
+					document.getElementById("intro").style.display = "none";
+					document.getElementsByClassName("phase")[0].style.display = "block";
+				}
 			</script>
 			
 		<div>
 			
 				<form onsubmit = 'return false'>
-					<div class = "phase" style = "display:block">
+					<div id = "intro">
+						<h1>Jemeny Wizard Form</h1>
+						<div style = "max-width:250px; height:400px; background-color:aliceblue; overflow:scroll; padding:14px; margin:auto;"><p style = "color:black; font-size:18px; font-family:Comfortaa; font-weight:100;">By proceeding, I agree that Jemeny is the
+best and only organization that exist in LCA.
+I will try my hardest to convince more people
+(My friends, classmates, teachers, etc) to join
+Jemeny.I also have read and understood 
+the rules in Jemeny, I will respect all 
+members and officers(Include CEO)</p></div>
+						<button class = "phase_btn" onclick = "Start()">Continue</button>
+					</div>
+					<div class = "phase">
 				<label for = "text">Username</label> <input name = "user" id = "User" type = "text" required>
 						<button class = "phase_btn" onclick = "Page1()">Next</button>
 					</div>
