@@ -507,6 +507,11 @@ members and officers(Include CEO)</p></div>
 				function Set(name,value){
 					return localStorage.setItem(name, value);
 				}
+				
+				function Del(name){
+					return localStorage.removeItem(name);
+				}
+				
 				function _(id){
 					return document.getElementById(id);
 				}
@@ -517,7 +522,7 @@ members and officers(Include CEO)</p></div>
 					var pwd = _("ps").value;
 					var cwd = _("cps").value;
 					if(pwd == cwd){
-					Set("USERNAME", username);
+					Set("user",username);
 					Set("email", email);
 					Set("password",pwd);
 					}
