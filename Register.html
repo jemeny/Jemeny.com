@@ -259,6 +259,19 @@
 		border-image:url(Border.png) 15% stretch;
 	}
 	
+	.phase{
+		
+		display:none;
+		z-index:1;
+		margin-top:15px;
+		margin-bottom:15px;
+		padding:14px;
+		width:250px;
+		height:auto;
+		box-shadow:10px 10px 15px black;
+		background-color:#efefef;
+	}
+	
 	input[type='submit']{
 		width:30%;
 		margin:auto;
@@ -348,21 +361,94 @@
 			<br>
 			<br>
 			<br>
-
+			<script>
+				
+				function Page1(){
+					if(document.getElementById("User").value.length > 1){
+						document.getElementsByClassName("phase")[0].style.display = "none";
+						document.getElementsByClassName("phase")[1].style.display = "block";
+					}else{
+						alert("Please Enter your username, it has to be more than one letter");
+					}
+				}
+				
+				function Page2(){
+					if(document.getElementById("email").value != "" && document.getElementById("email").value != null){
+						document.getElementsByClassName("phase")[1].style.display = "none";
+						document.getElementsByClassName("phase")[2].style.display = "block";
+					}else{
+						alert("Please enter a valid email address!");
+					}
+				}
+				
+				function Page3(){
+					if(document.getElementById("ps").value.length > 5){
+						document.getElementsByClassName("phase")[2].style.display = "none";
+						document.getElementsByClassName("phase")[3].style.display = "block";
+					}else{
+						alert("Please enter a stronger password");
+					}
+				}
+				
+				function Page4(){
+					if(document.getElementById("cps").value == document.getElementById("ps").value){
+						document.getElementsByClassName("phase")[3].style.display = "none";
+						document.getElementsByClassName("phase")[4].style.display = "block";
+					}else{
+						alert("Please enter a stronger password");
+					}
+				}
+				
+				function Close(){
+					document.getElementsByClassName("phase")[4].style.display = "none";
+				}
+			</script>
+			
 		<div class = "form-div">
 			
-			
-		
+				<form onsubmit = 'return false'>
+					<div class = "phase" style = "display:block">
 				<label for = "text">Username</label> <input name = "user" id = "User" type = "text" required>
-				
+						<button class = "phase_btn" onclick = "Page1()">Next</button>
+					</div>
+					<div class = "phase">
 				<label for = "email">Email</label> <input name = "email" id = "email" type = "email" required>
-				
+						<button class = "phase_btn" onclick = "Page2()">Next</button>
+					</div>
+					<div class = "phase">
 				<label for = "password">Password</label> <input name = "ps" id = "ps" type = "password" required>
-				
+						<button class = "phase_btn" onclick = "Page3()">Next</button>
+					</div>
+					<div class = "phase">
 				<label for = "password">Confirm Password</label> <input name = "confirm" id = "cps" type = "password" required>
-				
-				<input type = "submit" value = "Submit" name = "sub" onsubmit = 'S();' />
+						<button class = "phase_btn" onclick = "Page4()">Next</button>
+					</div>
+					<div class = "phase">
+						<h2>Congrats, you are now a member of Jemeny!</h2>
+						<button class = "phase_btn" onclick = "Close(); Store_Data()">Close</button>
+					</div>
+					</form>
 			
+			<script>
+				function Set(name,value){
+					return localStorage.setItem(name, value);
+				}
+				function _(id){
+					return document.getElementById(id);
+				}
+				
+				function Store_Data(){
+					var username = _("User").value;
+					var email = _("email").value;
+					var pwd = _("ps").value;
+					var cwd = _("cps").value;
+					if(pwd == cwd){
+					Set("username", username);
+					Set("email", email);
+					Set("password",pwd);
+					}
+				}
+			</script>
 			
 			</div>
 			
