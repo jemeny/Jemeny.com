@@ -438,12 +438,14 @@
 				}
 				
 				function Close(){
+					document.getElementsByClassName('nav-bar')[0].display = "none";
 					document.getElementsByClassName("phase")[4].style.display = "none";
 					document.getElementsByClassName("cover")[0].style.height = "0%";
 				}
 				
 				function Start(){
 					document.getElementById("intro").style.display = "none";
+					document.getElementsByClassName('nav-bar')[0].display = "none";
 					document.getElementsByClassName("phase")[0].style.display = "block";
 					document.getElementsByClassName("cover")[0].style.height = "100%";
 				}
