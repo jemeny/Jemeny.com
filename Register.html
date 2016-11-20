@@ -439,6 +439,7 @@
 				
 				function Close(){
 					document.getElementsByClassName('nav-bar')[0].display = "none";
+					document.getElementsByTagName('h1')[0].display = "none";
 					document.getElementsByClassName("phase")[4].style.display = "none";
 					document.getElementsByClassName("cover")[0].style.height = "0%";
 				}
@@ -494,11 +495,12 @@ members and officers(Include CEO)</p></div>
 					</div>
 					<div class = "phase">
 						<div style = "margin:auto; max-width:300px; margin-top:200px">
-						<h2>Congrats, you are now a member of Jemeny!</h2>
+						<h2 style = "color:tomato; font-size:30px; font-weight:100; font-family:Exo; text-transform:uppercase;" >Congrats, you are now a member of Jemeny!</h2>
 						<button class = "phase_btn" onclick = "Close(); Store_Data()"><a href = "Login.html">Close</a></button>
 						</div>
 						</div>
 					</form>
+			<div></div>
 			
 			<script>
 				function Set(name,value){
