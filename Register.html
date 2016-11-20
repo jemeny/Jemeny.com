@@ -295,11 +295,23 @@
 		background-color:#CD6090;
 	}
 	
+	.cover{
+		
+		background-color:rgba(0,0,0,0.8);
+		position:fixed;
+		height:0;
+		width:100%;
+		overflow-x:hidden;
+		transition:0.8s ease;
+	}
+	
 	
 </style>
 </head>
 	
 	<body>
+		<div class = "cover">
+		</div>
 		<script>
 		
 			function Bake(){
@@ -410,12 +422,15 @@
 				
 				function Close(){
 					document.getElementsByClassName("phase")[4].style.display = "none";
+					document.getElementsByClassName("cover")[0].style.height = "0%";
 				}
 				
 				function Start(){
 					document.getElementById("intro").style.display = "none";
 					document.getElementsByClassName("phase")[0].style.display = "block";
+					document.getElementsByClassName("cover")[0].style.height = "100%";
 				}
+				
 			</script>
 			
 		<div>
@@ -435,25 +450,35 @@ members and officers(Include CEO)</p></div>
 						<button class = "phase_btn" onclick = "Start()">Continue</button>
 					</div>
 					<div class = "phase">
+						<div style = "margin:auto; max-width:300px;">
 				<label for = "text">Username</label> <input name = "user" id = "User" type = "text" required>
 						<button class = "phase_btn" onclick = "Page1()">Next</button>
+						</div>
 					</div>
 					<div class = "phase">
+						<div style = "margin:auto; max-width:300px;">
 				<label for = "email">Email</label> <input name = "email" id = "email" type = "email" required>
 						<button class = "phase_btn" onclick = "Page2()">Next</button>
+						</div>
 					</div>
 					<div class = "phase">
+						<div style = "margin:auto; max-width:300px;">
 				<label for = "password">Password</label> <input name = "ps" id = "ps" type = "password" required>
 						<button class = "phase_btn" onclick = "Page3()">Next</button>
+						</div>
 					</div>
 					<div class = "phase">
+						<div style = "margin:auto; max-width:300px;">
 				<label for = "password">Confirm Password</label> <input name = "confirm" id = "cps" type = "password" required>
 						<button class = "phase_btn" onclick = "Page4()">Next</button>
+						</div>
 					</div>
 					<div class = "phase">
+						<div style = "margin:auto; max-width:300px;">
 						<h2>Congrats, you are now a member of Jemeny!</h2>
 						<button class = "phase_btn" onclick = "Close(); Store_Data()"><a href = "Login.html">Close</a></button>
-					</div>
+						</div>
+						</div>
 					</form>
 			
 			<script>
