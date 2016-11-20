@@ -266,17 +266,32 @@
 		color:white;
 		font-size:20px;
 		font-weight:100;
+		width:100%;
 		font-family:Exo;
 		transition:0.7s ease;
+		
+		
+	}
+	
+	.form_btn{
+		
+		padding:10px,15px;
+		width:100px;
+		border:none;
+		background-color:tomato;
+		color:white;
+		font-size:20px;
+		font-weight:100;
 		float:right;
-		
-		
+		font-family:Exo;
+		transition:0.7s ease;
 	}
 	
 	.phase_btn:hover{
 		
 		background-color:lightseagreen;
 	}
+
 	
 	input[type='submit']{
 		width:30%;
@@ -303,6 +318,7 @@
 		width:100%;
 		overflow-x:hidden;
 		transition:0.8s ease;
+		z-index:1;
 	}
 	
 	
@@ -310,6 +326,9 @@
 </head>
 	
 	<body>
+		
+		<div class = "cover">
+		</div>
 		<script>
 		
 			function Bake(){
@@ -445,34 +464,34 @@ I will try my hardest to convince more people
 Jemeny.I also have read and understood 
 the rules in Jemeny, I will respect all 
 members and officers(Include CEO)</p></div>
-						<button class = "phase_btn" onclick = "Start()">Continue</button>
+						<button class = "form_btn" onclick = "Start()">Continue</button>
 					</div>
 					<div class = "phase">
-						<div style = "margin:auto; max-width:300px;">
-				<label for = "text">Username</label> <input name = "user" id = "User" type = "text" required>
+						<div style = "margin:auto; max-width:300px; margin-top:200px">
+				<label for = "text">Username</label> <input style = "width:100%;" name = "user" id = "User" type = "text" required>
 						<button class = "phase_btn" onclick = "Page1()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
-						<div style = "margin:auto; max-width:300px;">
-				<label for = "email">Email</label> <input name = "email" id = "email" type = "email" required>
+						<div style = "margin:auto; max-width:300px; margin-top:200px">
+				<label for = "email">Email</label> <input style = "width:100%;" name = "email" id = "email" type = "email" required>
 						<button class = "phase_btn" onclick = "Page2()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
-						<div style = "margin:auto; max-width:300px;">
-				<label for = "password">Password</label> <input name = "ps" id = "ps" type = "password" required>
+						<div style = "margin:auto; max-width:300px; margin-top:200px">
+				<label for = "password">Password</label> <input style = "width:100%;" name = "ps" id = "ps" type = "password" required>
 						<button class = "phase_btn" onclick = "Page3()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
-						<div style = "margin:auto; max-width:300px;">
-				<label for = "password">Confirm Password</label> <input name = "confirm" id = "cps" type = "password" required>
+						<div style = "margin:auto; max-width:300px; margin-top:200px">
+				<label for = "password">Confirm Password</label> <input style = "width:100%;" name = "confirm" id = "cps" type = "password" required>
 						<button class = "phase_btn" onclick = "Page4()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
-						<div style = "margin:auto; max-width:300px;">
+						<div style = "margin:auto; max-width:300px; margin-top:200px">
 						<h2>Congrats, you are now a member of Jemeny!</h2>
 						<button class = "phase_btn" onclick = "Close(); Store_Data()"><a href = "Login.html">Close</a></button>
 						</div>
@@ -504,6 +523,4 @@ members and officers(Include CEO)</p></div>
 			
 		</center>
 	</div>
-		<div class = "cover" style = "z-index:1;">
-		</div>
 	</body>
