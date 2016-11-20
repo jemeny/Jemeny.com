@@ -508,7 +508,7 @@
 	 if (document.getElementById('user').value == 'Jack' && document.getElementById('pass').value == 'ScasdA') { a = 'true' }
 	if (document.getElementById('user').value == 'doggy' && document.getElementById('pass').value == 'monster') { a = 'true' }
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
-	if(localStorage.username == localStorage.USERNAME && localStorage.pwd == localStorage.password){a = 'true'}
+	if(document.getElementById('user') == localStorage.user && document.getElementById('pass') == localStorage.password){a = 'true'}
           if(a == 'true'){
 		  var m = document.createAttribute("class");
 		  m.value = 'edaf';
