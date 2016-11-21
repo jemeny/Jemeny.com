@@ -22,6 +22,29 @@
         padding:14px;
       }
       
+      .user_info{
+        
+        display:table;
+        margin:0, 6px;
+        white-space:nowrap;
+      }
+      
+      .user_info:before{
+        content: " ";
+        display:table-cell;
+        width:50%;
+        border-top:1px solid teal;
+        position:relative;
+      }
+      
+       .user_info:after{
+        content: " ";
+        display:table-cell;
+        width:50%;
+        border-top:1px solid teal;
+        position:relative;
+      }
+      
       .window{
         
         float:left;
@@ -62,6 +85,7 @@
         font-family:Exo;
         text-transform:Capitalize;
         color:black;
+        text-align:center;
       }
       
     </style>
