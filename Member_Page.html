@@ -76,10 +76,10 @@
         </div>
     </div>
       <div class = "container">
-        <p><i></i></p>
-        <p><i></i></p>
-        <p><i></i></p>
-        <p><i></i></p>
+        <p id = "user_name"><i></i></p>
+        <p id = "job"><i></i></p>
+        <p id = "gender"><i></i></p>
+        <p id = "email"><i></i></p>
       </div>
     </div>
     <script>
@@ -89,22 +89,26 @@
     </script>
     <script>
       var logg = false;
-    if(localStorage.username == 'Jeff'){logg = true;}
-     if(localStorage.username == 'Lane'){logg = true;}
-        if(localStorage.username == 'Jon'){logg = true;}
-        if(localStorage.username == 'Daniel'){logg = true}
-        if(localStorage.username == 'Felipe'){logg = true}
-        if(localStorage.username == 'Dario'){logg = true}
-        if(localStorage.username == 'Tobias'){logg = true}
-        if(localStorage.username == 'Jemeny'){logg = true}
-        if(localStorage.username == 'doggy'){logg = true}
-        if(localStorage.username == 'Collin'){logg = true}
-        if(localStorage.username == 'Pj'){logg = true}
-        if(localStorage.username == 'Trey'){logg = true}
-        if(localStorage.username == 'Harry'){logg = true}
-        if(localStorage.username == 'Jack'){logg = true}
-        if(localStorage.username == 'Luke'){logg = true}
-        if(localStorage.username == 'Crocker'){logg = true}
+      var email, job, credit, gender, first_name, last_name, depar;
+    if(localStorage.username == 'Jeff'){logg = true; gender = "male"; first_name = "jeff" last_name = "jun" credit = "10" job = "vice president" email = "jeff.jun@lca.edu"}
+     if(localStorage.username == 'Lane'){logg = true; gender = "male"; first_name = "Lane" last_name = "Beliveau" credit = "5" job = "officer" depar = "antonias druses" email = "lane.beliveau@lca.edu"}
+        if(localStorage.username == 'Jon'){logg = true;gender = "male"; first_name = "Jonathan" last_name = "Guerrier" credit = "5" depar = "doggymonster" job = "member" email = "jonathan.guerrier@lca.edu"}
+        if(localStorage.username == 'Daniel'){logg = true; gender = "male"; first_name = "Daniel" last_name = "Bass" credit = "10" job = "member" depar = "doggymonster" email = "daniel.bass@lca.edu"}
+        if(localStorage.username == 'Felipe'){logg = true;gender = "male"; first_name = "Felipe" last_name = "DeSouza" depar = "doggymonster" credit = "5" job = "member" email = "felipe.DeSouza@lca.edu"}
+        if(localStorage.username == 'Dario'){logg = true;gender = "male"; first_name = "Dario" last_name = "Petrilo" credit = "10" job = "CEO" depar = "drago" email = "dario.petrilo@lca.edu"}
+        if(localStorage.username == 'Tobias'){logg = true;gender = "male"; first_name = "Geoffrey" last_name = "Freeman" credit = "10" job = "assitance" depar = "antonias druses" email = "geoffrey.freeman@lca.edu"}
+        if(localStorage.username == 'Jemeny'){logg = true;gender = "male"; first_name = "Jim" last_name = "Jin" credit = "infinite" job = "Director" email = "gjj370.sunrise@gmail.com"}
+        if(localStorage.username == 'doggy'){logg = true;gender = "male"; first_name = "doggy" last_name = "monster" credit = "infinite" job = "Director" email = "jim@jemeny.com"}
+        if(localStorage.username == 'Collin'){logg = true;gender = "male"; first_name = "Collin" last_name = "Alexander" credit = "10" job = "CEO" email = "collin.alexander@lca.edu"}
+        if(localStorage.username == 'Pj'){logg = true;gender = "male"; first_name = "paul" last_name = "griffin" credit = "5" job = "officer" email = "paul.griffin@lca.edu"}
+        if(localStorage.username == 'Trey'){logg = true;gender = "male"; first_name = "treyson" last_name = "baskett" credit = "5" job = "member" email = "treyson.baskett@lca.edu"}
+        if(localStorage.username == 'Harry'){logg = true;gender = "male"; first_name = "harrison" last_name = "mccarthy" credit = "10" job = "officer" email = "harrison.mccarthy@lca.edu"}
+        if(localStorage.username == 'Jack'){logg = true;gender = "male"; first_name = "jack" last_name = "scaro" credit = "10" job = "officer" email = "jack.scaro@lca.edu"}
+        if(localStorage.username == 'Luke'){logg = true;gender = "male"; first_name = "luke" last_name = "mollenhauer" credit = "10" job = "agent" email = "luke.mollenhauer"}
+        if(localStorage.username == 'Crocker'){logg = true;gender = "male"; first_name = "matthew" last_name = "crocker" credit = "5" job = "member" email = "matthew.crocker@lca.edu"}
+      if(logg == true){
+        
+      }
       if(logg !== true){alert("You don't have an account!"); window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");}
     </script>
   </body>
