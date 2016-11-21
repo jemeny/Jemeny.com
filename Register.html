@@ -321,6 +321,25 @@
 		z-index:-1;
 	}
 	
+	.progress-bar{
+		
+		background-color:aliceblue;
+		width:35%;
+		position:relative;
+		height:25px;
+		float:left;
+		border-radius:10px;
+	}
+	
+	.bar-content{
+		
+		width:0;
+		height:100%;
+		position:absolute;
+		transition:1s ease;
+		background-color:rgba(15,167,189,0.8);
+		border-radius:10px;
+	}
 	
 </style>
 </head>
@@ -402,10 +421,13 @@
 			<script>
 				
 				function Page1(){
-					bar();
+					//bar();
 					if(document.getElementById("User").value.length > 1){
 						document.getElementsByClassName("phase")[0].style.display = "none";
 						document.getElementsByClassName("phase")[1].style.display = "block";
+						var bar = document.getElementById("prb1");
+						var nar = document.getElementById("bct1");
+						nar.style.width = "25%";
 					}else{
 						alert("Please Enter your username, it has to be more than one letter");
 					}
@@ -415,6 +437,9 @@
 					if(document.getElementById("email").value != "" && document.getElementById("email").value != null){
 						document.getElementsByClassName("phase")[1].style.display = "none";
 						document.getElementsByClassName("phase")[2].style.display = "block";
+						var bar = document.getElementById("prb2");
+						var nar = document.getElementById("bct2");
+						nar.style.width = "50%";
 					}else{
 						alert("Please enter a valid email address!");
 					}
@@ -424,6 +449,9 @@
 					if(document.getElementById("ps").value.length > 5){
 						document.getElementsByClassName("phase")[2].style.display = "none";
 						document.getElementsByClassName("phase")[3].style.display = "block";
+						var bar = document.getElementById("prb3");
+						var nar = document.getElementById("bct3");
+						nar.style.width = "75%";
 					}else{
 						alert("Please enter a stronger password");
 					}
@@ -433,8 +461,11 @@
 					if(document.getElementById("cps").value == document.getElementById("ps").value){
 						document.getElementsByClassName("phase")[3].style.display = "none";
 						document.getElementsByClassName("phase")[4].style.display = "block";
+						var bar = document.getElementById("prb4");
+						var nar = document.getElementById("bct4");
+						nar.style.width = "100%";
 					}else{
-						alert("Please enter a stronger password");
+						alert("Password does not match, please try again.");
 					}
 				}
 				
@@ -456,7 +487,7 @@
 			</script>
 			<script>
 			
-					function bar(){
+					/*function bar(){
 					var ctx = document.getElementById("cav").getContext("2d");
 					var percent = 0;
 					var deg = 4.72; 
@@ -478,7 +509,7 @@
 					}
 					percent++;
 				}
-				var fun = setInterval(bar, 50);
+				var fun = setInterval(bar, 50);*/
 			</script>
 			
 		<div>
@@ -498,6 +529,7 @@ members and officers(Include CEO)</p></div>
 						<button class = "form_btn" onclick = "Start()">Continue</button>
 					</div>
 					<div class = "phase">
+						<div class = "progress-bar" id = "prb"><div class = "bar-content" id = "bct"></div></div>
 						<!--<canvas id = "cav" width = 100 height = 100 style = "float:left;"></canvas>-->
 						<div style = "margin:auto; max-width:300px; margin-top:200px">
 				<label for = "text">Username</label> <input style = "width:100%;" name = "user" id = "User" type = "text" required>
@@ -505,25 +537,29 @@ members and officers(Include CEO)</p></div>
 						</div>
 					</div>
 					<div class = "phase">
-						<canvas id = "cav" width = 100 height = 100 style = "float:left;"></canvas>
+						<div class = "progress-bar" id = "prb1"><div class = "bar-content" id = "bct1"></div></div>
+						<!--<canvas id = "cav" width = 100 height = 100 style = "float:left;"></canvas>-->
 						<div style = "margin:auto; max-width:300px; margin-top:200px">
 				<label for = "email">Email</label> <input style = "width:100%;" name = "email" id = "email" type = "email" required>
 						<button class = "phase_btn" onclick = "Page2()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
+						<div class = "progress-bar" id = "prb2"><div class = "bar-content" id = "bct2"></div></div>
 						<div style = "margin:auto; max-width:300px; margin-top:200px">
 				<label for = "password">Password</label> <input style = "width:100%;" name = "ps" id = "ps" type = "password" required>
 						<button class = "phase_btn" onclick = "Page3()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
+						<div class = "progress-bar" id = "prb3"><div class = "bar-content" id = "bct3"></div></div>
 						<div style = "margin:auto; max-width:300px; margin-top:200px">
 				<label for = "password">Confirm Password</label> <input style = "width:100%;" name = "confirm" id = "cps" type = "password" required>
 						<button class = "phase_btn" onclick = "Page4()">Next</button>
 						</div>
 					</div>
 					<div class = "phase">
+						<div class = "progress-bar" id = "prb4"><div class = "bar-content" id = "bct4"></div></div>
 						<div style = "margin:auto; max-width:300px; margin-top:100px">
 						<h2 style = "color:tomato; font-size:30px; font-weight:100; font-family:Exo; text-transform:uppercase;" >Congrats, you are now a member of Jemeny!</h2>
 							<button class = "phase_btn" onclick = "Close(); Store_Data()"><a href = "Login.html">Close</a></button>
