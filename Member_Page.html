@@ -107,7 +107,14 @@
         if(localStorage.username == 'Luke'){logg = true;gender = "male"; first_name = "luke" last_name = "mollenhauer" credit = "10" job = "agent" email = "luke.mollenhauer"}
         if(localStorage.username == 'Crocker'){logg = true;gender = "male"; first_name = "matthew" last_name = "crocker" credit = "5" job = "member" email = "matthew.crocker@lca.edu"}
       if(logg == true){
-        
+        var e = document.getElementById("email");
+        var g = document.getElementById("gender");
+        var j = document.getElementById("job");
+        var n = document.getElementById('user_name');
+        e.innerHTML = email;
+        g.innerHTML = gender; 
+        j.innerHTML = job;
+        n.innerHTML = first_name + " " + last_name;
       }
       if(logg !== true){alert("You don't have an account!"); window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");}
     </script>
