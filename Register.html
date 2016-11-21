@@ -402,6 +402,7 @@
 			<script>
 				
 				function Page1(){
+					bar("cav");
 					if(document.getElementById("User").value.length > 1){
 						document.getElementsByClassName("phase")[0].style.display = "none";
 						document.getElementsByClassName("phase")[1].style.display = "block";
@@ -454,13 +455,14 @@
 				
 			</script>
 			<script>
-				var ctx = document.getElementById("cav").getContext("2d");
-				var percent = 0;
-				var deg = 4.72; 
-				var mw = ctx.canvas.width;
-				var mh = ctx.canvas.height;
-				var progress;
-				function bar(){
+				
+				function bar(id){
+					var ctx = document.getElementById(id).getContext("2d");
+					var percent = 0;
+					var deg = 4.72; 
+					var mw = ctx.canvas.width;
+					var mh = ctx.canvas.height;
+					var progress;
 					progress = ((percent/100) * Math.PI*2*10);
 					ctx.clearRect(0, 0, mw, mh);
 					ctx.lineWidth = 15;
@@ -468,7 +470,15 @@
 					ctx.strokeStyle = "tomato";
 					ctx.textAlign = "center";
 					ctx.fillText(progress + '%', mw*0.5, mh*0.5, mw);
+					ctx.beginPath();
+					ctx.arc(35, 35, 30, deg, progress/10+deg, false);
+					ctx.stroke();
+					if(percent >= 25){
+						clearTimeout(fun);
+					}
+					percent++;
 				}
+				var fun = setInterval(bar, 50);
 			</script>
 			
 		<div>
@@ -488,7 +498,7 @@ members and officers(Include CEO)</p></div>
 						<button class = "form_btn" onclick = "Start()">Continue</button>
 					</div>
 					<div class = "phase">
-						<canvas id = "cav" width = 50 height = 50></canvas>
+						<canvas id = "cav" width = 100 height = 100 style = "float:left;"></canvas>
 						<div style = "margin:auto; max-width:300px; margin-top:200px">
 				<label for = "text">Username</label> <input style = "width:100%;" name = "user" id = "User" type = "text" required>
 						<button class = "phase_btn" onclick = "Page1()">Next</button>
