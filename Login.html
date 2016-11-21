@@ -510,6 +510,7 @@
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
 	if(document.getElementById('user').value == localStorage.user && document.getElementById('pass').value == localStorage.password){a = 'true'}
           if(a == 'true'){
+		  if(localStorage.username == " "){
 		  Antonias();
 		  var m = document.createAttribute("class");
 		  m.value = 'edaf';
@@ -520,7 +521,11 @@
 		//  document.getElementById('acc').style.visibility = 'visible';
 		  document.getElementById('acc').style.display = "inline-block";
 		  document.getElementById('acc').setAttributeNode(m);
-		   a = 'false';    
+		   a = 'false'; 
+		  }else{
+			  comfirm("You are already logged in!");
+			  window.location.assign("http://jemeny.github.io/Jemeny.com/Member_Page.html");
+		  }
 	    }else { 
 		    var dmonster = document.createAttribute("class");
 		    dmonster.value = 'fade';
