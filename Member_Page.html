@@ -3,9 +3,37 @@
   <head>
     <title>Jemeny.com</title>
     <link href = "Jemeny Style.css" rel = "stylesheet"/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Exo'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Comfortaa'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    
+    <style>
+      li a{
+        color:black;
+      }
+      
+      .container{
+        
+        padding:14px;
+      }
+      
+      .window{
+        
+        float:left;
+      }
+      
+      *{
+        
+        box-sizing:border-box;
+      }
+      
+      .user{
+        width:33%;
+        background-color:red;
+      }
+    </style>
   </head>
   <body>
-    <div class = "container">
      <div class = "nav-bar" style = "background:none;">
        <ul>
          <li><a href = "index.html">Home</a><li>
@@ -17,7 +45,11 @@
          <a class = "Reg" href = "Login.html">Login</a>
        </ul>
       </div>
+    <div class = "container">
+      <div class = "user window">
+        
     <h1 id = "welcome"></h1>
+    </div>
     </div>
     <script>
       alert("Welcome," + " " + localStorage.username + "!");
