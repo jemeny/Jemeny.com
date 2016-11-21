@@ -491,6 +491,7 @@
 				}*/
 				var input = document.getElementById('user').value;
 				var output = document.getElementById('submit_butt');
+				var com = false;
 	    if (document.getElementById('user').value == 'Jeff' && document.getElementById('pass').value == 'jasdks') { a = 'true' }
             if (document.getElementById('user').value == 'Lane' && document.getElementById('pass').value == 'jaosjd') { a = 'true'}
             if (document.getElementById('user').value == 'Jemeny' && document.getElementById('pass').value == 'Jemeny') { a = 'true' }
@@ -510,7 +511,7 @@
 	if (document.getElementById('user').value == 'Crocker' && document.getElementById('pass').value == 'rolsDD') { a = 'true' }
 	if(document.getElementById('user').value == localStorage.user && document.getElementById('pass').value == localStorage.password){a = 'true'}
           if(a == 'true'){
-		  if(localStorage.username == " "){
+		  if(localStorage.username == " " || com == true ){
 		  Antonias();
 		  var m = document.createAttribute("class");
 		  m.value = 'edaf';
@@ -526,8 +527,9 @@
 			  alert("You are already logged in!");
 			 var question = prompt("Do you want to sign out? yes or no?");
 			  if(question == "yes"){
-				  localStorage.removeItem("username");
-				  window.location.reload();
+				  localStorage.clear();
+				  com = true;
+				  //window.location.reload();
 			  }else{
 			  window.location.assign("http://jemeny.github.io/Jemeny.com/Member_Page.html");
 			  }
