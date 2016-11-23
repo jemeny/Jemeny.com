@@ -277,6 +277,15 @@
         content: "\f091";
       }
       
+      .sad-icon:before{
+        content: "\f119";
+        color:teal;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        padding-right:10px;
+      }
+      
       .Education-icon:before{
         font-style:normal;
         font-size:35px;
@@ -369,6 +378,10 @@
         <div class = "jemeny--progress">
           <div class = "jemeny--progress--bar" id = "salary-bar"></div>
         </div>
+         <p class = "jemeny--section--title">Next Bonuse</p>
+        <div class = "jemeny--progress">
+          <div class = "jemeny--progress--bar" id = "bonuse-bar"></div>
+        </div>
     </div>
       <div class = "Infor window grid">
         <div class = "jemeny--dec--wrap jemeny--dec--position--strong jemeny--dec jemeny--dec--normal">
@@ -417,22 +430,22 @@
     <script>
       var logg = false;
       var email, job, credit, gender, first_name, last_name, depar, salary;
-    if(localStorage.username == 'Jeff'){logg = true; gender = "male"; salary = '0'; first_name = "jeff"; last_name = "jun"; credit = "10"; job = "vice president" ;email = "jeff.jun@lca.edu";}
-     if(localStorage.username == 'Lane'){logg = true; gender = "male"; salary = '0'; first_name = "Lane"; last_name = "Beliveau"; credit = "5"; job = "officer" ;depar = "antonias druses"; email = "lane.beliveau@lca.edu";}
-        if(localStorage.username == 'Jon'){logg = true;gender = "male"; salary = '0';first_name = "Jonathan"; last_name = "Guerrier"; credit = "5"; depar = "doggymonster"; job = "member"; email = "jonathan.guerrier@lca.edu";}
-        if(localStorage.username == 'Daniel'){logg = true; gender = "male"; salary = '0'; first_name = "Daniel"; last_name = "Bass"; credit = "10"; job = "member"; depar = "doggymonster" ;email = "daniel.bass@lca.edu";}
-        if(localStorage.username == 'Felipe'){logg = true;gender = "male"; salary = '0'; first_name = "Felipe"; last_name = "DeSouza"; depar = "doggymonster"; credit = "5" ;job = "member" ;email = "felipe.DeSouza@lca.edu";}
-        if(localStorage.username == 'Dario'){logg = true;gender = "male"; salary = '0';first_name = "Dario"; last_name = "Petrilo" ;credit = "10" ;job = "CEO"; depar = "drago"; email = "dario.petrilo@lca.edu";}
-        if(localStorage.username == 'Tobias'){logg = true;gender = "male"; salary = '0.10';first_name = "Geoffrey"; last_name = "Freeman" ;credit = "10"; job = "assitance"; depar = "antonias druses"; email = "geoffrey.freeman@lca.edu";}
-        if(localStorage.username == 'Jemeny'){logg = true;gender = "male"; salary = 'infinite'; first_name = "Jim" ;last_name = "Jin";credit = "infinite" ;job = "Director"; email = "gjj370.sunrise@gmail.com";}
-        if(localStorage.username == 'doggy'){logg = true;gender = "male"; salary = 'infinite'; first_name = "doggy" ;last_name = "monster"; credit = "infinite"; job = "Director"; email = "jim@jemeny.com";}
-        if(localStorage.username == 'Collin'){logg = true;gender = "male";salary = '0.25'; first_name = "Collin"; last_name = "Alexander" ;credit = "10"; job = "CEO"; email = "collin.alexander@lca.edu";}
-        if(localStorage.username == 'Pj'){logg = true;gender = "male"; salary = '0'; first_name = "paul" ;last_name = "griffin" ;credit = "5" ;job = "officer"; email = "paul.griffin@lca.edu";}
-        if(localStorage.username == 'Trey'){logg = true;gender = "male"; salary = '0'; first_name = "treyson" ;last_name = "baskett"; credit = "5"; job = "member" ;email = "treyson.baskett@lca.edu";}
-        if(localStorage.username == 'Harry'){logg = true;gender = "male"; salary = '0'; first_name = "harrison"; last_name = "mccarthy"; credit = "10" ;job = "officer"; email = "harrison.mccarthy@lca.edu";}
-        if(localStorage.username == 'Jack'){logg = true;gender = "male"; salary = '0'; first_name = "jack";last_name = "scaro" ;credit = "10" ;job = "officer" ;email = "jack.scaro@lca.edu";}
-        if(localStorage.username == 'Luke'){logg = true;gender = "male"; salary = '0'; first_name = "luke"; last_name = "mollenhauer" ;credit = "10"; job = "agent"; email = "luke.mollenhauer";}
-        if(localStorage.username == 'Crocker'){logg = true;gender = "male"; salary = '0'; first_name = "matthew"; last_name = "crocker"; credit = "5" ;job = "member" ;email = "matthew.crocker@lca.edu";}
+    if(localStorage.username == 'Jeff'){logg = true; gender = "male"; bonus = "none"; salary = '0'; first_name = "jeff"; last_name = "jun"; credit = "10"; job = "vice president" ;email = "jeff.jun@lca.edu";}
+     if(localStorage.username == 'Lane'){logg = true; gender = "male"; bonus = "none"; salary = '0'; first_name = "Lane"; last_name = "Beliveau"; credit = "5"; job = "officer" ;depar = "antonias druses"; email = "lane.beliveau@lca.edu";}
+        if(localStorage.username == 'Jon'){logg = true;gender = "male"; bonus = "none"; salary = '0';first_name = "Jonathan"; last_name = "Guerrier"; credit = "5"; depar = "doggymonster"; job = "member"; email = "jonathan.guerrier@lca.edu";}
+        if(localStorage.username == 'Daniel'){logg = true; gender = "male"; bonus = "none"; salary = '0'; first_name = "Daniel"; last_name = "Bass"; credit = "10"; job = "member"; depar = "doggymonster" ;email = "daniel.bass@lca.edu";}
+        if(localStorage.username == 'Felipe'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "Felipe"; last_name = "DeSouza"; depar = "doggymonster"; credit = "5" ;job = "member" ;email = "felipe.DeSouza@lca.edu";}
+        if(localStorage.username == 'Dario'){logg = true;gender = "male"; bonus = "none"; salary = '0';first_name = "Dario"; last_name = "Petrilo" ;credit = "10" ;job = "CEO"; depar = "drago"; email = "dario.petrilo@lca.edu";}
+        if(localStorage.username == 'Tobias'){logg = true;gender = "male"; bonus = "none"; salary = '0.10';first_name = "Geoffrey"; last_name = "Freeman" ;credit = "10"; job = "assitance"; depar = "antonias druses"; email = "geoffrey.freeman@lca.edu";}
+        if(localStorage.username == 'Jemeny'){logg = true;gender = "male"; bonus = "none"; salary = 'infinite'; first_name = "Jim" ;last_name = "Jin";credit = "infinite" ;job = "Director"; email = "gjj370.sunrise@gmail.com";}
+        if(localStorage.username == 'doggy'){logg = true;gender = "male"; bonus = "none"; salary = 'infinite'; first_name = "doggy" ;last_name = "monster"; credit = "infinite"; job = "Director"; email = "jim@jemeny.com";}
+        if(localStorage.username == 'Collin'){logg = true;gender = "male"; bonus = "none"; salary = '0.25'; first_name = "Collin"; last_name = "Alexander" ;credit = "10"; job = "CEO"; email = "collin.alexander@lca.edu";}
+        if(localStorage.username == 'Pj'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "paul" ;last_name = "griffin" ;credit = "5" ;job = "officer"; email = "paul.griffin@lca.edu";}
+        if(localStorage.username == 'Trey'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "treyson" ;last_name = "baskett"; credit = "5"; job = "member" ;email = "treyson.baskett@lca.edu";}
+        if(localStorage.username == 'Harry'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "harrison"; last_name = "mccarthy"; credit = "10" ;job = "officer"; email = "harrison.mccarthy@lca.edu";}
+        if(localStorage.username == 'Jack'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "jack";last_name = "scaro" ;credit = "10" ;job = "officer" ;email = "jack.scaro@lca.edu";}
+        if(localStorage.username == 'Luke'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "luke"; last_name = "mollenhauer" ;credit = "10"; job = "agent"; email = "luke.mollenhauer";}
+        if(localStorage.username == 'Crocker'){logg = true;gender = "male"; bonus = "none"; salary = '0'; first_name = "matthew"; last_name = "crocker"; credit = "5" ;job = "member" ;email = "matthew.crocker@lca.edu";}
       if(logg == true){
         var e = document.getElementById("email");
         var g = document.getElementById("gender");
@@ -440,6 +453,7 @@
         var n = document.getElementById('user_name');
         var pro = document.getElementById('pro-bar');
         var sa = document.getElementById('salary-bar');
+        var bob = document.getElementById('bonuse-bar');
         e.innerHTML = "<i class = 'email-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>E-mail:</span>" + " " + email; 
         g.innerHTML = "<i class = 'Gender-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Gender:</span>" + " " + gender; 
         j.innerHTML = "<i class = 'Job-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Job:</span>" + " " + job;
@@ -447,7 +461,15 @@
         pro.innerHTML = credit + "%";
         pro.style.width = credit + '%';
         sa.innerHTML = '$' + salary;
-        sa.style.width = salary * 10 + '%';
+        sa.style.width = salary * 100 + '%';
+        if(bonus == "none"){
+          bob.innerHTML = "<i class = 'sad-icon'></i>" + bonus;
+        }else{
+          bob.innerHTML = bonus + "more days left"; 
+          var www = bonus/31;
+          bob.style.width = www * 100 + "%";
+        }
+        
       }
       if(logg !== true){alert("You don't have an account!"); window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");}
     </script>
