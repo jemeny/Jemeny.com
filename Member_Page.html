@@ -136,6 +136,45 @@
         text-transform:uppercase;
         font-size:25px;
       }
+      
+      .Job-icon:before{
+        
+        color:teal;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        padding-right:10px;
+        content:"\f19d";
+      }
+      
+      .email-icon{
+         color:teal;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        padding-right:10px;
+        content: "\f0e0";
+      }
+      
+      .Name-icon{
+        
+         color:teal;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        padding-right:10px;
+        content: "\f007";
+      }
+      
+      .Gender-icon{
+        
+        content: "\f183";
+         color:teal;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        padding-right:10px;
+      }
 
       
     </style>
@@ -232,10 +271,10 @@
         var g = document.getElementById("gender");
         var j = document.getElementById("job");
         var n = document.getElementById('user_name');
-        e.innerHTML = "<span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>E-mail:</span>" + " " + email; 
-        g.innerHTML = "<span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Gender:</span>" + " " + gender; 
-        j.innerHTML = "<span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Job:</span>" + " " + job;
-        n.innerHTML = "<span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Name:</span>" + " " + first_name + " " + last_name;
+        e.innerHTML = "<i class = 'email-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>E-mail:</span>" + " " + email; 
+        g.innerHTML = "<i class = 'Gender-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Gender:</span>" + " " + gender; 
+        j.innerHTML = "<i class = 'Job-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Job:</span>" + " " + job;
+        n.innerHTML = "<i class = 'Name-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Name:</span>" + " " + first_name + " " + last_name;
       }
       if(logg !== true){alert("You don't have an account!"); window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");}
     </script>
