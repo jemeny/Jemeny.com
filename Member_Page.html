@@ -273,6 +273,7 @@
         font-weight:normal;
         font-family:FontAwesome;
         padding-right:10px;
+        font-size:40px;
         content: "\f091";
       }
       
@@ -294,6 +295,35 @@
         font-weight:normal;
         font-family:FontAwesome;
         padding-right:10px;
+      }
+      
+      .jemeny--section--header{
+        color:#757575;
+        font-family:Exo;
+        font-size:35px;
+        font-weight:400;
+        text-transform:uppercase;
+      }
+      
+      .jemeny--section--title{
+        color:#616060;
+        font-weight:100;
+        font-family:Exo;
+        font-size:20px;
+        text-transform:capitalize;
+      }
+      
+      .jemeny--progress{
+        border-radius:16px;
+        position:relative;
+        width:100%;
+        background-color:aliceblue;
+      }
+      
+      .jemeny--progress--bar{
+        border-radius:16px;
+        width:90%;
+        background-color:teal;
       }
 
       
@@ -325,10 +355,12 @@
         <p class = "jemeny_info" id = "gender"><i></i></p>
         <p class = "jemeny_info" id = "email"><i></i></p>
       </div>
-        <hr style = "border-top:1px solid #616060; border:0; box-sizing:content-box; margin:20px 0; overflow:visible;">
-        <h2><i class = "Treasure-icon"></i> Treasure</h2>
-        <p class = "jemeny_info">Credit</p>
-        <div></div>
+        <hr style = "border:0; border-top:1px solid #616060; box-sizing:content-box; margin:20px 0; overflow:visible;">
+        <h2 class = "jemeny--section--header"><i class = "Treasure-icon"></i> Treasure</h2>
+        <p class = "jemeny--section--title">Credit</p>
+        <div class = "jemeny--progress">
+          <div class = "jemeny--progress--bar"></div>
+        </div>
     </div>
       <div class = "Infor window grid">
         <div class = "jemeny--dec--wrap jemeny--dec--position--strong jemeny--dec jemeny--dec--normal">
