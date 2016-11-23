@@ -6,6 +6,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Exo'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Comfortaa'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon (2).ico">
     
     <style>
       li a{
@@ -148,10 +149,10 @@
         var g = document.getElementById("gender");
         var j = document.getElementById("job");
         var n = document.getElementById('user_name');
-        e.innerHTML = "E-mail" + ":" + " " + email; 
-        g.innerHTML = "Gender" + ":" + " " + gender; 
-        j.innerHTML = "Job" + ":" + " " + job;
-        n.innerHTML = "Name" + ":" + " " + first_name + " " + last_name;
+        e.innerHTML = "<span style = 'color:teal; font-size:25px font-weight:400; text-transform:uppercase;'>E-mail</span>" + ":" + " " + email; 
+        g.innerHTML = "<span style = 'color:teal; font-size:25px font-weight:400; text-transform:uppercase;'>Gender</span>" + ":" + " " + gender; 
+        j.innerHTML = "<span style = 'color:teal; font-size:25px font-weight:400; text-transform:uppercase;'>Job</span>" + ":" + " " + job;
+        n.innerHTML = "<span style = 'color:teal; font-size:25px font-weight:400; text-transform:uppercase;'>Name</span>" + ":" + " " + first_name + " " + last_name;
       }
       if(logg !== true){alert("You don't have an account!"); window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");}
     </script>
