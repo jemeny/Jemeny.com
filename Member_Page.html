@@ -465,9 +465,20 @@
         if(bonus == "none"){
           bob.innerHTML = "<i class = 'sad-icon'></i>" + bonus;
         }else{
-          bob.innerHTML = bonus + "more days left"; 
-          var www = bonus/31;
+           var bboo = bonus;
+          bob.innerHTML = bboo + "more days left"; 
+          var www = bboo/31;
           bob.style.width = www * 100 + "%";
+         
+          function Counter(){
+            var time = 1000 * 60 * 60 * 24;
+            if(bboo > 0){
+            bboo -= 1;
+            }else{
+              bboo = 31;
+            }
+          }
+          setInterval(Counter, time);
         }
         
       }
