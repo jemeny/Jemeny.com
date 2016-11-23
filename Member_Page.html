@@ -31,6 +31,56 @@
         white-space:nowrap;
       }
       
+      .jemeny--dec--wrap{
+        display:table;
+        white-space:nowrap;
+        margin:0,6px;
+      }
+      
+      .jemeny--dec--teal:before :after{
+        border-top:1px solid teal'
+      }
+      
+      .jemeny--dec--normal:before :after{
+        border-top:1px solid #616060;
+      }
+      
+      .jemeny--dec--gray:before :after{
+        border-top:1px solid #757575;
+      }
+      
+      .jemeny--dec:before :after{
+        content: " ";
+        position:relative;
+        display:table-cell;
+        width:50%;
+      }
+      
+      
+      .jemeny--padding--soft{
+        padding:7px;
+      }
+      
+      .jemeny--padding--normal{
+        padding:14px;
+      }
+      
+      .jemeny--padding--medium{
+        padding:21px;
+      }
+      
+      .jemeny-padding--strong{
+        padding:28px;
+      }
+      
+      .jemeny--dec--position--soft{
+        top:2em;
+      }
+      
+      .jemeny--dec--position--strong{
+        top:3em;
+      }
+      
       .user_info:before{
         content: " ";
         display:table-cell;
@@ -224,7 +274,7 @@
       </div>
     </div>
       <div class = "Infor window grid">
-        <div class = "user-info">
+        <div class = "jemeny--dec--wrap jemeny--dec--position--strong jemeny--dec jemeny--dec--normal">
         <i class = "Education-icon"></i>
         <h1 class = "HEADER">Education Background</h1>
         </div>
