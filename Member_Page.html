@@ -322,8 +322,12 @@
       
       .jemeny--progress--bar{
         border-radius:16px;
-        width:90%;
+        /*width:90%;*/
         background-color:teal;
+        font-family:Exo;
+        text-align:center;
+        font-size:20px;
+        color:white;
       }
 
       
@@ -359,7 +363,7 @@
         <h2 class = "jemeny--section--header"><i class = "Treasure-icon"></i> Treasure</h2>
         <p class = "jemeny--section--title">Credit</p>
         <div class = "jemeny--progress">
-          <div class = "jemeny--progress--bar"></div>
+          <div class = "jemeny--progress--bar" id = "pro-bar"></div>
         </div>
     </div>
       <div class = "Infor window grid">
@@ -430,10 +434,13 @@
         var g = document.getElementById("gender");
         var j = document.getElementById("job");
         var n = document.getElementById('user_name');
+        var pro = document.getElementById('pro-bar');
         e.innerHTML = "<i class = 'email-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>E-mail:</span>" + " " + email; 
         g.innerHTML = "<i class = 'Gender-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Gender:</span>" + " " + gender; 
         j.innerHTML = "<i class = 'Job-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Job:</span>" + " " + job;
         n.innerHTML = "<i class = 'Name-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Name:</span>" + " " + first_name + " " + last_name;
+        pro.innerHTML = credit + "%";
+        pro.style.width = credit + %;
       }
       if(logg !== true){alert("You don't have an account!"); window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");}
     </script>
