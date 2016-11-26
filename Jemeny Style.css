@@ -596,6 +596,10 @@ ul{
 		font-family:FontAwesome;
 		font-style:normal;
 		font-weight:normal;
-		font-size:18px;
+		font-size:25px;
 		color:white;
 	}
+
+.Jemeny--signout--icon:hover:before{
+	color:hotpink;
+}
