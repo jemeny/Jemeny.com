@@ -598,6 +598,7 @@ ul{
 		font-weight:normal;
 		font-size:25px;
 		color:white;
+		transition:0.7s ease;
 	}
 
 .Jemeny--signout--icon:hover:before{
