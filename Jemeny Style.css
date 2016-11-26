@@ -601,6 +601,16 @@ ul{
 		transition:0.7s ease;
 	}
 
+ .Setting-icon:before{
+        content:"\f013";
+        color:gray;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:25px;
+      }
+
 .Jemeny--signout--icon:hover:before{
 	color:hotpink;
 }
