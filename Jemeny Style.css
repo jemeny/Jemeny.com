@@ -591,14 +591,9 @@ ul{
 	color:teal;
 }
 
-@font-face{
-	font-family:Jemeny--icon;
-	src: url("https://use.fontawesome.com/1d1a06f231.js");
-}
-
 .Jemeny--signout--icon:before{
 		content:"\f08b";
-		font-family:Jemeny--icon;
+		font-family:FontAwesome;
 		font-style:normal;
 		font-weight:normal;
 		font-size:18px;
