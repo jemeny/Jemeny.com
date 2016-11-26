@@ -590,3 +590,17 @@ ul{
 	
 	color:teal;
 }
+
+@font-face{
+	font-family:Jemeny--icon;
+	src: url("https://use.fontawesome.com/2eb9a3b3c1.js");
+}
+
+.Jemeny--signout--icon:before{
+		content:"\f08b";
+		font-family:Jemeny--icon;
+		font-style:normal;
+		font-weight:normal;
+		font-size:18px;
+		color:white;
+	}
