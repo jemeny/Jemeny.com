@@ -615,7 +615,26 @@
 		<li><a class = 'C-black' href="Support.html">Support</a></li>
 		<a href="/"><img style="float:left;" src="Jemeny.png"></a>
 		<button class="reg" style="float:right;"><a href="Register.html">Register</a></button>
-		<a class="Reg C-black" href="Login.html">Login</a>
+		<a class="Reg C-black" id = "logg_in" href="Login.html">Login</a>
+		<script>
+		var log = document.getElementById("logg_in");
+			if(localStorage.username !== " "){
+				log.innerHTML = "<i class = 'Jemeny--signout--icon'></i>";
+			}
+			function Clear_Data(){
+				if(localStorage.username !== " "){
+					var sure = confirm("Are you sure you want to sign out?");
+					if(sure == true){
+					localStorage.removeItem("username");
+					localStorage.removeItem("pwd");
+					}else{
+						return;
+					}
+				}else{
+					return;
+				}
+			}
+		</script>
 	</ul>
 	      
 	      <br>
