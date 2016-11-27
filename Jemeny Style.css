@@ -734,12 +734,38 @@ ul{
       }
       
       .jemeny--dec--teal:before{
-        border-top:1px solid teal'
+        border-top:1px solid teal;
       }
       
       .jemeny--dec--teal:after{
-        border-top:1px solid teal'
+        border-top:1px solid teal;
       }
+	
+	.jemeny--dec--marine:before{
+        border-top:1px solid #48D1CC;
+      }
+      
+      .jemeny--dec--marine:after{
+        border-top:1px solid #48D1CC;
+      }
+
+	.jemeny--dec--hotpink:before{
+        border-top:1px solid hotpink;
+      }
+      
+      .jemeny--dec--hotpink:after{
+        border-top:1px solid hotpink;
+      }
+
+	.jemeny--dec--seagreen:before{
+        border-top:1px solid seagreen;
+      }
+      
+      .jemeny--dec--seagreen:after{
+        border-top:1px solid seagreen;
+      }
+
+
       
       .jemeny--dec--normal:before{
         border-top:1px solid #616060;
