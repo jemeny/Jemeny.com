@@ -72,8 +72,8 @@
     }
   
     
-    body{
-      transition: margin-left 0.7s;
+    .con{
+      transition: 0.8s ease;
       padding:20px;
     }
   </style>
@@ -108,6 +108,7 @@
   </script>
   <span class = "jemeny--open--icon" onclick = "Open()"></span>
 <body>
+  <div class = "container" id = "con">
   <section>
     <header><h1 style = "font-family:Roboto; font-size:40px; font-weight:bold; text-transform:uppercase; color:teal; text-shadow:none;"><i class = "Setting-icon"></i>Setting Page</h1></header>
     <form onsubmit = "return false">
@@ -122,20 +123,22 @@
        <p>Doggy<input type = "radio" name = "Theme" value = "doggy"></p>
     </form>
   </section>
+  </div>
 </body>
   
   <script>
   var nav = document.getElementById("side-nav");
+    var container = document.getElementById("con");
     function Open(){
       nav.style.width = "300px";
-      document.body.style.background = "rgba(0,0,0,0.8)";
-      document.body.style.marginLeft = "300px";
+      container.style.background = "rgba(0,0,0,0.8)";
+      container.style.marginLeft = "300px";
     }
     
     function Close(){
       nav.style.width = "0px";
-      document.body.style.background = "rgb(0,0,0)";
-      document.body.style.marginLeft = "0px";
+      container.style.background = "#e0e4f5"; 
+      container.style.marginLeft = "0px";
     }
   
   </script>
