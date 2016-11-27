@@ -758,11 +758,11 @@ ul{
       }
 
 	.jemeny--dec--seagreen:before{
-        border-top:1px solid seagreen;
+        border-top:1px solid lightseagreen;
       }
       
       .jemeny--dec--seagreen:after{
-        border-top:1px solid seagreen;
+        border-top:1px solid lightseagreen;
       }
 
 
