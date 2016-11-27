@@ -611,6 +611,78 @@ ul{
         font-size:25px;
       }
 
+.jemeny--close--icon:before{
+	content: "\f00d";
+	  color:white;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:35px;
+}
+
+.jemeny--open--icon:before{
+	content: "\f00b";
+	  color:tomato;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:35px;
+}
+
+.jemeny--code--icon{
+	content: "\f121";
+	  color:white;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:25px;
+	
+}
+
+.jemeny--information--icon{
+	content: "\f129";
+	  color:white;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:25px;
+	
+}
+
+.jemeny--customize--icon{
+	content: "\f040";
+	  color:white;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:25px;
+	
+}
+
+.jemeny--calender--icon{
+	content: "\f133";
+	  color:white;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:25px;
+	
+}
+
+.jemeny--close--icon:hover :before{
+	color:tomato;
+}
+
+.jemeny--open--icon:hover:before{
+	color:teal;
+}
+
 .Jemeny--signout--icon:hover:before{
 	color:hotpink;
 }
