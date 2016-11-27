@@ -44,6 +44,13 @@
       padding:15px;
     }
     
+    #more_btn{
+      position:absolute;
+      top:45%;
+      right:10px;
+      padding:15px;
+    }
+    
     #setting_menu:hover #icon_1:before{
       content:"\f129";
       font-family:FontAwesome;
@@ -74,6 +81,14 @@
       font-size:25px;
       padding-right:20px;
       color:white;
+    }
+    
+    .jemeny--more--icon{
+      content: "\f054";
+      font-family:FontAwesome;
+      font-size:50px;
+      color:white;
+      font-weight:400;
     }
   
     
@@ -113,6 +128,7 @@
     <a id = "setting_menu1" href = "/"><i id = "icon_2"></i>Coding</a>
     <a id = "setting_menu2" href = "/"><i id = "icon_3"></i>Calender</a>
     <a id = "setting_menu3" href = "/"><i id = "icon_4"></i>Customizing</a>
+    <a id = "more_btn" href = "javascript:void(0)" onclick = "Show_More()"><i class = "jemeny--more--icon"></i></a>
     </div>
   <script>
         /*var menu = document.getElementsByClassName("setting_menu");
@@ -169,6 +185,11 @@
       nav.style.width = "0px";
       //document.body.style.background = "#e0e4f5"; 
       container.style.marginLeft = "0px";
+    }
+    
+    function Show_More(){
+      nav.style.width = "100%";
+      nav.style.background = "rgba(0,0,0,0.8)";
     }
   
   </script>
