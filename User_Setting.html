@@ -53,6 +53,7 @@
     
     #setting_menu:hover #icon_1:before{
       content:"\f129";
+      opacity:1;
       font-family:FontAwesome;
       font-size:25px;
       padding-right:20px;
@@ -60,8 +61,14 @@
       color:white;
     }
     
+    i[class~=icon_]:before{
+      opacity:0;
+      transition:0.8s ease;
+    }
+    
     #setting_menu1:hover #icon_2:before{
       content: "\f121";
+         opacity:1;
       font-family:FontAwesome;
       font-size:25px;
       padding-right:20px;
@@ -71,6 +78,7 @@
     
       #setting_menu2:hover #icon_3:before{
       content:  "\f133";
+           opacity:1;
       font-family:FontAwesome;
       font-size:25px;   
         font-style:normal;
@@ -80,6 +88,7 @@
     
         #setting_menu3:hover #icon_4:before{
       content: "\f044";
+             opacity:1;
       font-family:FontAwesome;
       font-size:25px;
       font-style:normal;
