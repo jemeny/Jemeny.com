@@ -622,6 +622,37 @@ ul{
         font-size:35px;
 }
 
+.jemeny--why--icon:before{
+	content: "\f128";
+	 color:tomato;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:40px;
+}
+
+.jemeny--theme--icon:before{
+	content: "\f108";
+	 color:tomato;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:40px;
+}
+
+.jemeny--gender--icon:before{
+	content: "\f113";
+	 color:tomato;
+        font-style:normal;
+        font-weight:normal;
+        font-family:FontAwesome;
+        transition:0.8s ease;
+        font-size:40px;
+}
+
+
 .jemeny--open--icon:before{
 	content: "\f00b";
 	  color:tomato;
