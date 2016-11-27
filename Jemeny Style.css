@@ -608,7 +608,8 @@ ul{
         font-weight:normal;
         font-family:FontAwesome;
         transition:0.8s ease;
-        font-size:25px;
+        font-size:40px;
+	 padding-right:25px;
       }
 
 .jemeny--close--icon:before{
