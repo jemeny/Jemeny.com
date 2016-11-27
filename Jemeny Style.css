@@ -718,3 +718,123 @@ ul{
 .Jemeny--signout--icon:hover:before{
 	color:hotpink;
 }
+
+
+  .user_info{
+        
+        display:table;
+        margin:0, 6px;
+        white-space:nowrap;
+      }
+      
+      .jemeny--dec--wrap{
+        display:table;
+        white-space:nowrap;
+        margin:0,6px;
+      }
+      
+      .jemeny--dec--teal:before{
+        border-top:1px solid teal'
+      }
+      
+      .jemeny--dec--teal:after{
+        border-top:1px solid teal'
+      }
+      
+      .jemeny--dec--normal:before{
+        border-top:1px solid #616060;
+      }
+      
+      .jemeny--dec--normal:after{
+        border-top:1px solid #616060;
+      }
+      
+      .jemeny--dec--gray:before{
+        border-top:1px solid #757575;
+      }
+      
+        .jemeny--dec--gray:after{
+        border-top:1px solid #757575;
+      }
+      
+      .jemeny--dec:before{
+        content: " ";
+        position:relative;
+        display:table-cell;
+        width:50%;
+      }
+      
+      .jemeny--dec:after{
+        content: " ";
+        position:relative;
+        display:table-cell;
+        width:50%;
+      }
+      
+      
+      .jemeny--padding--soft--right{
+        padding-right:7px;
+      }
+       
+       .jemeny--padding--soft--left{
+        padding-left:7px;
+      }
+      
+      .jemeny--padding--normal--right{
+        padding-right:14px;
+      }
+      
+       .jemeny--padding--normal--left{
+        padding-left:14px;
+      }
+      
+       .jemeny--padding--medium--right{
+        padding-right:14px;
+      }
+      
+       .jemeny--padding--medium--left{
+        padding-left:14px;
+      }
+      
+      .jemeny-padding--strong--right{
+        padding-right:28px;
+      }
+      
+        .jemeny-padding--strong--left{
+        padding-left:28px;
+      }
+      
+      .jemeny--dec--position--soft:before{
+        top:2em;
+      }
+      
+      .jemeny--dec--position--soft:after{
+        top:2em;
+      }
+      
+      .jemeny--dec--position--strong:before{
+        top:3em;
+      }
+      
+       .jemeny--dec--position--strong:after{
+        top:3em;
+      }
+      
+      .user_info:before{
+        content: " ";
+        display:table-cell;
+        width:50%;
+        border-top:1px solid teal;
+        position:relative;
+        top:2em;
+      }
+      
+       .user_info:after{
+        content: " ";
+        display:table-cell;
+        width:50%;
+        border-top:1px solid teal;
+        position:relative;
+         top:2em;
+      }
+      
