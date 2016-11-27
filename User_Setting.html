@@ -120,7 +120,11 @@
   </style>
   <script>
     //window.location.assign("http://jemeny.github.io/Jemeny.com");
+    if(localStorage.username == " " || localStorage.username == null){
+      window.location.assign("http://jemeny.github.io/Jemeny.com/Login.html");
+    }else{
     document.title = localStorage.username + "'s Setting";
+    }
   </script>
    <script src="https://use.fontawesome.com/2eb9a3b3c1.js"></script>
   <link rel = "stylesheet" href = "Jemeny Style.css"/>
