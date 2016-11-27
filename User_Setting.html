@@ -38,6 +38,38 @@
       right:25px;
       padding:15px;
     }
+    
+    #setting_menu:hover #icon_1:before{
+      content:"\f129";
+      font-family:FontAwesome;
+      font-size:25px;
+      padding-right:20px;
+      color:white;
+    }
+    
+    #setting_menu1:hover #icon_2:before{
+      content: "\f121";
+      font-family:FontAwesome;
+      font-size:25px;
+      padding-right:20px;
+      color:white;
+    }
+    
+      #setting_menu2:hover #icon_3:before{
+      content:  "\f133";
+      font-family:FontAwesome;
+      font-size:25px;
+      padding-right:20px;
+      color:white;
+    }
+    
+        #setting_menu3:hover #icon_4:before{
+      content: "\f044";
+      font-family:FontAwesome;
+      font-size:25px;
+      padding-right:20px;
+      color:white;
+    }
   
     
     body{
@@ -58,11 +90,22 @@
 </head>
   <div class = "nav-container" id = "side-nav">
     <a id = "close_btn" href = "javascript:void(0)" onclick = "Close()"><i class = "jemeny--close--icon"></i></a>
-    <a href = "/"><i></i>Information</a>
-    <a href = "/"><i></i>Coding</a>
-    <a href = "/"><i></i>Calender</a>
-    <a href = "/"><i></i>Customizing</a>
+    <a id = "setting_menu" href = "/"><i id = "icon_1"></i>Information</a>
+    <a id = "setting_menu1" href = "/"><i id = "icon_2"></i>Coding</a>
+    <a id = "setting_menu2" href = "/"><i id = "icon_3"></i>Calender</a>
+    <a id = "setting_menu3" href = "/"><i id = "icon_4"></i>Customizing</a>
     </div>
+  <script>
+        /*var menu = document.getElementsByClassName("setting_menu");
+        var i;
+        for( i=0; i<menu.length; i++){
+       menu[i].addEventListener("mouseover", function(){
+       var icon = document.createElement('i');
+         icon.setAttribute("class", "
+       });
+        }*/
+  
+  </script>
   <span class = "jemeny--open--icon" onclick = "Open()"></span>
 <body>
   <section>
