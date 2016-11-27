@@ -86,9 +86,10 @@
     .jemeny--more--icon:before{
       content: "\f054";
       font-family:FontAwesome;
-      font-size:50px;
+      font-size:30px;
       color:white;
-      font-weight:400;
+      font-weight:normal;
+      font-style:normal;
       transition:0.7s ease;
     }
     
@@ -183,6 +184,8 @@
     var container = document.getElementById("con");
     function Open(){
       nav.style.width = "300px";
+      nav.style.background = "rgb(0,0,0)";
+      nav.style.paddingTop = "60px";
       //document.body.style.background = "rgba(0,0,0,0.8)";
       container.style.marginLeft = "300px";
     }
@@ -195,6 +198,7 @@
     
     function Show_More(){
       nav.style.width = "100%";
+      nav.style.paddingTop = "100px";
       nav.style.background = "rgba(0,0,0,0.8)";
     }
   
