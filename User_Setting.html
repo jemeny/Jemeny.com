@@ -76,6 +76,10 @@
       transition: 0.8s ease;
       padding:20px;
     }
+    
+    body{
+      transition:0.8s ease;
+    }
   </style>
   <script>
     //window.location.assign("http://jemeny.github.io/Jemeny.com");
@@ -112,15 +116,18 @@
   <section>
     <header><h1 style = "font-family:Roboto; font-size:40px; font-weight:bold; text-transform:uppercase; color:teal; text-shadow:none;"><i class = "Setting-icon"></i>Setting Page</h1></header>
     <form onsubmit = "return false">
+      <div class = "wra_pper">
+        <h2>Gender <i class = "jemeny--why--icon"></i></h2>
       <p>Male<input type = "radio" name = "Gender" value = "Male"></p>
       <p>Female<input type = "radio" name = "Gender" value = "Female"></p>
       <script></script>
-      <div>
-      <h2>Theme</h2>
       </div>
+      <div class = "wra_pper">
+        <h2>Theme <i class = "jemeny--theme--icon"></i></h2>
       <p>Drago<input type = "radio" name = "Theme" value = "drago"></p>
        <p>Antonias<input type = "radio" name = "Theme" value = "antonias"></p>
        <p>Doggy<input type = "radio" name = "Theme" value = "doggy"></p>
+      </div>
     </form>
   </section>
   </div>
@@ -131,13 +138,13 @@
     var container = document.getElementById("con");
     function Open(){
       nav.style.width = "300px";
-      container.style.background = "rgba(0,0,0,0.8)";
+      document.body.style.background = "rgba(0,0,0,0.8)";
       container.style.marginLeft = "300px";
     }
     
     function Close(){
       nav.style.width = "0px";
-      container.style.background = "#e0e4f5"; 
+      document.body.style.background = "#e0e4f5"; 
       container.style.marginLeft = "0px";
     }
   
