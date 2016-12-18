@@ -183,7 +183,10 @@
   <div class = "container" id = "con">
   <section>
     <header><h1 style = "font-family:Exo; font-size:40px; font-weight:bold; text-transform:uppercase; color:teal; text-shadow:none;"><i class = "Setting-icon"></i>Setting Page</h1></header>
-    <audio controls autoplay><source src = "Try Everything .mp3" type = "audio/mpeg" /></audio>
+    <audio controls autoplay>
+	    <source src = "Try Everything .mp3" type = "audio/mpeg" />
+	    <source src = "Daylight-Maroon 5 (Lyrics).mp3" type = "audio/mpeg"/>
+	  </audio>
     <form onsubmit = "return false">
       <div class = "wra_pper">
         <div style = "margin:auto;" class = "jemeny--dec jemeny--dec--wrap jemeny--dec--position--strong jemeny--dec--seagreen">
@@ -200,9 +203,9 @@
         <h2 style = "margin:0; padding: 0px 10px 0px 10px;"><i class = "jemeny--theme--icon"></i> Theme</h2>
         </div>
         <div class = "form_content">
-      <p>Drago<input type = "radio" name = "Theme" value = "drago"></p>
-       <p>Antonias<input type = "radio" name = "Theme" value = "antonias"></p>
-       <p>Doggy<input type = "radio" name = "Theme" value = "doggy"></p>
+      <p>Drago<input type = "radio" id = "Drago" name = "Theme" value = "drago"></p>
+       <p>Antonias<input type = "radio" id = "Antonias" name = "Theme" value = "antonias" checked></p>
+       <p>Doggy<input type = "radio" id = "Doggy" name = "Theme" value = "doggy"></p>
           </div>
       </div>
     </form>
@@ -210,6 +213,44 @@
   </div>
 </body>
   
+<script>
+	
+	function Theme_Picker(){
+		localStorage.setItem("User_Theme", "");
+		var Drago = document.getElementById("Drago");
+		var Antonias = document.getElementById("Antonias");
+		var Doggy = document.getElementById("Doggy");
+		if(Drago.checked == true){
+			localStorage.setItem("User_Theme", "Drago");
+			console.log(localStorage.User_Theme);
+		}
+		if(Antonias.checked == true){
+			localStorage.setItem("User_Theme", "Antonias");
+			console.log(localStorage.User_Theme);
+		}
+		if(Doggy.checked == true){
+			localStorage.setItem("User_Theme", "Doggy");
+			console.log(localStorage.User_Theme);
+		}
+		if(localStorage.User_Theme !== ""){
+			switch(localStorage.User_Theme){
+				case "Drago":
+					Drago_Theme();
+					break
+				case "Antonias":
+				        Antonias_Theme();
+					break;
+				case "Doggy":
+					Doggy_Theme();
+					break;
+				default:
+					Default_Theme();
+					
+						      }
+		}
+	}
+	
+</script>
   <script>
   var nav = document.getElementById("side-nav");
     var container = document.getElementById("con");
