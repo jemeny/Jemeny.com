@@ -614,6 +614,7 @@ ul{
 
 .jemeny--close--icon:before{
 	content: "\f00d";
+	opacity:1;
 	  color:white;
         font-style:normal;
         font-weight:normal;
