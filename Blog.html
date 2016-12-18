@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="Jemeny Style.css"/>
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Exo'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Comfortaa'>
+	   <script src="https://use.fontawesome.com/2eb9a3b3c1.js"></script>
 	  <style>
 		  body{
 			  margin:0;
@@ -22,6 +23,28 @@
 		  .nav-bar ul{
 			  background-color:rgba(0,0,0,0.8);
 			  padding:0px 0px 10px 0px;
+		  }
+		  .header-container{
+			  overflow:hidden;
+			  max-height:725px;
+			  width:100%;
+		  }
+		  
+		  .Ideas--icon:before{
+			  font-family:FontAwesome;
+			  content: "\f086";
+			  font-style:normal;
+			  font-weight:normal;
+			  font-size:45px;
+			  color:white;
+		  }
+		  
+		  .Header{
+			  color:white;
+			  font-family:Comfortaa;
+			  font-size:45px;
+			  font-weight:100;
+			  text-transform:Uppercase;
 		  }
 	  </style>
   </head>
@@ -50,10 +73,10 @@ s0.parentNode.insertBefore(s1,s0);
 		<a class = "open_button hoverable" href = "javascript:void(0)" onclick = "Open()">&#9776</a> 
       </ul>
       </div>
-	    <div>
+	    <div class = "header-container">
 	     <img class = "header_background" src = 'http://s1.picswalls.com/wallpapers/2015/09/20/background-hd-2015_111526235_269.jpg'/>
-		    <div>
-			    
+		    <div class = "header-content">
+			    <h1 class = "Header">Share Your Ideas <i class = "Ideas--icon"></i></h1>
 		    </div>
 	    </div>
     </div>
