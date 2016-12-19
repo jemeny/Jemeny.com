@@ -91,7 +91,7 @@
 		  }
 		  
 		  .footer--list--item{
-			  display:block;
+			  display:inline-block;
 		  }
 		  
 		  .list--1{
@@ -148,6 +148,21 @@
 			  color:transparent;
 			  border-radius:10px;
 		  }
+		  
+		  .intact-button{
+			  position:absolute;
+			  top:0;
+			  left:0;
+			  width:100px;
+			  padding:10px 15px;
+			  transition:0.7s ease;
+			  background-color:#efefef;
+			  color:white;
+		  }
+		  
+		  .intact-button:hover{
+			  background-color:DeepSkyBlue;
+		  }
 	  </style>
   </head>
 <script type="text/javascript">
@@ -182,6 +197,7 @@ s0.parentNode.insertBefore(s1,s0);
 		    </div>
 		    <div class = "header-content">
 			   <i class = "Search--icon"></i><input type = "search" placeholder = "What are you looking for?"/>
+			    <button class = "intact-button">Submit</button>
 		    </div>
 	    </div>
 	    <div class = "footer">
