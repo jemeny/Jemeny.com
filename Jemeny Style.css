@@ -890,6 +890,27 @@ body{
 	padding: 0 0 10px 0;
 }
 
+.Jemeny--nav--strong{
+	overflow:hidden;
+	padding 0 0 15px 0;
+}
+
+.Jemeny--nav--extreme{
+	overflow:hidden;
+	padding 0 0 20px 0;
+}
+
+.Jemeny--nav--super{
+	overflow:hidden;
+	padding 0 0 25px 0;
+}
+
+.Jemeny--nav--terminat-e{
+	overflow:hidden;
+	padding 0 0 30px 0;
+}
+
+
 .Jemeny--nav--shadow--soft{
 	box-shadow:10px 10px 15px gray;
 }
