@@ -891,11 +891,11 @@ body{
 }
 
 .Jemeny--nav--shadow--soft{
-	box-shadow:10px 10px 15px;
+	box-shadow:10px 10px 15px gray;
 }
 .Jemeny--nav--shadow--strong{
-	box-shadow:10px 10px 20px;
+	box-shadow:10px 10px 20px gray;
 }
 .Jemeny--nav--shadow--extreme{
-	box-shadow:10px 10px 25px;
+	box-shadow:10px 10px 25px gray;
 }
