@@ -162,7 +162,7 @@
 		  
 		  .footer--UI--button{
 			  background:transparent;
-			  color:white;
+			  color:#00b2ee;
 			  margin:auto;
 			  display:block;
 			  border:none;
@@ -210,6 +210,33 @@
 			  padding:0;
 			  width:70%;	  
 		  }
+		  
+		  .item--header--tag{
+			  border-radius:15px;
+			  padding:10px 15px;
+			  position:absolute;
+			  top:0;
+		  }
+		  
+		  .bgcolor--tomato{
+			  background-color:tomato;
+		  }
+		  
+		  .bgcolor--blue--right{
+			  background:linear-gradient(to bottom right, Deepskyblue, skyblue);
+		  }
+		  
+		  .bgcolor--blue--left{
+			  background:linear-gradient(to bottom left, Deepskyblue, skyblue);
+		  }
+		  
+		  .bgcolor--orange--left{
+			  background:linear-gradient(to bottom left, #EE799F, tomato);
+		  }
+		  
+		   .bgcolor--orange--right{
+			  background:linear-gradient(to bottom right, #EE799F, tomato);
+		  }
 	  </style>
   </head>
 <script type="text/javascript">
@@ -250,7 +277,10 @@ s0.parentNode.insertBefore(s1,s0);
 	    <div class = "body--content">
 		    <div class = "content--body--item">
 			    <div class = "item--header">
-				    <div class = "item--header--tag"></div>
+				    <div class = "item--header--tag bgcolor--orange--right">
+					    <h2 id = "date">12/19/2016</h2>
+				    </div>
+				    <a href = "#" class = "item--header--normal">Christmas Break</a>
 			    </div>
 			    <div class = "item--body">
 			    </div>
