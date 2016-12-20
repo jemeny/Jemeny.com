@@ -160,6 +160,20 @@
 			  border:none;
 		  }
 		  
+		  .footer--UI--button{
+			  background:transparent;
+			  color:white;
+			  border:none;
+			  text-decoration:none;
+			  transition:0.8s ease;
+			  padding:10px 15px;
+			  width:150px;
+		  }
+		  
+		    .footer--UI--button:hover{
+			 color:tomato;
+		  }
+		  
 		  .intact-button:hover{
 			  background-color:#f77c76;
 		  }
@@ -170,6 +184,28 @@
 			  font-style:normal;
 			  font-weight:normal;
 			  font-size:30px;
+		  }
+		  
+		   .post--icon:before{
+			 content: "\f055";
+			  font-family:FontAwesome;
+			  font-style:normal;
+			  font-weight:normal;
+			  font-size:30px;
+		  }
+		  
+		  .body--footer{
+			  width:100%;
+		  }
+		  
+		  .body--content{
+			  width:100%;
+			  position:relative;
+		  }
+		  .post--area{
+			  margin:35px auto;
+			  padding:0;
+			  width:70%;	  
 		  }
 	  </style>
   </head>
@@ -206,6 +242,20 @@ s0.parentNode.insertBefore(s1,s0);
 		    <div class = "header-content">
 			   <i class = "Search--icon"></i><input type = "search" placeholder = "What are you looking for?"/>
 			    <button class = "intact-button"><i class = "Submit--icon"></i></button>
+		    </div>
+	    </div>
+	    <div class = "body--content">
+		    <div class = "content--body--item">
+			    <div class = "item--header">
+				    <div class = "item--header--tag"></div>
+			    </div>
+			    <div class = "item--body">
+			    </div>
+		    </div>
+		    <div class = "body--footer">
+			    <div class = "post--area">
+				    <a class = "footer--UI--button" href = "#">Post <i class = "post--icon"></i></a>
+			    </div>
 		    </div>
 	    </div>
 	    <div class = "footer">
