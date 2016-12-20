@@ -889,3 +889,13 @@ body{
 	overflow:hidden;
 	padding: 0 0 10px 0;
 }
+
+.Jemeny--nav--shadow--soft{
+	box-shadow:10px 10px 15px;
+}
+.Jemeny--nav--shadow--strong{
+	box-shadow:10px 10px 20px;
+}
+.Jemeny--nav--shadow--extreme{
+	box-shadow:10px 10px 25px;
+}
