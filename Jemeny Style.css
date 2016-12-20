@@ -868,4 +868,24 @@ body{
         position:relative;
          top:2em;
       }
+
+	.Jemeny--bgcolor--black{
+		background:linear-gradient(to bottom right, black, gray);
+}
+
+.Jemeny--bgcolor--pink{
+	background:linear-gradient(to bottom right, tomato, pink);
+}
       
+.Jemeny--bgcolor--green{
+	background:linear-gradient(to bottom right, seagreen, lightseagreen);
+}
+
+.Jemeny--bgcolor--blue{
+	background:linear-gradient(to bottom right, #436EEE, #6495ED);
+}
+
+.Jemeny--nav--soft{
+	overflow:hidden;
+	padding: 0 0 10px 0;
+}
