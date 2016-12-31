@@ -1,1 +1,28 @@
+*{
+  box-sizing:border-box;
+}
 
+.jim-1 {width: 8.33%;}
+.jim-2 {width: 16.66%;}
+.jim-3 {width: 25%;}
+.jim-4 {width: 33.33%;}
+.jim-5 {width: 41.66%;}
+.jim-6 {width: 50%;}
+.jim-7 {width: 58.33%;}
+.jim-8 {width: 66.66%;}
+.jim-9 {width: 75%;}
+.jim-10 {width: 83.33%;}
+.jim-11 {width: 91.66%;}
+.jim-12 {width: 100%;}
+
+[class*="jim"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid transparent;
+}
+
+.jin::after {
+    content: "";
+    clear: both;
+    display: table;
+}
