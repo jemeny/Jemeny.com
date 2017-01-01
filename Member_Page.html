@@ -467,7 +467,11 @@
       for(i=0; i<document.getElementsByTagName("i").length; i++){
         document.getElementsByTagName("i")[i].style.color = localStorage.theme_color;
       }
-      sheet.addRule('user_info::before', 'borderTop:' + localStorage.theme_color);
+      for(i=0; i<document.getElementsByClassName('span-icon').length; i++){
+        document.getElementsByClassName('span-icon')[i].style.color = localStorage.theme_color;
+      }
+      sheet.addRule('user_info::before', 'borderTop:' + '1px solid' + localStorage.theme_color);
+      sheet.addRule('user_info::after', 'borderTop:' + '1px solid' + localStorage.theme_color);
       sheet.addRule('.Name-icon::before', 'color:' + localStorage.theme_color);
       sheet.addRule('.Job-icon::before', 'color:' + localStorage.theme_color);
       sheet.addRule('.Gender-icon::before', 'color:' + localStorage.theme_color);
@@ -509,10 +513,10 @@
         var pro = document.getElementById('pro-bar');
         var sa = document.getElementById('salary-bar');
         var bob = document.getElementById('bonuse-bar');
-        e.innerHTML = "<i class = 'email-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>E-mail:</span>" + " " + email; 
-        g.innerHTML = "<i class = 'Gender-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Gender:</span>" + " " + gender; 
-        j.innerHTML = "<i class = 'Job-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Job:</span>" + " " + job;
-        n.innerHTML = "<i class = 'Name-icon'></i><span style = 'color:teal; font-size:25px; font-weight:400; text-transform:uppercase;'>Name:</span>" + " " + first_name + " " + last_name;
+        e.innerHTML = "<i class = 'email-icon'></i><span class = 'span-icon' style = 'font-size:25px; font-weight:400; text-transform:uppercase;'>E-mail:</span>" + " " + email; 
+        g.innerHTML = "<i class = 'Gender-icon'></i><span class = 'span-icon' style = 'font-size:25px; font-weight:400; text-transform:uppercase;'>Gender:</span>" + " " + gender; 
+        j.innerHTML = "<i class = 'Job-icon'></i><span class = 'span-icon' style = ' font-size:25px; font-weight:400; text-transform:uppercase;'>Job:</span>" + " " + job;
+        n.innerHTML = "<i class = 'Name-icon'></i><span class = 'span-icon' style = 'font-size:25px; font-weight:400; text-transform:uppercase;'>Name:</span>" + " " + first_name + " " + last_name;
         pro.innerHTML = credit + "%";
         pro.style.width = credit + '%';
         sa.innerHTML = '$' + salary;
