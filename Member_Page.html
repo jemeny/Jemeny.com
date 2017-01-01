@@ -457,6 +457,9 @@
     </div>
     <script>
       var i;
+      var stylesheet = document.createElement('style');
+      document.head.appendChild(stylesheet);
+      sheet = stylesheet.sheet;
       document.getElementsByClassName("name")[0].style.color = localStorage.theme_color;
       for(i=0; i<document.getElementsByClassName("jemeny--progress--bar").length; i++){
         document.getElementsByClassName("jemeny--progress--bar")[i].style.backgroundColor = localStorage.theme_color;
@@ -464,8 +467,15 @@
       for(i=0; i<document.getElementsByTagName("i").length; i++){
         document.getElementsByTagName("i")[i].style.color = localStorage.theme_color;
       }
-      document.styleSheets[0].addRule('user_info::before', '"color:" + localStorage.theme_color');
-      document.styleSheets[0].addRule('user_info::after', '"color:" + localStorage.theme_color');
+      sheet.addRule('user_info::before', 'borderTop:' + localStorage.theme_color);
+      sheet.addRule('.Name-icon::before', 'color:' + localStorage.theme_color);
+      sheet.addRule('.Job-icon::before', 'color:' + localStorage.theme_color);
+      sheet.addRule('.Gender-icon::before', 'color:' + localStorage.theme_color);
+        sheet.addRule('.email-icon::before', 'color:' + localStorage.theme_color);
+        sheet.addRule('.Treasure-icon::before', 'color:' + localStorage.theme_color);
+        sheet.addRule('.Education-icon::before', 'color:' + localStorage.theme_color);
+        sheet.addRule('.date::before', 'color:' + localStorage.theme_color);
+      
     </script>
     <script>
       alert("Welcome," + " " + localStorage.username + "!");
