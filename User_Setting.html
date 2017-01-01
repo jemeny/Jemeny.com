@@ -261,7 +261,7 @@
 		var snack_bar = document.getElementById("snack_div");
 		snack_bar.innerHTML = text;
 		snack_bar.className = name;
-		setTimeout(function(){ snack_bar.className = snack_bar.className.replace("vis", ""); }, time);	
+		setTimeout(function(){ snack_bar.className = snack_bar.className.replace(name, ""); }, time);	
 	}
 	
 	/*
