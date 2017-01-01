@@ -315,11 +315,13 @@
 		}
 	}
 	*/
+	if(localStorage.theme_title == undefined){
 	localStorage.setItem("window_bgcolor", "#efefef");
 	localStorage.setItem("name_color", "teal");
 	localStorage.setItem("progress_bar", "teal");
 	localStorage.setItem("theme_color", "teal");
 	localStorage.setItem("theme_title", "antonias");
+	}
 	function Theme_Picker(){
 	/*var bgcolor = localStorage.window_bgcolor;
 	var color = localStorage.name_color;
