@@ -921,7 +921,7 @@ body{
 	box-shadow:10px 10px 25px gray;
 }
 
-.vis{
+#snack_div .vis{
 	visibility:visible;
 	animation:show_bar 0.5s, hide_bar 0.5s 2s;
 }
@@ -933,13 +933,15 @@ body{
 	z-index:1;
 	bottom:30px;
 	left:50%;
+	display:block;
+	margin:auto;
 	text-align:center;
 	padding:15px;
 	color:white;
 	font-family:Comfortaa;
 	font-weight:100;
 	text-transform:Capitalize;
-	font-size:25px;
+	font-size:18px;
 	min-width:250px;
 }
 
