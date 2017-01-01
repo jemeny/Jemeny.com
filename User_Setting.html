@@ -127,6 +127,15 @@
       width:50%;
       margin:auto;
     }
+	  
+	  .Jemeny--submit{
+		  position:absolute;
+		  bottom:30%;
+		  right:30%;
+		  padding:8px 15px;
+		  border:none;
+		  color:white;
+	  }
     
     body{
       transition:0.8s ease;
@@ -239,7 +248,7 @@
        <p>Doggy<input type = "radio" id = "Doggy" name = "Theme" value = "doggy"></p>
           </div>
       </div>
-	    <input type = "submit" id = "setting_submit" onclick = "Theme_Picker()"/>
+	    <input class = "Jemeny--submit Jemeny--bgcolor--green" value = "Save" type = "submit" id = "setting_submit" onclick = "Theme_Picker()"/>
     </form>
   </section>
   </div>
