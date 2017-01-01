@@ -136,7 +136,7 @@
 		  border:none;
 		  color:white;
 	  }
-    
+	 
     body{
       transition:0.8s ease;
     }
@@ -256,6 +256,13 @@
   
 <script>
 	
+	function snack(text, time, name){
+		var snack_bar = document.getElementById("snack_div");
+		snack_bar.innerHTML = text;
+		snack_bar.className = name;
+		setTimeout(function(){ snack_bar.className = snack_bar.className.replace("vis", ""); }, time);	
+	}
+	
 	/*
 	var window123 = document.getElementById("wias");
 	 function Default_Theme(){
@@ -301,14 +308,52 @@
 					break;
 				default:
 					Default_Theme();
-					
+					sn
 						      }
 		}
 	}
 	*/
-	
+	localStorage.setItem("window_bgcolor", "#efefef");
+	localStorage.setItem("name_color", "teal");
+	localStorage.setItem("progress_bar", "teal");
+	localStorage.setItem("theme_color", "teal");
+	localStorage.setItem("theme_title", "antonias");
 	function Theme_Picker(){
-	
+	/*var bgcolor = localStorage.window_bgcolor;
+	var color = localStorage.name_color;
+	var progress = localStorage.progress_bar;
+	var theme = localStorage.theme_title;*/
+	var theme_color = localStorage.theme_color;
+		var Drago = document.getElementById("Drago");
+		var Antonias = document.getElementById("Antonias");
+		var Doggy = document.getElementById("Doggy");
+		var content = "Success, it's saved!";
+		var n = "vis";
+		var time = 3000;
+		if(Drago.checked == true){
+	localStorage.setItem("window_bgcolor", "#efefef");
+	localStorage.setItem("name_color", "#1E90FF");
+	localStorage.setItem("progress_bar", "#1E90FF");
+	localStorage.setItem("theme_color", "#1E90FF");
+	localStorage.setItem("theme_title", "drago");
+		}
+		if(Doggy.checked == true){
+	localStorage.setItem("window_bgcolor", "#efefef");
+	localStorage.setItem("name_color", "#FF9912");
+	localStorage.setItem("progress_bar", "#FF9912");
+	localStorage.setItem("theme_color", "#FF9912");
+	localStorage.setItem("theme_title", "doggy");
+		}
+		if(Antonias.checked == true){
+	localStorage.setItem("window_bgcolor", "#efefef");
+	localStorage.setItem("name_color", "teal");
+	localStorage.setItem("progress_bar", "teal");
+	localStorage.setItem("theme_color", "teal");
+	localStorage.setItem("theme_title", "antonias");
+		}
+		snack(content,n,time);
+		//location.assign("http://jemeny.github.io/Jemeny.com/Member_Page.html");
+		
 	}
 	
 	
