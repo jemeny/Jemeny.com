@@ -456,6 +456,13 @@
       </div>
     </div>
     <script>
+      var i;
+      document.getElementByClassName("name")[0].style.color = localStorage.theme_color;
+      for(i=0; i<document.getElementsByClassName("jemeny--progress--bar").length; i++){
+        document.getElementsByClassName("jemeny--progress--bar")[i].style.background_color = localStorage.theme_color;
+      }
+    </script>
+    <script>
       alert("Welcome," + " " + localStorage.username + "!");
     var x = document.getElementById("welcome");
      x.innerHTML = "Welcome Home," + " " + localStorage.username + "!";
