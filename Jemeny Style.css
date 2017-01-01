@@ -922,11 +922,13 @@ body{
 }
 #snack_div{
 	opacity:0;
-	transition:0.8s ease;
+	transition-duration:0.8s;
 	background:linear-gradient(to bottom right, black, gray);
 	position:fixed;
 	z-index:1;
 	bottom:30px;
+	margin-left:-125px;
+	border-radius:10px;
 	left:50%;
 	display:block;
 	margin:auto;
