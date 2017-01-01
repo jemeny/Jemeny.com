@@ -922,6 +922,7 @@ body{
 }
 #snack_div{
 	opacity:0;
+	transition:0.8s ease;
 	background:linear-gradient(to bottom right, black, gray);
 	position:fixed;
 	z-index:1;
