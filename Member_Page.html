@@ -467,9 +467,6 @@
       for(i=0; i<document.getElementsByTagName("i").length; i++){
         document.getElementsByTagName("i")[i].style.color = localStorage.theme_color;
       }
-      for(i=0; i<document.getElementsByClassName('span-icon').length; i++){
-        document.getElementsByClassName('span-icon')[i].style.color = localStorage.theme_color;
-      }
       sheet.addRule('user_info::before', 'borderTop:' + '1px solid' + localStorage.theme_color);
       sheet.addRule('user_info::after', 'borderTop:' + '1px solid' + localStorage.theme_color);
       sheet.addRule('.Name-icon::before', 'color:' + localStorage.theme_color);
@@ -521,6 +518,9 @@
         pro.style.width = credit + '%';
         sa.innerHTML = '$' + salary;
         sa.style.width = salary * 100 + '%';
+          for(var asd=0; asd<document.getElementsByClassName('span-icon').length; asd++){
+        document.getElementsByClassName('span-icon')[asd].style.color = localStorage.theme_color;
+      }
         if(bonus == "none"){
           bob.innerHTML = "<i class = 'sad-icon'></i>" + bonus;
         }else{
