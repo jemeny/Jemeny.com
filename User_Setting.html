@@ -256,11 +256,11 @@
   
 <script>
 	
-	function snack(text, time, name){
+	function snack(){
 		var snack_bar = document.getElementById("snack_div");
-		snack_bar.innerHTML = text;
-		snack_bar.className = name;
-		setTimeout(function(){ snack_bar.className = snack_bar.className.replace(name, ""); }, time);	
+		snack_bar.innerHTML = "Everything is saved!";
+		snack_bar.className = "vis";
+		setTimeout(function(){ snack_bar.className = snack_bar.className.replace("vis", ""); }, 3000);	
 	}
 	
 	/*
@@ -351,7 +351,7 @@
 	localStorage.setItem("theme_color", "teal");
 	localStorage.setItem("theme_title", "antonias");
 		}
-		snack(content,time,n);
+		snack();
 		//location.assign("http://jemeny.github.io/Jemeny.com/Member_Page.html");
 		
 	}
