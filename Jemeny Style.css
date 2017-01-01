@@ -920,14 +920,8 @@ body{
 .Jemeny--nav--shadow--extreme{
 	box-shadow:10px 10px 25px gray;
 }
-
-#snack_div .vis{
-	visibility:visible;
-	animation:show_bar 0.5s, hide_bar 0.5s 2s;
-}
-
 #snack_div{
-	visibility:hidden;
+	opacity:0;
 	background:linear-gradient(to bottom right, black, gray);
 	position:fixed;
 	z-index:1;
@@ -944,6 +938,12 @@ body{
 	font-size:18px;
 	min-width:250px;
 }
+
+#snack_div .vis{
+	opacity:1;
+	animation:show_bar 0.5s, hide_bar 0.5s 2s;
+}
+
 
 @keyframes show_bar{
 	from{bottom:0;opacity:0}
