@@ -384,6 +384,7 @@
       }
       
       [class*="shuffler_phase"]{
+        position:relative;
         min-height:550px;
         border:none;
         padding:15px;
@@ -396,6 +397,9 @@
       .shuffler_start{
         padding:8px 20px;
         font-size:20px;
+        position:absolute;
+        right:10px;
+        bottom:10px;
         font-family:Comfortaa;
         font-weight:100;
         text-transform:Capitalize;
@@ -417,6 +421,7 @@
         -webkit-transform: scale(2); /* Safari and Chrome */
         -o-transform: scale(2); /* Opera */
         padding: 10px;
+        margin-left:15px;
       }
       
       .p2_cap{
@@ -536,8 +541,8 @@
         <button class = "p2_btn Jemeny--bgcolor--blue" onclick = "phase_change('p2', 'p3')">Continue</button>
         </div>
         <div class = "shuffler_phase2" id = "p3">
-          <textarea row = 5 col = 15 id = "name_area" placeholder = "Enter your desired names, each seperated by ','. "></textarea>
-        <button onclick = "phase_change('p3', 'p4'); Shuffler_index();">Continue</button>
+          <textarea style = "padding:15px; resize:none; display:block; margin:30px auto;" row = 25 col = 25 id = "name_area" placeholder = "Enter your desired names, each seperated by ','. "></textarea>
+        <button class = "p2_btn Jemeny--bgcolor--green" onclick = "phase_change('p3', 'p4'); Shuffler_index();">Continue</button>
         </div>
         <div class = "shuffler_phase3" id = "p4">
           <div id = "response_area">
@@ -569,7 +574,7 @@
         sheet.addRule('.date::before', 'color:' + localStorage.theme_color);
       sheet.addRule('.jemeny--magical--icon::before', 'color:' + localStorage.theme_color);
       sheet.addRule('.p2_checker', 'color:' + localStorage.theme_color);
-      sheet.addRule("p2_cap", 'color:' + localStorage.theme_color);
+      sheet.addRule(".p2_cap", 'color:' + localStorage.theme_color);
       
     </script>
     <script>
