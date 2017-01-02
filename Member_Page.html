@@ -496,16 +496,17 @@
         </div>
         <div class = "shuffler_phase1" id = "p2">
           <h1>Pick one best for you</h1>
-          <p>Team Picker<input type = "checkbox" id = "checker_d" name = "mode" value = "default"/></p>
-        <p>Default<input type = "checkbox" id = "checker_t" name = "mode" value = "Team"/></p>
+          <p>Team Picker<input type = "checkbox" id = "checker_t" name = "mode" value = "team"/></p>
+        <p>Default<input type = "checkbox" id = "checker_d" name = "mode" value = "default"/></p>
         <button onclick = "phase_change('p2', 'p3')">Continue</button>
-          <script></script>
         </div>
         <div class = "shuffler_phase2" id = "p3">
-          
+          <textarea row = 5 col = 15 id = "name_area" placeholder = "Enter your desired names, each seperated by ','. "></textarea>
         <button onclick = "phase_change('p3', 'p4')">Continue</button>
         </div>
         <div class = "shuffler_phase3" id = "p4">
+          <div id = "response_area">
+          </div>
         <button onclick = "phase_change('p4', 'p1')">Restart</button>
         </div>
       </div>
@@ -547,8 +548,72 @@
         sec.style.display = "block";
       }
       
-      function Shuffler_ultimate(){
+      function _ (id){
+        return document.getElementById(id);
+      }
+          
+      function Shuffler_ultimate(obj){
+        var c = obj.length, random, next;
+        var br = '<br>';
+        var br2 = '';
+        var b = 0;
+        var content = '';
+        var area = _("response_area");
+        var i = 0;
+        var item = obj.length; 
+        var t_mem = 2;
+        var seperator = '<hr>'
+        while(0 !== obj.length){
+          if(_("checker_d").checked == true){
+            random = Math.floor(Math.random() * obj.length);
+            content += br + obj[random] + br;
+            obj.splice(random, 1);
+            area.innerHTML = "";
+            area.innerHTML = content + seperator + br + item + " " + "Item Listed";
+          }else if(_("checker_t").checked == true){
+            var com = prompt("How big is your team?");
+            if(com !== " " && isNaN(com) == false){
+              t_mem = com;
+              continue;
+            }else{
+              alert("It has to be a number");
+              return;
+            }
+            random = Math.floor(Math.random() * obj.length);
+            b++;
+            if(b % t_mem == 0){
+            br = '<br>';
+            br2 = '</div>';
+            }else if(b % t_mem == 1){
+            br = '<div class = "team_box">';
+            br2 = '';
+            }else{
+            br2 = "</div>";
+            br = "";
+            }
+            content += br + obj[random] + br2;
+            obj.splice(random, 1);
+            area.innerHTML = "";
+            area.innerHTML = content + '</div>' + seperator + '<br>' + item + " " + "Item Listed" + '<br>' + Math.floor(item/t_mem) + " " + "Team";
+        }else{
+          random = Math.floor(Math.random() * obj.length);
+            content += br + obj[random] + br;
+            obj.splice(random, 1);
+            area.innerHTML = "";
+            area.innerHTML = content + seperator + br + item + " " + "Item Listed";
+        }
         
+      }
+      
+      function Shuffler_index(){
+        var index = _('name_area').value;
+        if(index !== ""){
+        var trimes = index.trim();
+        var indexA = trimes.split(",");
+        Shuffler_ultimate(indexA);
+        }else{
+        alert("You can't leave it blank!");
+        }
       }
     </script>
     <script>
