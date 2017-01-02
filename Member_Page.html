@@ -384,13 +384,24 @@
       }
       
       [class*="shuffler_phase"]{
-        min-height:350px;
+        min-height:550px;
         border:none;
         padding:15px;
         margin:0;
         box-sizing:border-box;
         z-index:1;
         margin:auto;
+      }
+      
+      .shuffler_start{
+        padding:8px 20px;
+        font-size:20px;
+        font-family:Comfortaa;
+        font-weight:100;
+        text-transform:Capitalize;
+        border:none;
+        border-radius:5px;
+        color:white;
       }
 
       
@@ -478,10 +489,10 @@
       <div class = "Infor window grid">
         <div class = "shuffler_phase" id = "p1">
           <div class = "jemeny--dec--wrap jemeny--dec--position--strong jemeny--dec jemeny--dec--normal">
-          <h1 class = "HEADER"><i class = "jemeny--magical--icon">Magical Shuffler</i></h1>
+          <h1 class = "HEADER"><i class = "jemeny--magical--icon"></i> Magical Shuffler</h1>
         </div>
           <img src = "http://www.merlinsmagiccircle.com/images/in-page/magic-book.png"/>
-         <button class = "shuffler_start" onclick = "phase_change('p1', 'p2')">Start</button>
+         <button class = "shuffler_start Jemeny--bgcolor--pink" onclick = "phase_change('p1', 'p2')">Start</button>
         </div>
         <div class = "shuffler_phase1" id = "p2">
         <button onclick = "phase_change('p2', 'p3')">Continue</button>
