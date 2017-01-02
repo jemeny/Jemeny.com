@@ -507,7 +507,7 @@
         <div class = "shuffler_phase3" id = "p4">
           <div id = "response_area">
           </div>
-        <button onclick = "phase_change('p4', 'p1')">Restart</button>
+        <button onclick = "phase_change('p4', 'p1') Shuffler_index()">Restart</button>
         </div>
       </div>
     </div>
@@ -574,7 +574,6 @@
             var com = prompt("How big is your team?");
             if(com !== " " && isNaN(com) == false){
               t_mem = com;
-              continue;
             }else{
               alert("It has to be a number");
               return;
