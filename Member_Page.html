@@ -410,6 +410,34 @@
         padding:15px;
         margin-bottom:25px;
       }
+      
+      .p2_checker input[type=checkbox]{
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        padding: 10px;
+      }
+      
+      .p2_cap{
+        text-align:center;
+        font-family:Comfortaa;
+        font-weight:200;
+      }
+      
+      .p2_checker{
+        font-weight:bold;
+        font-family:Comfotaa;
+        font-size:25px;
+      }
+      
+      .p2_btn{
+        border:none;
+        font-family:Comfortaa;
+        font-size:18px;
+        color:white;
+        padding:8px 15px;
+      }
 
       
     </style>
@@ -502,10 +530,10 @@
          <button class = "shuffler_start Jemeny--bgcolor--pink" onclick = "phase_change('p1', 'p2')">Start</button>
         </div>
         <div class = "shuffler_phase1" id = "p2">
-          <h1>Pick one best for you</h1>
-          <p>Team Picker<input type = "checkbox" id = "checker_t" name = "mode" value = "team"/></p>
-        <p>Default<input type = "checkbox" id = "checker_d" name = "mode" value = "default"/></p>
-        <button onclick = "phase_change('p2', 'p3')">Continue</button>
+          <h1 class = "p2_cap" id = "phase1_caption">Pick one best for you</h1>
+          <p class = "p2_checker">Team Picker<input type = "checkbox" id = "checker_t" name = "mode" value = "team"/></p>
+        <p class = "p2_checker">Default<input type = "checkbox" id = "checker_d" name = "mode" value = "default"/></p>
+        <button class = "p2_btn Jemeny--bgcolor--blue" onclick = "phase_change('p2', 'p3')">Continue</button>
         </div>
         <div class = "shuffler_phase2" id = "p3">
           <textarea row = 5 col = 15 id = "name_area" placeholder = "Enter your desired names, each seperated by ','. "></textarea>
@@ -540,6 +568,8 @@
         sheet.addRule('.Education-icon::before', 'color:' + localStorage.theme_color);
         sheet.addRule('.date::before', 'color:' + localStorage.theme_color);
       sheet.addRule('.jemeny--magical--icon::before', 'color:' + localStorage.theme_color);
+      sheet.addRule('.p2_checker', 'color:' + localStorage.theme_color);
+      sheet.addRule("p2_cap", 'color:' + localStorage.theme_color);
       
     </script>
     <script>
