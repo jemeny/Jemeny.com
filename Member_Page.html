@@ -570,16 +570,18 @@
         var item = obj.length; 
         var t_mem = 2;
         var seperator = '<hr>'
-        while(0 !== obj.length){
           if(_("checker_d").checked == true){
+             while(0 !== obj.length){
             random = Math.floor(Math.random() * obj.length);
             content += br + obj[random] + br;
             obj.splice(random, 1);
             area.innerHTML = "";
             area.innerHTML = content + seperator + br + item + " " + "Item Listed";
+             }
           }else if(_("checker_t").checked == true){
             var com = prompt("How big is your team?");
             if(com !== " " && isNaN(com) == false){
+               while(0 !== obj.length){
               t_mem = com;
                random = Math.floor(Math.random() * obj.length);
             b++;
@@ -604,11 +606,11 @@
             area.innerHTML = "";
             area.innerHTML = content + seperator + br + item + " " + "Item Listed";
         }
+            }
             }else{
               alert("It has to be a number");
               return;
             }
-        }
       }
       
       function Shuffler_index(){
