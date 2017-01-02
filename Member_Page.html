@@ -581,11 +581,7 @@
             var com = prompt("How big is your team?");
             if(com !== " " && isNaN(com) == false){
               t_mem = com;
-            }else{
-              alert("It has to be a number");
-              return;
-            }
-            random = Math.floor(Math.random() * obj.length);
+               random = Math.floor(Math.random() * obj.length);
             b++;
             if(b % t_mem == 0){
             br = '<br>';
@@ -608,6 +604,10 @@
             area.innerHTML = "";
             area.innerHTML = content + seperator + br + item + " " + "Item Listed";
         }
+            }else{
+              alert("It has to be a number");
+              return;
+            }
         }
       }
       
