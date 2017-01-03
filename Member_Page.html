@@ -478,9 +478,16 @@
     <div class = "container">
       <div class = "user window grid">
         <div class = "flexible--window">
-          <img id = "avatar" class = "Image" src = "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"/>
+          <img id = "avatar" class = "Image"/>
           <input style = "position:absolute; display:none;" type = "file" id = "file_upload" onchange = "Change_Avatar(this.files)"/>
           <a href = "#" id = "uploader"><i class = "avatar--icon"></i></a>
+          <script>
+            if(localStorage.Avatar_src !== " " && undefined){
+            document.getElementById("avatar").src = localStorage.Avatar_src;
+            }else{
+              document.getElementById("avatar").src = "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png";
+            }
+          </script>
           <script>
            var al = document.getElementById("uploader");
            var a = document.getElementById("file_upload");
