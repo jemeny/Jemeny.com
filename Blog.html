@@ -238,6 +238,25 @@
 		   .bgcolor--orange--right{
 			  background:linear-gradient(to bottom right, #EE799F, tomato);
 		  }
+		  
+		  [class*="editor_p"]:not([id = "01"]){
+			  display:none;
+		  }
+		  
+		  .Editor{
+			  display:none;
+			  position:relative;
+			  background-color:#efefef;
+			  min-width:50%;
+			  height:auto;
+			  padding:14px;
+			  transition:0.9s;
+		  }
+		  
+		  @keyframes FadeIn{
+			  from{opacity:0;}
+			  to{opacity:1;}
+		  }
 	  </style>
   </head>
 <script type="text/javascript">
@@ -308,7 +327,7 @@ s0.parentNode.insertBefore(s1,s0);
 		    <div class = "content--body--item">
 			    <div class = "item--header">
 				    <div class = "item--header--tag bgcolor--orange--right">
-					    <h2 id = "date">12/19/2016</h2>
+					    <!--<h2 id = "date">12/19/2016</h2>-->
 				    </div>
 				    <a href = "#" class = "item--header--normal">Christmas Break</a>
 			    </div>
@@ -317,7 +336,49 @@ s0.parentNode.insertBefore(s1,s0);
 		    </div>
 		    <div class = "body--footer">
 			    <div class = "post--area">
-				    <a class = "footer--UI--button" href = "#">Post <i class = "post--icon"></i></a>
+				    <label class = "footer--UI--button" onclick = "Popup()">Post <i class = "post--icon"></i></label>
+				    <div class = "Editor" id = "popup_edi">
+				    <form action="//flipmail.co/api/q1IlAxJmDpS49brRjmnC" method="post">
+					 <div class = "editor_p1" id = "01">
+					<label for = "f_name" class = "p_label">Please Enter Your name</label>
+   					<input type="text" name="name" id = "f_name">
+					 </div>
+					    <div class = "editor_p2" id = "02">
+					<label for = "email" class = "p_label">Please Enter Your E-mail</label>
+   					<input type="email" name="email" id = "email">
+					    </div>
+					       <div class = "editor_p3" id = "03">
+					<label for = "title" class = "p_label">Enter your caption here</label>
+   					<input type = "text" name="caption" id = "title">
+					    </div>
+					        <div class = "editor_p4" id = "04">
+					<label for = "content" class = "p_label">Enter your content here</label>
+						<textarea name = "Content" id = "content" col = 25 row = 25></textarea>
+					    </div>
+					      <div class = "editor_p5" id = "05">
+					<label for = "upload" class = "p_label">Enter the URL of your thumbnail</label>
+						<input type = "text" name = "upload" id = "url"/>
+						 <button type="submit">Post</button>
+					    </div>
+				    </form>
+				    </div>
+				    <script>
+					    function Popup(){
+						    var style = document.createElement('style');
+						    var pop = document.getElementById('popup_edi');
+						    document.head.appendChild(style);
+						    sheet = style.sheet;
+						    //sheet.addRule('.Editor', 'animationName:FadeIn');
+						    //sheet.addRule('.Editor','animationDuration:4s');
+						    pop.style.animationName = "FadeIn";
+						    pop.style.animationDuration:"4s";
+						    pop.style.display = "block";
+					    }
+					    
+				    function Post_Editor(){
+					    
+				    }
+				    </script>
 			    </div>
 		    </div>
 	    </div>
