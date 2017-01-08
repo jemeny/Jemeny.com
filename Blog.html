@@ -270,6 +270,56 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+	  <div class = "Editor" id = "popup_edi">
+					 <div class = "editor_p1" id = "01">
+					<label for = "f_name" class = "p_label">Please Enter Your name</label>
+   					<input type="text" name="name" id = "f_name" required>
+						 <button onclick = "Post_fade(); inspection('f_name');">Next</button>
+					 </div>
+					    <div class = "editor_p2" id = "02">
+					<label for = "email" class = "p_label">Please Enter Your E-mail</label>
+   					<input type="email" name="email" id = "email" required>
+						 <button onclick = "Post_fade1(); inspection('email');">Next</button>
+					    </div>
+					       <div class = "editor_p3" id = "03">
+					<label for = "title" class = "p_label">Enter your caption here</label>
+   					<input type = "text" name="caption" id = "title" required>
+						 <button onclick = "Post_fade2(); inspection('title');">Next</button>
+					    </div>
+					        <div class = "editor_p4" id = "04">
+					<label for = "content" class = "p_label">Enter your content here</label>
+						<textarea name = "Content" id = "content" col = 25 row = 25></textarea>
+						<button onclick = "Post_fade3(); inspection('content')">Next</button>
+					    </div>
+					      <div class = "editor_p5" id = "05">
+					<label for = "upload" class = "p_label">Enter the URL of your thumbnail</label>
+						<input type = "text" name = "upload" id = "url"/>
+						  <form action = "https://formspree.io/gjj370.sunrise@gmail.com" method = "post">
+						<input type = "hidden" name = "_next" value = "http://jemeny.github.io/Jemeny.com/thanks.html">
+					   	 <input type = "hidden" name = "_subject" value = "The Jemeny Team">
+						 <input type = "hidden" name = "email" id = "shuai">
+						<input type = "hidden" name = "user" id = "sshua">
+						<input type = "hidden" name = "title" id = "huas">
+						<input type = "hidden" name = "upl" id = "yee">
+						<textarea style = "display:none" name = "content" id = "zhishang"></textarea>
+							  <script>
+								  function Blah(){
+								  var n = document.getElementById('f_name');
+								  var email = document.getElementById('email');
+								  var title = document.getElementById('title');
+								   var content = document.getElementById('content');
+								  var u = document.getElementById('url');
+								  document.getElementById('shuai').value = email.value;
+								  document.getElementById('sshua').value = n.value;
+								   document.getElementById('huas').value = title.value;
+								   document.getElementById('yee').value = u.value;
+								   document.getElementById('zhishang').value = content.value;
+								  }
+								  
+							  </script>
+						 <input type="submit" onclick = "Blah(); inspection('url')" value = "Post">
+						 </form>
+					    </div>
   <body>
     <div class = "container">
     <div class = "nav-bar" style = "background:none;">
@@ -337,56 +387,6 @@ s0.parentNode.insertBefore(s1,s0);
 		    <div class = "body--footer">
 			    <div class = "post--area">
 				    <label class = "footer--UI--button" onclick = "Popup()">Post <i class = "post--icon"></i></label>
-				    <div class = "Editor" id = "popup_edi">
-					 <div class = "editor_p1" id = "01">
-					<label for = "f_name" class = "p_label">Please Enter Your name</label>
-   					<input type="text" name="name" id = "f_name" required>
-						 <button onclick = "Post_fade(); inspection('f_name');">Next</button>
-					 </div>
-					    <div class = "editor_p2" id = "02">
-					<label for = "email" class = "p_label">Please Enter Your E-mail</label>
-   					<input type="email" name="email" id = "email" required>
-						 <button onclick = "Post_fade1(); inspection('email');">Next</button>
-					    </div>
-					       <div class = "editor_p3" id = "03">
-					<label for = "title" class = "p_label">Enter your caption here</label>
-   					<input type = "text" name="caption" id = "title" required>
-						 <button onclick = "Post_fade2(); inspection('title');">Next</button>
-					    </div>
-					        <div class = "editor_p4" id = "04">
-					<label for = "content" class = "p_label">Enter your content here</label>
-						<textarea name = "Content" id = "content" col = 25 row = 25></textarea>
-						<button onclick = "Post_fade3(); inspection('content')">Next</button>
-					    </div>
-					      <div class = "editor_p5" id = "05">
-					<label for = "upload" class = "p_label">Enter the URL of your thumbnail</label>
-						<input type = "text" name = "upload" id = "url"/>
-						  <form action = "https://formspree.io/gjj370.sunrise@gmail.com" method = "post">
-						<input type = "hidden" name = "_next" value = "http://jemeny.github.io/Jemeny.com/thanks.html">
-					   	 <input type = "hidden" name = "_subject" value = "The Jemeny Team">
-						 <input type = "hidden" name = "email" id = "shuai">
-						<input type = "hidden" name = "user" id = "sshua">
-						<input type = "hidden" name = "title" id = "huas">
-						<input type = "hidden" name = "upl" id = "yee">
-						<textarea style = "display:none" name = "content" id = "zhishang"></textarea>
-							  <script>
-								  function Blah(){
-								  var n = document.getElementById('f_name');
-								  var email = document.getElementById('email');
-								  var title = document.getElementById('title');
-								   var content = document.getElementById('content');
-								  var u = document.getElementById('url');
-								  document.getElementById('shuai').value = email.value;
-								  document.getElementById('sshua').value = n.value;
-								   document.getElementById('huas').value = title.value;
-								   document.getElementById('yee').value = u.value;
-								   document.getElementById('zhishang').value = content.value;
-								  }
-								  
-							  </script>
-						 <input type="submit" onclick = "Blah(); inspection('url')" value = "Post">
-						 </form>
-					    </div>
 				    </div>
 				    <script>
 					    function inspection(id){
@@ -468,7 +468,6 @@ s0.parentNode.insertBefore(s1,s0);
 			    </div>
 		    </div>
 	    </div>
-    </div>
 	  </div>
   </body>
 </html>
