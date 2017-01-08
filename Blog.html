@@ -346,17 +346,17 @@ s0.parentNode.insertBefore(s1,s0);
 					    <div class = "editor_p2" id = "02">
 					<label for = "email" class = "p_label">Please Enter Your E-mail</label>
    					<input type="email" name="email" id = "email" required>
-						 <button onclick = "Post_fade1()">Next</button>
+						 <button onclick = "Post_fade1(); inspection('email');">Next</button>
 					    </div>
 					       <div class = "editor_p3" id = "03">
 					<label for = "title" class = "p_label">Enter your caption here</label>
    					<input type = "text" name="caption" id = "title" required>
-						 <button onclick = "Post_fade2()">Next</button>
+						 <button onclick = "Post_fade2(); inspection('title');">Next</button>
 					    </div>
 					        <div class = "editor_p4" id = "04">
 					<label for = "content" class = "p_label">Enter your content here</label>
 						<textarea name = "Content" id = "content" col = 25 row = 25></textarea>
-						<button onclick = "Post_fade3()">Next</button>
+						<button onclick = "Post_fade3(); inspection('content')">Next</button>
 					    </div>
 					      <div class = "editor_p5" id = "05">
 					<label for = "upload" class = "p_label">Enter the URL of your thumbnail</label>
@@ -384,7 +384,7 @@ s0.parentNode.insertBefore(s1,s0);
 								  }
 								  
 							  </script>
-						 <input type="submit" onclick = "Blah()" value = "Post">
+						 <input type="submit" onclick = "Blah(); inspection('url')" value = "Post">
 						 </form>
 					    </div>
 				    </div>
