@@ -364,18 +364,22 @@ s0.parentNode.insertBefore(s1,s0);
 						  <form action = "https://formspree.io/gjj370.sunrise@gmail.com" method = "post">
 						<input type = "hidden" name = "_next" value = "http://jemeny.github.io/Jemeny.com/thanks.html">
 					   	 <input type = "hidden" name = "_subject" value = "The Jemeny Team">
-						 <input type = "text" name = "email">
-						<input type = "text" name = "user">
-						<input type = "text" name = "title">
-						<input type = "url" name = "upl">
-						<textarea name = "content"></textarea>
+						 <input type = "text" name = "email" id = "shuai">
+						<input type = "text" name = "user" id = "sshua">
+						<input type = "text" name = "title" id = "huas">
+						<input type = "url" name = "upl" id = "yee">
+						<textarea name = "content" id = "zhishang"></textarea>
 							  <script>
 								  var n = document.getElementById('f_name');
 								  var email = document.getElementById('email');
 								  var title = document.getElementById('title');
 								   var content = document.getElementById('content');
 								  var u = document.getElementById('url');
-								  document.getElementById(
+								  document.getElementById('shuai').value = email.value;
+								  document.getElementById('sshua').value = n.value;
+								   document.getElementById('huas').value = title.value;
+								   document.getElementById('yee').value = u.value;
+								   document.getElementById('zhishang').value = content.value;
 							  </script>
 						 <input type="submit" value = "Post"/>
 						 </form>
