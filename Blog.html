@@ -338,9 +338,6 @@ s0.parentNode.insertBefore(s1,s0);
 			    <div class = "post--area">
 				    <label class = "footer--UI--button" onclick = "Popup()">Post <i class = "post--icon"></i></label>
 				    <div class = "Editor" id = "popup_edi">
-				    <form action="https://formspree.io/gjj370.sunrise@gmail.com" method="post">
-					  <input type = "hidden" name = "_next" value = "http://jemeny.github.io/Jemeny.com/thanks.html">
-					    <input type = "hidden" name = "_subject" value = "The Jemeny Team">
 					 <div class = "editor_p1" id = "01">
 					<label for = "f_name" class = "p_label">Please Enter Your name</label>
    					<input type="text" name="name" id = "f_name" required>
@@ -364,9 +361,15 @@ s0.parentNode.insertBefore(s1,s0);
 					      <div class = "editor_p5" id = "05">
 					<label for = "upload" class = "p_label">Enter the URL of your thumbnail</label>
 						<input type = "text" name = "upload" id = "url"/>
+						  <form action = "https://formspree.io/gjj370.sunrise@gmail.com" method = "post">
+						<input type = "hidden" name = "_next" value = "http://jemeny.github.io/Jemeny.com/thanks.html">
+					   	 <input type = "hidden" name = "_subject" value = "The Jemeny Team">
+						 <input type = "text" name = "email">
+						<input type = "text" name = "user">
+							  <textarea nameextarea>
 						 <input type="submit" value = "Post"/>
+						 </form>
 					    </div>
-				    </form>
 				    </div>
 				    <script>
 					    function Popup(){
@@ -422,5 +425,6 @@ s0.parentNode.insertBefore(s1,s0);
 		    </div>
 	    </div>
     </div>
+	  </div>
   </body>
 </html>
