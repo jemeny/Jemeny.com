@@ -341,7 +341,7 @@ s0.parentNode.insertBefore(s1,s0);
 					 <div class = "editor_p1" id = "01">
 					<label for = "f_name" class = "p_label">Please Enter Your name</label>
    					<input type="text" name="name" id = "f_name" required>
-						 <button onclick = "Post_fade()">Next</button>
+						 <button onclick = "Post_fade(); inspection('f_name');">Next</button>
 					 </div>
 					    <div class = "editor_p2" id = "02">
 					<label for = "email" class = "p_label">Please Enter Your E-mail</label>
@@ -389,6 +389,14 @@ s0.parentNode.insertBefore(s1,s0);
 					    </div>
 				    </div>
 				    <script>
+					    function inspection(id){
+						    if(document.getElementById(id).value !== " "){
+							  return;  
+						    }else{
+							    alert("You can't leave it blank!");
+						    }
+					    }
+					    
 					    function Popup(){
 						    var style = document.createElement('style');
 						    var pop = document.getElementById('popup_edi');
