@@ -341,22 +341,22 @@ s0.parentNode.insertBefore(s1,s0);
 					 <div class = "editor_p1" id = "01">
 					<label for = "f_name" class = "p_label">Please Enter Your name</label>
    					<input type="text" name="name" id = "f_name" required>
-						 <button onclick = "Post_fade(01, 02)">Next</button>
+						 <button onclick = "Post_fade()">Next</button>
 					 </div>
 					    <div class = "editor_p2" id = "02">
 					<label for = "email" class = "p_label">Please Enter Your E-mail</label>
    					<input type="email" name="email" id = "email" required>
-						 <button onclick = "Post_fade(02, 03)">Next</button>
+						 <button onclick = "Post_fade1()">Next</button>
 					    </div>
 					       <div class = "editor_p3" id = "03">
 					<label for = "title" class = "p_label">Enter your caption here</label>
    					<input type = "text" name="caption" id = "title" required>
-						 <button onclick = "Post_fade(03, 04)">Next</button>
+						 <button onclick = "Post_fade2()">Next</button>
 					    </div>
 					        <div class = "editor_p4" id = "04">
 					<label for = "content" class = "p_label">Enter your content here</label>
 						<textarea name = "Content" id = "content" col = 25 row = 25></textarea>
-						<button onclick = "Post_fade(04, 05)">Next</button>
+						<button onclick = "Post_fade3()">Next</button>
 					    </div>
 					      <div class = "editor_p5" id = "05">
 					<label for = "upload" class = "p_label">Enter the URL of your thumbnail</label>
@@ -398,9 +398,28 @@ s0.parentNode.insertBefore(s1,s0);
 						    pop.style.animationDuration = "4s";
 					    }
 					    
-				    function Post_fade(id, ne){
-					    var div = document.getElementById(id);
-					    var asd = document.getElementById(ne);
+				    function Post_fade(){
+					    var div = document.getElementById('01');
+					    var asd = document.getElementById('02');
+					    div.style.display = "none";
+					    asd.style.display = "block";
+				    }
+					    
+					    function Post_fade1(){
+					    var div = document.getElementById('02');
+					    var asd = document.getElementById('03');
+					    div.style.display = "none";
+					    asd.style.display = "block";
+				    }
+					    function Post_fade2(){
+					    var div = document.getElementById('03');
+					    var asd = document.getElementById('04');
+					    div.style.display = "none";
+					    asd.style.display = "block";
+				    }
+					    function Post_fade3(){
+					    var div = document.getElementById('04');
+					    var asd = document.getElementById('05');
 					    div.style.display = "none";
 					    asd.style.display = "block";
 				    }
