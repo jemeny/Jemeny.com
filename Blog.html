@@ -370,6 +370,7 @@ s0.parentNode.insertBefore(s1,s0);
 						<input type = "hidden" name = "upl" id = "yee">
 						<textarea style = "display:none" name = "content" id = "zhishang"></textarea>
 							  <script>
+								  function Blah(){
 								  var n = document.getElementById('f_name');
 								  var email = document.getElementById('email');
 								  var title = document.getElementById('title');
@@ -380,8 +381,10 @@ s0.parentNode.insertBefore(s1,s0);
 								   document.getElementById('huas').value = title.value;
 								   document.getElementById('yee').value = u.value;
 								   document.getElementById('zhishang').value = content.value;
+								  }
+								  
 							  </script>
-						 <input type="submit" value = "Post"/>
+						 <input type="submit" onclick = "Blah()" value = "Post">
 						 </form>
 					    </div>
 				    </div>
